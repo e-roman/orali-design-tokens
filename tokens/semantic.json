@@ -36,6 +36,10 @@
       "overlay-strong": {
         "$value": "{color.alpha.black-60}",
         "$description": "Scrim del carrito"
+      },
+      "external-mercadopago": {
+        "$value": "{color.external.mercadopago}",
+        "$description": "Solo el botón de pago de Mercado Pago"
       }
     },
     "text": {
@@ -198,6 +202,10 @@
       "ring": {
         "$value": "{color.tomato.600}",
         "$description": "Focus visible: 2px, offset 2px"
+      },
+      "ring-inverse": {
+        "$value": "{color.neutral.0}",
+        "$description": "Focus sobre bg.accent, bg.brand, bg.inverse y fotos"
       }
     },
     "commerce": {
@@ -256,6 +264,15 @@
       },
       "$description": "Hero (h1)"
     },
+    "heading-xl": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.4xl}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.line-height.4xl}"
+      },
+      "$description": "Títulos de página (h1) desde md"
+    },
     "heading-lg": {
       "$value": {
         "fontFamily": "{font.family.sans}",
@@ -263,7 +280,7 @@
         "fontWeight": "{font.weight.semibold}",
         "lineHeight": "{font.line-height.2xl}"
       },
-      "$description": "Títulos de sección (h2)"
+      "$description": "Títulos de página (h1) mobile y de sección (h2)"
     },
     "heading-md": {
       "$value": {
@@ -339,6 +356,56 @@
         },
         "$description": "Drawers, acordeones"
       }
+    }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "subtle": {
+      "$value": "{shadow.sm}",
+      "$description": "Cards de contenido en reposo"
+    },
+    "card": {
+      "$value": "{shadow.md}",
+      "$description": "Card de producto en reposo"
+    },
+    "card-hover": {
+      "$value": "{shadow.lg}",
+      "$description": "Card de producto en hover, barra flotante"
+    },
+    "dropdown": {
+      "$value": "{shadow.xl}",
+      "$description": "Menús del nav, resultados de búsqueda"
+    },
+    "overlay": {
+      "$value": "{shadow.2xl}",
+      "$description": "Drawers, modales, bottom sheets"
+    }
+  },
+  "layer": {
+    "$type": "number",
+    "sticky": {
+      "$value": "{z-index.sticky}"
+    },
+    "header": {
+      "$value": "{z-index.header}"
+    },
+    "overlay": {
+      "$value": "{z-index.overlay}"
+    },
+    "mobile-menu": {
+      "$value": "{z-index.mobile-menu}"
+    },
+    "drawer": {
+      "$value": "{z-index.drawer}"
+    },
+    "modal": {
+      "$value": "{z-index.modal}"
+    },
+    "modal-top": {
+      "$value": "{z-index.modal-top}"
+    },
+    "progress": {
+      "$value": "{z-index.progress}"
     }
   }
 }

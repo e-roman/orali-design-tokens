@@ -77,6 +77,37 @@
         "$value": "{color.action.outline.bg-hover}"
       }
     },
+    "neutral": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.default}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.default}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.default}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.bg.subtle}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.6}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}",
+        "$description": "Acción alternativa sin peso de marca: Continuar con Google, Cancelar"
+      }
+    },
     "add-to-cart": {
       "bg": {
         "$type": "color",
@@ -136,6 +167,61 @@
       "radius": {
         "$type": "dimension",
         "$value": "{radius.lg}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.4}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      }
+    },
+    "inverse": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.default}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.default}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.bg.subtle}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.8}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}",
+        "$description": "Sobre fotos o superficies oscuras: 'Ver productos' en categorías"
+      }
+    },
+    "size": {
+      "md": {
+        "$type": "dimension",
+        "$value": "{size.control.md}",
+        "$description": "40px: dentro de cards, drawers, inline con inputs"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}",
+        "$description": "44px: CTAs de sección y de formulario (default)"
       }
     }
   },
@@ -191,36 +277,75 @@
       "$type": "color",
       "$value": "{color.action.outline.bg-hover}",
       "$description": "Hover sobre −/+"
+    },
+    "height-lg": {
+      "$type": "dimension",
+      "$value": "{size.control.lg}",
+      "$description": "Variante lg (PDP)"
     }
   },
   "input": {
-    "bg": {
-      "$type": "color",
-      "$value": "{color.bg.default}"
+    "form": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.subtle}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.default}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.default}"
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{color.border.strong}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.lg}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.3}",
+        "$description": "Checkout, login, cupón, filtros"
+      }
     },
-    "fg": {
-      "$type": "color",
-      "$value": "{color.text.default}"
-    },
-    "border": {
-      "$type": "color",
-      "$value": "{color.border.default}"
-    },
-    "radius": {
-      "$type": "dimension",
-      "$value": "{radius.full}"
-    },
-    "height": {
-      "$type": "dimension",
-      "$value": "{size.control.xl}"
-    },
-    "padding-x": {
-      "$type": "dimension",
-      "$value": "{space.4}"
-    },
-    "padding-y": {
-      "$type": "dimension",
-      "$value": "{space.3}"
+    "pill": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.default}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.default}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.default}"
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{color.border.strong}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.4}",
+        "$description": "Búsqueda y newsletter"
+      }
     }
   },
   "badge": {
@@ -275,6 +400,29 @@
         "$type": "dimension",
         "$value": "{font.size.2xs}"
       }
+    },
+    "counter": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.brand}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.inverse}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "font-size": {
+        "$type": "dimension",
+        "$value": "{font.size.2xs}",
+        "$description": "Contador del carrito y filtros. Mínimo 11px"
+      },
+      "min-size": {
+        "$type": "dimension",
+        "$value": "16px"
+      }
     }
   },
   "card": {
@@ -289,11 +437,34 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.2xl}"
+        "$value": "{radius.lg}"
       },
       "gap": {
         "$type": "dimension",
         "$value": "{space.3}"
+      },
+      "shadow": {
+        "$type": "shadow",
+        "$value": "{elevation.card}"
+      },
+      "shadow-hover": {
+        "$type": "shadow",
+        "$value": "{elevation.card-hover}"
+      }
+    },
+    "content": {
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.2xl}",
+        "$description": "Pasos, banners de categoría, newsletter"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.default}"
+      },
+      "shadow": {
+        "$type": "shadow",
+        "$value": "{elevation.subtle}"
       }
     }
   }

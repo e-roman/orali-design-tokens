@@ -32,6 +32,7 @@
   --color-amber-800: #92400e;
   --color-blue-50: #eff6ff;
   --color-blue-700: #1d4ed8;
+  --color-external-mercadopago: #009ee3; /** Marca de terceros. Blanco encima: 3.0:1 (no AA en texto normal) */
   --font-family-sans: Montserrat, system-ui, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -55,6 +56,7 @@
   --font-line-height-2xl: 36px;
   --font-line-height-3xl: 40px;
   --font-line-height-6xl: 60px;
+  --font-line-height-4xl: 40px;
   --space-0: 0px;
   --space-1: 4px;
   --space-2: 8px;
@@ -82,6 +84,10 @@
   --radius-3xl: 24px; /** Contenedores destacados */
   --radius-full: 9999px; /** CTAs, inputs pill, badges, stepper */
   --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
   --duration-fast: 150ms;
   --duration-base: 300ms;
   --duration-slow: 500ms;
@@ -94,8 +100,17 @@
   --opacity-disabled: 0.5;
   --border-width-default: 1px;
   --border-width-focus: 2px;
+  --z-index-sticky: 40; /** Barra de mínimo de compra */
+  --z-index-header: 50; /** Header, dropdowns del nav */
+  --z-index-overlay: 60; /** Scrim del carrito */
+  --z-index-mobile-menu: 65;
+  --z-index-drawer: 70; /** Panel del carrito */
+  --z-index-modal: 100; /** Bottom sheet, confirmaciones */
+  --z-index-modal-top: 110; /** Login (puede abrirse sobre otro modal) */
+  --z-index-progress: 200; /** Barra de progreso de navegación */
   --button-outline-bg: rgba(0, 0, 0, 0);
   --badge-discount-padding-y: 2px;
+  --badge-counter-min-size: 16px;
   --color-bg-default: var(--color-neutral-0); /** Página, nav, cards */
   --color-bg-subtle: var(--color-neutral-50); /** Bandas de sección, inputs secundarios */
   --color-bg-muted: var(--color-neutral-100); /** Skeletons, placeholders, chips inactivos */
@@ -105,6 +120,7 @@
   --color-bg-inverse: var(--color-neutral-900); /** Superficies oscuras */
   --color-bg-overlay: var(--color-alpha-black-50); /** Scrim de modales, drawers y fotos */
   --color-bg-overlay-strong: var(--color-alpha-black-60); /** Scrim del carrito */
+  --color-bg-external-mercadopago: var(--color-external-mercadopago); /** Solo el botón de pago de Mercado Pago */
   --color-text-default: var(--color-neutral-900); /** Títulos y cuerpo */
   --color-text-muted: var(--color-neutral-500); /** Gramaje, precio por unidad, metadatos */
   --color-text-decorative: var(--color-neutral-100); /** Numerales y flechas decorativas. Nunca información */
@@ -145,6 +161,7 @@
   --color-feedback-info-bg: var(--color-blue-50);
   --color-feedback-info-fg: var(--color-blue-700);
   --color-focus-ring: var(--color-tomato-600); /** Focus visible: 2px, offset 2px */
+  --color-focus-ring-inverse: var(--color-neutral-0); /** Focus sobre bg.accent, bg.brand, bg.inverse y fotos */
   --color-commerce-price-current: var(--color-neutral-900); /** Precio final del pack */
   --color-commerce-price-previous: var(--color-neutral-500); /** Precio anterior, tachado */
   --color-commerce-price-unit: var(--color-neutral-500); /** Precio por unidad */
@@ -155,7 +172,8 @@
   --color-commerce-badge-dietary-fg: var(--color-neutral-0); /** 5.02:1 */
   --color-commerce-shipping-free-fg: var(--color-sage-700); /** Etiqueta 'Gratis' en el resumen de compra */
   --typography-display: var(--font-weight-semibold) var(--font-size-6xl)/var(--font-line-height-6xl) var(--font-family-sans); /** Hero (h1) */
-  --typography-heading-lg: var(--font-weight-semibold) var(--font-size-3xl)/var(--font-line-height-2xl) var(--font-family-sans); /** Títulos de sección (h2) */
+  --typography-heading-xl: var(--font-weight-semibold) var(--font-size-4xl)/var(--font-line-height-4xl) var(--font-family-sans); /** Títulos de página (h1) desde md */
+  --typography-heading-lg: var(--font-weight-semibold) var(--font-size-3xl)/var(--font-line-height-2xl) var(--font-family-sans); /** Títulos de página (h1) mobile y de sección (h2) */
   --typography-heading-md: var(--font-weight-semibold) var(--font-size-xl)/var(--font-line-height-lg) var(--font-family-sans); /** Subtítulos de bloque */
   --typography-heading-sm: var(--font-weight-semibold) var(--font-size-sm)/var(--font-line-height-sm) var(--font-family-sans); /** Nombre de producto en card (h3) */
   --typography-body-md: var(--font-weight-regular) var(--font-size-md)/var(--font-line-height-md) var(--font-family-sans); /** Texto base */
@@ -164,6 +182,19 @@
   --typography-caption: var(--font-weight-regular) var(--font-size-xs)/var(--font-line-height-xs) var(--font-family-sans); /** Precio por unidad, legales */
   --motion-transition-fast: var(--duration-fast) var(--easing-standard) 0ms; /** Hover de botones y links */
   --motion-transition-base: var(--duration-base) var(--easing-standard) 0ms; /** Drawers, acordeones */
+  --elevation-subtle: var(--shadow-sm); /** Cards de contenido en reposo */
+  --elevation-card: var(--shadow-md); /** Card de producto en reposo */
+  --elevation-card-hover: var(--shadow-lg); /** Card de producto en hover, barra flotante */
+  --elevation-dropdown: var(--shadow-xl); /** Menús del nav, resultados de búsqueda */
+  --elevation-overlay: var(--shadow-2xl); /** Drawers, modales, bottom sheets */
+  --layer-sticky: var(--z-index-sticky);
+  --layer-header: var(--z-index-header);
+  --layer-overlay: var(--z-index-overlay);
+  --layer-mobile-menu: var(--z-index-mobile-menu);
+  --layer-drawer: var(--z-index-drawer);
+  --layer-modal: var(--z-index-modal);
+  --layer-modal-top: var(--z-index-modal-top);
+  --layer-progress: var(--z-index-progress);
   --button-primary-radius: var(--radius-full);
   --button-primary-height: var(--size-control-lg);
   --button-primary-padding-x: var(--space-8);
@@ -174,28 +205,46 @@
   --button-outline-padding-x: var(--space-4);
   --button-outline-padding-y: var(--space-3);
   --button-outline-font-weight: var(--font-weight-medium);
+  --button-neutral-radius: var(--radius-full);
+  --button-neutral-padding-x: var(--space-6);
+  --button-neutral-font-weight: var(--font-weight-medium); /** Acción alternativa sin peso de marca: Continuar con Google, Cancelar */
   --button-add-to-cart-radius: var(--radius-full); /** Comparte forma con stepper: se reemplazan en el mismo slot */
   --button-add-to-cart-height: var(--size-control-md);
   --button-add-to-cart-font-weight: var(--font-weight-medium);
   --button-focus-width: var(--border-width-focus);
   --button-disabled-opacity: var(--opacity-disabled);
   --button-secondary-radius: var(--radius-lg);
+  --button-secondary-height: var(--size-control-md);
+  --button-secondary-padding-x: var(--space-4);
+  --button-secondary-font-weight: var(--font-weight-medium);
+  --button-inverse-radius: var(--radius-full);
+  --button-inverse-height: var(--size-control-md);
+  --button-inverse-padding-x: var(--space-8);
+  --button-inverse-font-weight: var(--font-weight-medium); /** Sobre fotos o superficies oscuras: 'Ver productos' en categorías */
+  --button-size-md: var(--size-control-md); /** 40px: dentro de cards, drawers, inline con inputs */
+  --button-size-lg: var(--size-control-lg); /** 44px: CTAs de sección y de formulario (default) */
   --stepper-border-width: var(--border-width-default);
   --stepper-padding-x: var(--space-3); /** Mínimo para que −/+ no toquen la curva del pill */
   --stepper-hit-area: var(--size-control-md); /** Área táctil de −/+ (40×40) */
   --stepper-font-weight: var(--font-weight-medium);
-  --input-radius: var(--radius-full);
-  --input-height: var(--size-control-xl);
-  --input-padding-x: var(--space-4);
-  --input-padding-y: var(--space-3);
+  --stepper-height-lg: var(--size-control-lg); /** Variante lg (PDP) */
+  --input-form-radius: var(--radius-lg);
+  --input-form-height: var(--size-control-lg);
+  --input-form-padding-x: var(--space-3); /** Checkout, login, cupón, filtros */
+  --input-pill-radius: var(--radius-full);
+  --input-pill-height: var(--size-control-lg);
+  --input-pill-padding-x: var(--space-4); /** Búsqueda y newsletter */
   --badge-discount-radius: var(--radius-full);
   --badge-discount-padding-x: var(--space-1-5);
   --badge-discount-font-size: var(--font-size-xs);
   --badge-discount-font-weight: var(--font-weight-bold);
   --badge-dietary-radius: var(--radius-full);
   --badge-dietary-font-size: var(--font-size-2xs);
-  --card-product-radius: var(--radius-2xl);
+  --badge-counter-radius: var(--radius-full);
+  --badge-counter-font-size: var(--font-size-2xs); /** Contador del carrito y filtros. Mínimo 11px */
+  --card-product-radius: var(--radius-lg);
   --card-product-gap: var(--space-3);
+  --card-content-radius: var(--radius-2xl); /** Pasos, banners de categoría, newsletter */
   --button-primary-bg: var(--color-action-primary-bg);
   --button-primary-fg: var(--color-action-primary-fg);
   --button-primary-bg-hover: var(--color-action-primary-bg-hover);
@@ -203,6 +252,10 @@
   --button-outline-fg: var(--color-text-brand);
   --button-outline-border: var(--color-border-brand);
   --button-outline-bg-hover: var(--color-action-outline-bg-hover);
+  --button-neutral-bg: var(--color-bg-default);
+  --button-neutral-fg: var(--color-text-default);
+  --button-neutral-border: var(--color-border-default);
+  --button-neutral-bg-hover: var(--color-bg-subtle);
   --button-add-to-cart-bg: var(--color-action-primary-bg);
   --button-add-to-cart-fg: var(--color-action-primary-fg);
   --button-add-to-cart-bg-hover: var(--color-action-primary-bg-hover);
@@ -211,6 +264,9 @@
   --button-secondary-bg: var(--color-action-secondary-bg);
   --button-secondary-bg-hover: var(--color-action-secondary-bg-hover);
   --button-secondary-fg: var(--color-action-secondary-fg);
+  --button-inverse-bg: var(--color-bg-default);
+  --button-inverse-fg: var(--color-text-default);
+  --button-inverse-bg-hover: var(--color-bg-subtle);
   --stepper-bg: var(--color-bg-default);
   --stepper-fg: var(--color-text-default);
   --stepper-icon: var(--color-text-brand);
@@ -219,16 +275,27 @@
   --stepper-height: var(--button-add-to-cart-height);
   --stepper-transition: var(--motion-transition-fast);
   --stepper-bg-hover: var(--color-action-outline-bg-hover); /** Hover sobre −/+ */
-  --input-bg: var(--color-bg-default);
-  --input-fg: var(--color-text-default);
-  --input-border: var(--color-border-default);
+  --input-form-bg: var(--color-bg-subtle);
+  --input-form-fg: var(--color-text-default);
+  --input-form-border: var(--color-border-default);
+  --input-form-border-focus: var(--color-border-strong);
+  --input-pill-bg: var(--color-bg-default);
+  --input-pill-fg: var(--color-text-default);
+  --input-pill-border: var(--color-border-default);
+  --input-pill-border-focus: var(--color-border-strong);
   --badge-discount-bg: var(--color-commerce-discount-bg);
   --badge-discount-fg: var(--color-commerce-discount-fg);
   --badge-discount-border: var(--color-commerce-discount-border);
   --badge-dietary-bg: var(--color-commerce-badge-dietary-bg);
   --badge-dietary-fg: var(--color-commerce-badge-dietary-fg);
+  --badge-counter-bg: var(--color-bg-brand);
+  --badge-counter-fg: var(--color-text-inverse);
   --card-product-bg: var(--color-bg-default);
   --card-product-border: var(--color-border-default);
+  --card-product-shadow: var(--elevation-card);
+  --card-product-shadow-hover: var(--elevation-card-hover);
+  --card-content-border: var(--color-border-default);
+  --card-content-shadow: var(--elevation-subtle);
 
   /* Canales RGB para modificadores de opacidad de Tailwind */
   --color-neutral-0-rgb: 255 255 255;
@@ -254,6 +321,7 @@
   --color-amber-800-rgb: 146 64 14;
   --color-blue-50-rgb: 239 246 255;
   --color-blue-700-rgb: 29 78 216;
+  --color-external-mercadopago-rgb: 0 158 227;
   --color-bg-default-rgb: 255 255 255;
   --color-bg-subtle-rgb: 245 245 245;
   --color-bg-muted-rgb: 228 228 228;
@@ -261,6 +329,7 @@
   --color-bg-brand-subtle-rgb: 254 242 242;
   --color-bg-accent-rgb: 21 128 61;
   --color-bg-inverse-rgb: 26 26 26;
+  --color-bg-external-mercadopago-rgb: 0 158 227;
   --color-text-default-rgb: 26 26 26;
   --color-text-muted-rgb: 107 107 107;
   --color-text-decorative-rgb: 228 228 228;
@@ -299,6 +368,7 @@
   --color-feedback-info-bg-rgb: 239 246 255;
   --color-feedback-info-fg-rgb: 29 78 216;
   --color-focus-ring-rgb: 227 6 19;
+  --color-focus-ring-inverse-rgb: 255 255 255;
   --color-commerce-price-current-rgb: 26 26 26;
   --color-commerce-price-previous-rgb: 107 107 107;
   --color-commerce-price-unit-rgb: 107 107 107;
@@ -315,6 +385,10 @@
   --button-outline-fg-rgb: 227 6 19;
   --button-outline-border-rgb: 227 6 19;
   --button-outline-bg-hover-rgb: 254 242 242;
+  --button-neutral-bg-rgb: 255 255 255;
+  --button-neutral-fg-rgb: 26 26 26;
+  --button-neutral-border-rgb: 228 228 228;
+  --button-neutral-bg-hover-rgb: 245 245 245;
   --button-add-to-cart-bg-rgb: 227 6 19;
   --button-add-to-cart-fg-rgb: 255 255 255;
   --button-add-to-cart-bg-hover-rgb: 194 5 16;
@@ -323,19 +397,30 @@
   --button-secondary-bg-rgb: 26 26 26;
   --button-secondary-bg-hover-rgb: 107 107 107;
   --button-secondary-fg-rgb: 255 255 255;
+  --button-inverse-bg-rgb: 255 255 255;
+  --button-inverse-fg-rgb: 26 26 26;
+  --button-inverse-bg-hover-rgb: 245 245 245;
   --stepper-bg-rgb: 255 255 255;
   --stepper-fg-rgb: 26 26 26;
   --stepper-icon-rgb: 227 6 19;
   --stepper-border-rgb: 227 6 19;
   --stepper-bg-hover-rgb: 254 242 242;
-  --input-bg-rgb: 255 255 255;
-  --input-fg-rgb: 26 26 26;
-  --input-border-rgb: 228 228 228;
+  --input-form-bg-rgb: 245 245 245;
+  --input-form-fg-rgb: 26 26 26;
+  --input-form-border-rgb: 228 228 228;
+  --input-form-border-focus-rgb: 26 26 26;
+  --input-pill-bg-rgb: 255 255 255;
+  --input-pill-fg-rgb: 26 26 26;
+  --input-pill-border-rgb: 228 228 228;
+  --input-pill-border-focus-rgb: 26 26 26;
   --badge-discount-bg-rgb: 255 255 255;
   --badge-discount-fg-rgb: 227 6 19;
   --badge-discount-border-rgb: 227 6 19;
   --badge-dietary-bg-rgb: 21 128 61;
   --badge-dietary-fg-rgb: 255 255 255;
+  --badge-counter-bg-rgb: 227 6 19;
+  --badge-counter-fg-rgb: 255 255 255;
   --card-product-bg-rgb: 255 255 255;
   --card-product-border-rgb: 228 228 228;
+  --card-content-border-rgb: 228 228 228;
 }

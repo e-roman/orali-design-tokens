@@ -115,6 +115,12 @@
       "700": {
         "$value": "#1D4ED8"
       }
+    },
+    "external": {
+      "mercadopago": {
+        "$value": "#009EE3",
+        "$description": "Marca de terceros. Blanco encima: 3.0:1 (no AA en texto normal)"
+      }
     }
   },
   "font": {
@@ -201,6 +207,9 @@
       },
       "6xl": {
         "$value": "60px"
+      },
+      "4xl": {
+        "$value": "40px"
       }
     }
   },
@@ -309,6 +318,69 @@
         "spread": "0px",
         "color": "rgba(0, 0, 0, 0.05)"
       }
+    },
+    "md": {
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "3px",
+          "spread": "0px",
+          "color": "rgba(0, 0, 0, 0.1)"
+        },
+        {
+          "offsetX": "0px",
+          "offsetY": "1px",
+          "blur": "2px",
+          "spread": "-1px",
+          "color": "rgba(0, 0, 0, 0.1)"
+        }
+      ]
+    },
+    "lg": {
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "10px",
+          "blur": "15px",
+          "spread": "-3px",
+          "color": "rgba(0, 0, 0, 0.1)"
+        },
+        {
+          "offsetX": "0px",
+          "offsetY": "4px",
+          "blur": "6px",
+          "spread": "-4px",
+          "color": "rgba(0, 0, 0, 0.1)"
+        }
+      ]
+    },
+    "xl": {
+      "$value": [
+        {
+          "offsetX": "0px",
+          "offsetY": "20px",
+          "blur": "25px",
+          "spread": "-5px",
+          "color": "rgba(0, 0, 0, 0.1)"
+        },
+        {
+          "offsetX": "0px",
+          "offsetY": "8px",
+          "blur": "10px",
+          "spread": "-6px",
+          "color": "rgba(0, 0, 0, 0.1)"
+        }
+      ]
+    },
+    "2xl": {
+      "$value": {
+        "offsetX": "0px",
+        "offsetY": "25px",
+        "blur": "50px",
+        "spread": "-12px",
+        "color": "rgba(0, 0, 0, 0.25)"
+      }
     }
   },
   "duration": {
@@ -370,6 +442,40 @@
     },
     "focus": {
       "$value": "2px"
+    }
+  },
+  "z-index": {
+    "$type": "number",
+    "sticky": {
+      "$value": 40,
+      "$description": "Barra de mínimo de compra"
+    },
+    "header": {
+      "$value": 50,
+      "$description": "Header, dropdowns del nav"
+    },
+    "overlay": {
+      "$value": 60,
+      "$description": "Scrim del carrito"
+    },
+    "mobile-menu": {
+      "$value": 65
+    },
+    "drawer": {
+      "$value": 70,
+      "$description": "Panel del carrito"
+    },
+    "modal": {
+      "$value": 100,
+      "$description": "Bottom sheet, confirmaciones"
+    },
+    "modal-top": {
+      "$value": 110,
+      "$description": "Login (puede abrirse sobre otro modal)"
+    },
+    "progress": {
+      "$value": 200,
+      "$description": "Barra de progreso de navegación"
     }
   }
 }

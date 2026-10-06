@@ -10,6 +10,26 @@ module.exports = {
       "3xl": "var(--radius-3xl)",
       "full": "var(--radius-full)"
     },
+    "boxShadow": {
+      "none": "none",
+      "subtle": "var(--elevation-subtle)",
+      "card": "var(--elevation-card)",
+      "card-hover": "var(--elevation-card-hover)",
+      "dropdown": "var(--elevation-dropdown)",
+      "overlay": "var(--elevation-overlay)"
+    },
+    "zIndex": {
+      "0": "0",
+      "auto": "auto",
+      "sticky": "var(--layer-sticky)",
+      "header": "var(--layer-header)",
+      "overlay": "var(--layer-overlay)",
+      "mobile-menu": "var(--layer-mobile-menu)",
+      "drawer": "var(--layer-drawer)",
+      "modal": "var(--layer-modal)",
+      "modal-top": "var(--layer-modal-top)",
+      "progress": "var(--layer-progress)"
+    },
     "extend": {
       "colors": {
         "neutral": {
@@ -46,6 +66,9 @@ module.exports = {
         "blue": {
           "50": "rgb(var(--color-blue-50-rgb) / <alpha-value>)",
           "700": "rgb(var(--color-blue-700-rgb) / <alpha-value>)"
+        },
+        "external": {
+          "mercadopago": "rgb(var(--color-external-mercadopago-rgb) / <alpha-value>)"
         }
       },
       "backgroundColor": {
@@ -58,6 +81,7 @@ module.exports = {
         "inverse": "rgb(var(--color-bg-inverse-rgb) / <alpha-value>)",
         "overlay": "var(--color-bg-overlay)",
         "overlay-strong": "var(--color-bg-overlay-strong)",
+        "external-mercadopago": "rgb(var(--color-bg-external-mercadopago-rgb) / <alpha-value>)",
         "action-primary": "rgb(var(--color-action-primary-bg-rgb) / <alpha-value>)",
         "action-primary-hover": "rgb(var(--color-action-primary-bg-hover-rgb) / <alpha-value>)",
         "action-primary-active": "rgb(var(--color-action-primary-bg-active-rgb) / <alpha-value>)",
@@ -122,13 +146,80 @@ module.exports = {
         "error": "rgb(var(--color-feedback-error-border-rgb) / <alpha-value>)",
         "warning": "rgb(var(--color-feedback-warning-border-rgb) / <alpha-value>)",
         "discount": "rgb(var(--color-commerce-discount-border-rgb) / <alpha-value>)",
-        "focus": "rgb(var(--color-focus-ring-rgb) / <alpha-value>)"
+        "focus": "rgb(var(--color-focus-ring-rgb) / <alpha-value>)",
+        "focus-inverse": "rgb(var(--color-focus-ring-inverse-rgb) / <alpha-value>)"
       },
       "outlineColor": {
-        "focus": "rgb(var(--color-focus-ring-rgb) / <alpha-value>)"
+        "focus": "rgb(var(--color-focus-ring-rgb) / <alpha-value>)",
+        "focus-inverse": "rgb(var(--color-focus-ring-inverse-rgb) / <alpha-value>)"
       },
       "gradientColorStops": {
         "scrim": "rgb(var(--color-neutral-900-rgb) / <alpha-value>)"
+      },
+      "fontSize": {
+        "display": [
+          "var(--font-size-6xl)",
+          {
+            "lineHeight": "var(--font-line-height-6xl)",
+            "fontWeight": "var(--font-weight-semibold)"
+          }
+        ],
+        "heading-xl": [
+          "var(--font-size-4xl)",
+          {
+            "lineHeight": "var(--font-line-height-4xl)",
+            "fontWeight": "var(--font-weight-semibold)"
+          }
+        ],
+        "heading-lg": [
+          "var(--font-size-3xl)",
+          {
+            "lineHeight": "var(--font-line-height-2xl)",
+            "fontWeight": "var(--font-weight-semibold)"
+          }
+        ],
+        "heading-md": [
+          "var(--font-size-xl)",
+          {
+            "lineHeight": "var(--font-line-height-lg)",
+            "fontWeight": "var(--font-weight-semibold)"
+          }
+        ],
+        "heading-sm": [
+          "var(--font-size-sm)",
+          {
+            "lineHeight": "var(--font-line-height-sm)",
+            "fontWeight": "var(--font-weight-semibold)"
+          }
+        ],
+        "body-md": [
+          "var(--font-size-md)",
+          {
+            "lineHeight": "var(--font-line-height-md)",
+            "fontWeight": "var(--font-weight-regular)"
+          }
+        ],
+        "body-sm": [
+          "var(--font-size-sm)",
+          {
+            "lineHeight": "var(--font-line-height-sm)",
+            "fontWeight": "var(--font-weight-regular)"
+          }
+        ],
+        "label": [
+          "var(--font-size-sm)",
+          {
+            "lineHeight": "var(--font-line-height-sm)",
+            "fontWeight": "var(--font-weight-medium)"
+          }
+        ],
+        "caption": [
+          "var(--font-size-xs)",
+          {
+            "lineHeight": "var(--font-line-height-xs)",
+            "fontWeight": "var(--font-weight-regular)"
+          }
+        ]
       },
       "fontFamily": {
         "sans": [

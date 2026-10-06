@@ -49,19 +49,22 @@ Components consume semantic tokens only. The CSS output keeps the reference chai
 
 ---
 
-## Collections (226 tokens)
+## Collections (293 tokens)
 
 | Collection | Tokens | Description |
 |---|---|---|
-| `color` (primitive) | 29 | tomato, sage, neutral, plus amber/blue for feedback only, alpha |
-| `color` (semantic) | 49 | bg, text, border, action, feedback, focus |
+| `color` (primitive) | 30 | tomato, sage, neutral, plus amber/blue for feedback only, alpha, external (Mercado Pago) |
+| `color` (semantic) | 51 | bg, text, border, action, feedback, focus (+ inverse ring) |
 | `color.commerce` | 9 | price, discount, dietary badge, free shipping |
-| `font` + `typography` | 31 | Montserrat, 4 weights, size and line-height scales, 8 composite styles |
+| `font` + `typography` | 33 | Montserrat, 4 weights, size and line-height scales, 9 composite styles |
 | `space` + `size` + `breakpoint` | 22 | base-4 scale, control heights, container, breakpoints |
 | `radius` | 7 | none → full, aligned with Tailwind names |
-| `border-width` + `opacity` + `shadow` | 4 | default/focus widths, disabled opacity, sm shadow |
+| `shadow` + `elevation` | 10 | 5 primitives → subtle, card, card-hover, dropdown, overlay |
+| `z-index` + `layer` | 16 | sticky → header → overlay → drawer → modal → progress |
+| `border-width` + `opacity` | 3 | default/focus widths, disabled opacity |
 | `duration` + `easing` + `motion` | 8 | 150–1000 ms, standard easing, transitions |
-| component | 67 | button (primary, outline, add-to-cart, secondary), stepper, input, badge, card |
+| component | 104 | button (primary, add-to-cart, secondary, outline, neutral, inverse, sizes), stepper, input (form, pill), badge (discount, dietary, counter), card (product, content) |
+
 
 ---
 
@@ -149,6 +152,10 @@ export default {
 | `color.feedback.{kind}.*` | `bg-success-subtle`, `bg-success`, `text-error`, `border-warning` |
 | `color.commerce.*` | `text-price-current`, `bg-discount`, `bg-badge-dietary`, `text-shipping-free` |
 | `radius.*` | `rounded-lg`, `rounded-2xl`, `rounded-full` (replaces Tailwind's scale) |
+| `elevation.*` | `shadow-subtle`, `shadow-card`, `shadow-card-hover`, `shadow-dropdown`, `shadow-overlay` (replaces Tailwind's scale) |
+| `layer.*` | `z-sticky`, `z-header`, `z-overlay`, `z-drawer`, `z-modal`, `z-modal-top`, `z-progress` (replaces Tailwind's scale) |
+| `typography.*` | `text-display`, `text-heading-xl`, `text-heading-lg`, `text-body-md`, `text-label`, `text-caption`… (size + line-height + weight) |
+| `color.focus.ring-inverse` | `outline-focus-inverse`, `ring-focus-inverse` (focus on dark/green surfaces and photos) |
 
 **Opacity modifiers work.** Every opaque color also ships as RGB channels (`--color-bg-muted-rgb: 228 228 228`), so `bg-muted/70` and `from-scrim/95` compile. With plain `var()` colors, Tailwind 3 drops those classes without a warning. That was happening on the site before the migration: hero and category image gradients never rendered.
 

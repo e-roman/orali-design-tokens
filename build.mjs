@@ -34,6 +34,9 @@ StyleDictionary.registerFormat({
  *   color.action.primary.* → bg-action-primary, hover:bg-action-primary-hover, text-on-primary
  *   color.feedback.*       → bg-success-subtle, text-error, border-warning …
  *   color.commerce.*       → text-price-current, bg-discount, bg-badge-dietary, text-shipping-free
+ *   elevation.*            → shadow-card, shadow-dropdown, shadow-overlay (reemplaza la escala)
+ *   layer.*                → z-header, z-drawer, z-modal (reemplaza la escala)
+ *   typography.*           → text-heading-lg, text-body-sm, text-caption (tamaño + interlineado + peso)
  */
 StyleDictionary.registerFormat({
   name: 'tailwind/preset',
@@ -74,6 +77,8 @@ StyleDictionary.registerFormat({
     const focus = sem.find((t) => t.path.join('.') === 'color.focus.ring');
     Object.assign(ringColor, borderColor);
     ringColor.focus = ref(focus);
+    const focusInverse = sem.find((t) => t.path.join('.') === 'color.focus.ring-inverse');
+    ringColor['focus-inverse'] = ref(focusInverse);
 
     // Primitivos: disponibles para casos puntuales (ilustración, gradientes). La UI usa semánticos.
     const colors = {};
@@ -92,17 +97,34 @@ StyleDictionary.registerFormat({
       borderRadius[t.path[1] === 'sm' ? 'DEFAULT' : t.path[1]] = `var(--${t.name})`;
     }
 
+    // Elevación y capas: reemplazan las escalas de Tailwind → solo existen los niveles del sistema.
+    const boxShadow = { none: 'none' };
+    for (const t of all.filter((t) => t.path[0] === 'elevation')) boxShadow[t.path[1]] = `var(--${t.name})`;
+    const zIndex = { auto: 'auto', 0: '0' };
+    for (const t of all.filter((t) => t.path[0] === 'layer')) zIndex[t.path[1]] = `var(--${t.name})`;
+
+    // Estilos tipográficos compuestos → text-heading-lg, text-body-sm… (tamaño + interlineado + peso)
+    const fontSize = {};
+    for (const t of all.filter((t) => t.path[0] === 'typography')) {
+      const v = t.original.$value;
+      const r = (x) => `var(--${x.slice(1, -1).replace(/\./g, '-')})`;
+      fontSize[t.path[1]] = [r(v.fontSize), { lineHeight: r(v.lineHeight), fontWeight: r(v.fontWeight) }];
+    }
+
     const preset = {
       theme: {
         borderRadius,
+        boxShadow,
+        zIndex,
         extend: {
           colors,
           backgroundColor,
           textColor,
           borderColor,
           ringColor,
-          outlineColor: { focus: ref(focus) },
+          outlineColor: { focus: ref(focus), 'focus-inverse': ref(focusInverse) },
           gradientColorStops,
+          fontSize,
           fontFamily: { sans: ['var(--font-family-sans)'] },
           maxWidth: { container: 'var(--size-container)' },
         },
