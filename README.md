@@ -49,7 +49,7 @@ Components consume semantic tokens only. The CSS output keeps the reference chai
 
 ---
 
-## Collections (293 tokens)
+## Collections (298 tokens)
 
 | Collection | Tokens | Description |
 |---|---|---|
@@ -57,13 +57,13 @@ Components consume semantic tokens only. The CSS output keeps the reference chai
 | `color` (semantic) | 51 | bg, text, border, action, feedback, focus (+ inverse ring) |
 | `color.commerce` | 9 | price, discount, dietary badge, free shipping |
 | `font` + `typography` | 33 | Montserrat, 4 weights, size and line-height scales, 9 composite styles |
-| `space` + `size` + `breakpoint` | 22 | base-4 scale, control heights, container, breakpoints |
+| `space` + `size` + `breakpoint` | 23 | base-4 scale, control heights, container, breakpoints |
 | `radius` | 7 | none → full, aligned with Tailwind names |
 | `shadow` + `elevation` | 10 | 5 primitives → subtle, card, card-hover, dropdown, overlay |
 | `z-index` + `layer` | 16 | sticky → header → overlay → drawer → modal → progress |
 | `border-width` + `opacity` | 3 | default/focus widths, disabled opacity |
 | `duration` + `easing` + `motion` | 8 | 150–1000 ms, standard easing, transitions |
-| component | 104 | button (primary, add-to-cart, secondary, outline, neutral, inverse, sizes), stepper, input (form, pill), badge (discount, dietary, counter), card (product, content) |
+| component | 108 | button (shape, primary, add-to-cart, secondary, outline, neutral, inverse, sizes), stepper (sm/md/lg), input (form, pill), badge (discount, dietary, counter), card (product, content) |
 
 
 ---
@@ -79,6 +79,12 @@ Components consume semantic tokens only. The CSS output keeps the reference chai
 | `color.action.secondary.bg` | `neutral.900` (#1A1A1A) | Dark secondary actions: apply coupon, checkout steps |
 | `color.bg.accent` | `sage.700` (#15803D) | Top bar, green surfaces with text |
 | `color.focus.ring` | `tomato.600` | 2px focus outline, 2px offset |
+
+### Shape
+| Token | Value | Use |
+|---|---|---|
+| `button.shape.default` | `radius.lg` (8px) | Purchase and UI actions: Add to cart, stepper, checkout, forms, empty states |
+| `button.shape.pill` | `radius.full` | Marketing only: hero, category banners, newsletter. Filters use `rounded-full` too |
 
 ### Commerce (e-commerce specific)
 | Token | Value | Use |
@@ -135,7 +141,7 @@ export default {
 ```
 
 ```tsx
-<button className="h-10 w-full rounded-full bg-action-primary text-on-primary hover:bg-action-primary-hover">
+<button className="h-10 w-full rounded-lg bg-action-primary text-on-primary hover:bg-action-primary-hover">
   Agregar
 </button>
 <span className="text-price-current">$ 12.600</span>
@@ -201,7 +207,8 @@ npm run build
 | 12 opacity-modified classes (39 usages) silently dropped | Compiled via RGB channels |
 | Hover = `opacity: 0.9` | Hover = `action.primary.bg-hover` |
 | 7 border radii, including Tailwind's `md` (6px) | 6 radii, enforced by the preset |
-| Add to cart (8px) ≠ quantity stepper (8px), CTAs (pill) | Add to cart + stepper share `radius.full` and height |
+| Mixed radii with no rule: pill on some purchase actions, 8px on others | Two shapes with a rule: 8px (`button.shape.default`) for purchase and UI actions, pill (`button.shape.pill`) only for marketing CTAs and filters |
+| One stepper size everywhere | Stepper sm 32px (cart, drawer), md 40px (card, shares slot with Add to cart), lg 44px (product page) |
 | Green text on white at 4.08:1 | `sage.700` at 5.02:1 |
 
 Verified with before/after screenshots across 9 routes × 2 viewports: pixel-identical except for the intended changes.
@@ -217,7 +224,7 @@ Color tokens are audited against WCAG 2.1 AA:
 - White on `action.accent.bg` / `commerce.badge-dietary.bg` (`sage.700`): 5.02:1
 - `sage.600` (#1A9139) is kept as a brand color for illustration only: 4.08:1 with white
 - Focus: 2px `focus.ring` with 2px offset, `:focus-visible` only
-- Touch targets: primary and outline buttons 44px (`size.control.lg`)
+- Touch targets: primary and outline buttons 44px (`size.control.lg`); compact stepper buttons 32×32 (above the 24px WCAG 2.2 minimum)
 
 ---
 

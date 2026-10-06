@@ -261,6 +261,10 @@
   "size": {
     "$type": "dimension",
     "control": {
+      "xs": {
+        "$value": "32px",
+        "$description": "Stepper compacto (carrito, drawer)"
+      },
       "sm": {
         "$value": "38px"
       },

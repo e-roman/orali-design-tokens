@@ -46,7 +46,7 @@ export default { presets: [oraliTokens], content: [...] }
 ```
 
 ```jsx
-<button className="rounded-full bg-action-primary text-on-primary hover:bg-action-primary-hover">Agregar</button>
+<button className="rounded-lg bg-action-primary text-on-primary hover:bg-action-primary-hover">Agregar</button>
 <p className="text-muted">$ 4.200 por unidad</p>
 ```
 

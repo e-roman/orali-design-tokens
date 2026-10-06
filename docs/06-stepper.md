@@ -29,14 +29,18 @@ El cambio botón ↔ stepper es un **cambio de estado del mismo control**, no do
 | Texto cantidad | `stepper.fg` | neutral.900 |
 | Iconos −/+ | `stepper.icon` | tomato.600 |
 | Borde | `stepper.border` / `stepper.border-width` | tomato.600 / 1px |
-| Radius | `stepper.radius` → `button.add-to-cart.radius` | 9999px |
-| Altura | `stepper.height` → `button.add-to-cart.height` | 40px |
+| Radius | `stepper.radius` → `button.add-to-cart.radius` | 8px |
+| Altura sm | `stepper.height-sm` → `size.control.xs` | 32px (carrito, drawer) |
+| Altura md | `stepper.height` → `button.add-to-cart.height` | 40px (card) |
+| Altura lg | `stepper.height-lg` → `size.control.lg` | 44px (PDP) |
 | Padding horizontal | `stepper.padding-x` | 12px |
-| Área táctil −/+ | `stepper.hit-area` | 40×40px |
+| Área táctil −/+ | `stepper.hit-area` / `stepper.hit-area-sm` | 40×40px / 32×32px en sm |
 | Tipografía | `typography.label` | 14 / 500 |
 | Transición | `stepper.transition` | 150ms standard |
 
 `stepper.radius` y `stepper.height` **referencian** los tokens del botón: si cambia el botón, el stepper lo sigue.
+
+El tamaño acompaña la densidad del contexto: en el carrito y el drawer el stepper es una línea más de la fila (sm), en la card reemplaza al botón Agregar (md) y en la PDP es la acción principal (lg).
 
 ## Estados
 

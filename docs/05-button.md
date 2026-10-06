@@ -20,8 +20,21 @@ Los botones disparan acciones. Orali tiene tres variantes, cada una con un rol c
 | Borde | — | — | 1px `border.brand` |
 | Altura | 44px (`size.control.lg`) | 40px (`size.control.md`) | 44px (`size.control.lg`) |
 | Padding | 12 / 32 | full-width | 12 / 16 |
-| Radius | `radius.full` | `radius.full` | `radius.full` |
+| Radius | `button.shape.default` → 8px | `button.shape.default` → 8px | `button.shape.default` → 8px |
 | Tipografía | 14 / 600 | 14 / 500 | 14 / 500 |
+
+## Forma: jerarquía de radius
+
+El radius separa **marketing** de **compra**. Mezclar las dos formas en una misma pantalla de compra borra la jerarquía.
+
+| Forma | Token | Dónde |
+|---|---|---|
+| **Default, 8px** | `button.shape.default` → `radius.lg` | Agregar, Stepper, Finalizar compra, Continuar con el pago, Aplicar cupón, Ingresar, estados vacíos, formularios |
+| **Pill** | `button.shape.pill` → `radius.full` | CTAs de hero, banners de categoría ("Ver productos"), newsletter ("Suscribirme"), filtros/chips |
+
+En código: `<Button shape="pill">` o `buttonClasses({ shape: "pill" })`. La variante `inverse` (botón blanco sobre foto) ya es pill.
+
+Badges (`-15%`, Vegano, Sin TACC) no son botones: usan `radius.sm` y no compiten con los CTAs.
 
 ## Estados
 
@@ -43,6 +56,7 @@ Los botones disparan acciones. Orali tiene tres variantes, cada una con un rol c
 **Don't**
 - Usar sage como fondo de CTA de compra.
 - Cambiar el radius de Add to cart sin cambiar el del Stepper: comparten slot y forma.
+- Usar pill en acciones de compra o de formulario. Pill es solo marketing y filtros.
 
 ## Accesibilidad
 

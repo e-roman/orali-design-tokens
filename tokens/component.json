@@ -11,7 +11,7 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.full}"
+        "$value": "{button.shape.default}"
       },
       "height": {
         "$type": "dimension",
@@ -53,7 +53,7 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.full}"
+        "$value": "{button.shape.default}"
       },
       "height": {
         "$type": "dimension",
@@ -96,7 +96,7 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.full}"
+        "$value": "{button.shape.default}"
       },
       "padding-x": {
         "$type": "dimension",
@@ -119,7 +119,7 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.full}",
+        "$value": "{button.shape.default}",
         "$description": "Comparte forma con stepper: se reemplazan en el mismo slot"
       },
       "height": {
@@ -166,7 +166,7 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.lg}"
+        "$value": "{button.shape.default}"
       },
       "height": {
         "$type": "dimension",
@@ -196,7 +196,8 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.full}"
+        "$value": "{button.shape.pill}",
+        "$description": "Va sobre fotos de banners: siempre pill"
       },
       "height": {
         "$type": "dimension",
@@ -222,6 +223,18 @@
         "$type": "dimension",
         "$value": "{size.control.lg}",
         "$description": "44px: CTAs de sección y de formulario (default)"
+      }
+    },
+    "shape": {
+      "default": {
+        "$type": "dimension",
+        "$value": "{radius.lg}",
+        "$description": "Acciones de compra y de UI: agregar, checkout, formularios, estados vacíos"
+      },
+      "pill": {
+        "$type": "dimension",
+        "$value": "{radius.full}",
+        "$description": "Solo marketing: CTAs de hero, banners y newsletter"
       }
     }
   },
@@ -282,6 +295,16 @@
       "$type": "dimension",
       "$value": "{size.control.lg}",
       "$description": "Variante lg (PDP)"
+    },
+    "height-sm": {
+      "$type": "dimension",
+      "$value": "{size.control.xs}",
+      "$description": "Carrito y drawer"
+    },
+    "hit-area-sm": {
+      "$type": "dimension",
+      "$value": "{size.control.xs}",
+      "$description": "Área de −/+ en el tamaño sm (32×32, mínimo WCAG 24)"
     }
   },
   "input": {

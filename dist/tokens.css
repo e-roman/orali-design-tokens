@@ -71,6 +71,7 @@
   --space-14: 56px;
   --space-16: 64px;
   --space-1-5: 6px;
+  --size-control-xs: 32px; /** Stepper compacto (carrito, drawer) */
   --size-control-sm: 38px;
   --size-control-md: 40px;
   --size-control-lg: 44px;
@@ -195,39 +196,37 @@
   --layer-modal: var(--z-index-modal);
   --layer-modal-top: var(--z-index-modal-top);
   --layer-progress: var(--z-index-progress);
-  --button-primary-radius: var(--radius-full);
   --button-primary-height: var(--size-control-lg);
   --button-primary-padding-x: var(--space-8);
   --button-primary-padding-y: var(--space-3);
   --button-primary-font-weight: var(--font-weight-semibold);
-  --button-outline-radius: var(--radius-full);
   --button-outline-height: var(--size-control-lg); /** 38 → 44px: target táctil mínimo en mobile */
   --button-outline-padding-x: var(--space-4);
   --button-outline-padding-y: var(--space-3);
   --button-outline-font-weight: var(--font-weight-medium);
-  --button-neutral-radius: var(--radius-full);
   --button-neutral-padding-x: var(--space-6);
   --button-neutral-font-weight: var(--font-weight-medium); /** Acción alternativa sin peso de marca: Continuar con Google, Cancelar */
-  --button-add-to-cart-radius: var(--radius-full); /** Comparte forma con stepper: se reemplazan en el mismo slot */
   --button-add-to-cart-height: var(--size-control-md);
   --button-add-to-cart-font-weight: var(--font-weight-medium);
   --button-focus-width: var(--border-width-focus);
   --button-disabled-opacity: var(--opacity-disabled);
-  --button-secondary-radius: var(--radius-lg);
   --button-secondary-height: var(--size-control-md);
   --button-secondary-padding-x: var(--space-4);
   --button-secondary-font-weight: var(--font-weight-medium);
-  --button-inverse-radius: var(--radius-full);
   --button-inverse-height: var(--size-control-md);
   --button-inverse-padding-x: var(--space-8);
   --button-inverse-font-weight: var(--font-weight-medium); /** Sobre fotos o superficies oscuras: 'Ver productos' en categorías */
   --button-size-md: var(--size-control-md); /** 40px: dentro de cards, drawers, inline con inputs */
   --button-size-lg: var(--size-control-lg); /** 44px: CTAs de sección y de formulario (default) */
+  --button-shape-default: var(--radius-lg); /** Acciones de compra y de UI: agregar, checkout, formularios, estados vacíos */
+  --button-shape-pill: var(--radius-full); /** Solo marketing: CTAs de hero, banners y newsletter */
   --stepper-border-width: var(--border-width-default);
   --stepper-padding-x: var(--space-3); /** Mínimo para que −/+ no toquen la curva del pill */
   --stepper-hit-area: var(--size-control-md); /** Área táctil de −/+ (40×40) */
   --stepper-font-weight: var(--font-weight-medium);
   --stepper-height-lg: var(--size-control-lg); /** Variante lg (PDP) */
+  --stepper-height-sm: var(--size-control-xs); /** Carrito y drawer */
+  --stepper-hit-area-sm: var(--size-control-xs); /** Área de −/+ en el tamaño sm (32×32, mínimo WCAG 24) */
   --input-form-radius: var(--radius-lg);
   --input-form-height: var(--size-control-lg);
   --input-form-padding-x: var(--space-3); /** Checkout, login, cupón, filtros */
@@ -247,31 +246,36 @@
   --card-content-radius: var(--radius-2xl); /** Pasos, banners de categoría, newsletter */
   --button-primary-bg: var(--color-action-primary-bg);
   --button-primary-fg: var(--color-action-primary-fg);
+  --button-primary-radius: var(--button-shape-default);
   --button-primary-bg-hover: var(--color-action-primary-bg-hover);
   --button-primary-bg-active: var(--color-action-primary-bg-active);
   --button-outline-fg: var(--color-text-brand);
   --button-outline-border: var(--color-border-brand);
+  --button-outline-radius: var(--button-shape-default);
   --button-outline-bg-hover: var(--color-action-outline-bg-hover);
   --button-neutral-bg: var(--color-bg-default);
   --button-neutral-fg: var(--color-text-default);
   --button-neutral-border: var(--color-border-default);
   --button-neutral-bg-hover: var(--color-bg-subtle);
+  --button-neutral-radius: var(--button-shape-default);
   --button-add-to-cart-bg: var(--color-action-primary-bg);
   --button-add-to-cart-fg: var(--color-action-primary-fg);
+  --button-add-to-cart-radius: var(--button-shape-default); /** Comparte forma con stepper: se reemplazan en el mismo slot */
   --button-add-to-cart-bg-hover: var(--color-action-primary-bg-hover);
   --button-add-to-cart-bg-active: var(--color-action-primary-bg-active);
   --button-focus-ring: var(--color-focus-ring);
   --button-secondary-bg: var(--color-action-secondary-bg);
   --button-secondary-bg-hover: var(--color-action-secondary-bg-hover);
   --button-secondary-fg: var(--color-action-secondary-fg);
+  --button-secondary-radius: var(--button-shape-default);
   --button-inverse-bg: var(--color-bg-default);
   --button-inverse-fg: var(--color-text-default);
   --button-inverse-bg-hover: var(--color-bg-subtle);
+  --button-inverse-radius: var(--button-shape-pill); /** Va sobre fotos de banners: siempre pill */
   --stepper-bg: var(--color-bg-default);
   --stepper-fg: var(--color-text-default);
   --stepper-icon: var(--color-text-brand);
   --stepper-border: var(--color-border-brand);
-  --stepper-radius: var(--button-add-to-cart-radius); /** Siempre igual al botón Agregar */
   --stepper-height: var(--button-add-to-cart-height);
   --stepper-transition: var(--motion-transition-fast);
   --stepper-bg-hover: var(--color-action-outline-bg-hover); /** Hover sobre −/+ */
@@ -296,6 +300,7 @@
   --card-product-shadow-hover: var(--elevation-card-hover);
   --card-content-border: var(--color-border-default);
   --card-content-shadow: var(--elevation-subtle);
+  --stepper-radius: var(--button-add-to-cart-radius); /** Siempre igual al botón Agregar */
 
   /* Canales RGB para modificadores de opacidad de Tailwind */
   --color-neutral-0-rgb: 255 255 255;

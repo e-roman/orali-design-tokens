@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.2.0
+
+Radius hierarchy: pill stops being the default button shape.
+
+Added
+- `button.shape.default` (`radius.lg`, 8px) and `button.shape.pill` (`radius.full`)
+- `size.control.xs` (32px)
+- `stepper.height-sm` and `stepper.hit-area-sm` for cart and drawer
+
+Changed
+- `button.{primary,add-to-cart,secondary,outline,neutral}.radius`: `radius.full` → `button.shape.default` (8px). `stepper.radius` follows add-to-cart.
+- `button.inverse.radius` → `button.shape.pill` (stays pill: it sits on banner photos)
+
+Migration: marketing CTAs (hero, category banners, newsletter) add `shape="pill"`. Cart and drawer steppers use `size="sm"`.
+
 ## 1.1.0
 
 **Breaking for consumers:** `boxShadow` and `zIndex` now *replace* Tailwind's scales. `shadow-sm|lg|xl|2xl` and `z-40|z-50` stop generating. Update the dependency in the same PR that migrates those classes.
