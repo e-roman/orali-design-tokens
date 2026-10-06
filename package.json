@@ -1,6 +1,6 @@
 {
   "name": "@orali/design-tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Design tokens for Tienda Orali: single source of truth for color, typography, spacing, radius, motion and component decisions.",
   "author": "Emiliano Román",
   "license": "MIT",
@@ -12,10 +12,21 @@
   "exports": {
     "./tokens.css": "./dist/tokens.css",
     "./tokens.json": "./dist/tokens.json",
-    "./tailwind": "./dist/tailwind.preset.js"
+    "./tailwind": {
+      "types": "./dist/tailwind.preset.d.ts",
+      "default": "./dist/tailwind.preset.js"
+    }
   },
   "scripts": {
     "build": "node build.mjs"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "style-dictionary": "^4.4.0"

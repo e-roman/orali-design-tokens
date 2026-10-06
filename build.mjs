@@ -136,3 +136,10 @@ const sd = new StyleDictionary({
 });
 
 await sd.buildAllPlatforms();
+
+// Tipos para consumidores TypeScript (tailwind.config.ts): el preset es CJS sin declaraciones.
+import { writeFileSync } from 'node:fs';
+writeFileSync(
+  'dist/tailwind.preset.d.ts',
+  `/** Generado por build.mjs — no editar a mano */\nimport type { Config } from "tailwindcss";\ndeclare const preset: Partial<Config>;\nexport = preset;\n`,
+);
