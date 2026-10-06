@@ -1,0 +1,35 @@
+name: Build tokens
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # Tokens Studio solo pushea tokens/: si dist/ quedó desactualizado, CI lo regenera y lo commitea.
+      - name: Commit dist/ si cambió
+        run: |
+          if [ -n "$(git status --porcelain dist)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add dist
+            git commit -m "chore(dist): rebuild tokens"
+            git push
+          else
+            echo "dist/ al día"
+          fi

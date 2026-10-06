@@ -1,0 +1,11 @@
+[
+  {
+    "id": "orali-light",
+    "name": "Orali Light",
+    "selectedTokenSets": {
+      "primitive": "source",
+      "semantic": "enabled",
+      "component": "enabled"
+    }
+  }
+]

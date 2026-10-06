@@ -1,0 +1,313 @@
+{
+  "color": {
+    "$type": "color",
+    "bg": {
+      "default": {
+        "$value": "{color.neutral.0}",
+        "$description": "Página, nav, cards"
+      },
+      "subtle": {
+        "$value": "{color.neutral.50}",
+        "$description": "Bandas de sección, inputs secundarios"
+      },
+      "muted": {
+        "$value": "{color.neutral.100}",
+        "$description": "Skeletons, placeholders, chips inactivos"
+      },
+      "brand": {
+        "$value": "{color.tomato.600}",
+        "$description": "Badges de contador, barra de progreso, banners"
+      },
+      "brand-subtle": {
+        "$value": "{color.tomato.50}",
+        "$description": "Tinte de marca: iconos de empty state, tarjetas de '¿Cómo funciona?', track de progreso"
+      },
+      "accent": {
+        "$value": "{color.sage.700}",
+        "$description": "Topbar y superficies verdes con texto"
+      },
+      "inverse": {
+        "$value": "{color.neutral.900}",
+        "$description": "Superficies oscuras"
+      },
+      "overlay": {
+        "$value": "{color.alpha.black-50}",
+        "$description": "Scrim de modales, drawers y fotos"
+      },
+      "overlay-strong": {
+        "$value": "{color.alpha.black-60}",
+        "$description": "Scrim del carrito"
+      }
+    },
+    "text": {
+      "default": {
+        "$value": "{color.neutral.900}",
+        "$description": "Títulos y cuerpo"
+      },
+      "muted": {
+        "$value": "{color.neutral.500}",
+        "$description": "Gramaje, precio por unidad, metadatos"
+      },
+      "decorative": {
+        "$value": "{color.neutral.100}",
+        "$description": "Numerales y flechas decorativas. Nunca información"
+      },
+      "inverse": {
+        "$value": "{color.neutral.0}",
+        "$description": "Texto sobre superficies de marca u oscuras"
+      },
+      "inverse-muted": {
+        "$value": "{color.alpha.white-80}",
+        "$description": "Secundario sobre marca"
+      },
+      "brand": {
+        "$value": "{color.tomato.600}",
+        "$description": "Links, precio en oferta, iconos de acción"
+      },
+      "brand-hover": {
+        "$value": "{color.tomato.700}"
+      },
+      "accent": {
+        "$value": "{color.sage.700}",
+        "$description": "Eyebrows, etiquetas veganas"
+      }
+    },
+    "border": {
+      "default": {
+        "$value": "{color.neutral.100}",
+        "$description": "Divisores, inputs, cards"
+      },
+      "strong": {
+        "$value": "{color.neutral.900}",
+        "$description": "Hover/focus de inputs y chips"
+      },
+      "brand": {
+        "$value": "{color.tomato.600}",
+        "$description": "Botón outline, stepper, badge de descuento"
+      },
+      "brand-subtle": {
+        "$value": "{color.tomato.200}"
+      },
+      "accent": {
+        "$value": "{color.sage.700}"
+      },
+      "inverse": {
+        "$value": "{color.alpha.white-30}",
+        "$description": "Divisores sobre marca"
+      }
+    },
+    "action": {
+      "primary": {
+        "bg": {
+          "$value": "{color.tomato.600}",
+          "$description": "CTA principal"
+        },
+        "bg-hover": {
+          "$value": "{color.tomato.700}"
+        },
+        "bg-active": {
+          "$value": "{color.tomato.800}"
+        },
+        "fg": {
+          "$value": "{color.neutral.0}"
+        }
+      },
+      "secondary": {
+        "bg": {
+          "$value": "{color.neutral.900}",
+          "$description": "Acción secundaria oscura: aplicar cupón, confirmar paso"
+        },
+        "bg-hover": {
+          "$value": "{color.neutral.500}"
+        },
+        "fg": {
+          "$value": "{color.neutral.0}"
+        }
+      },
+      "outline": {
+        "bg-hover": {
+          "$value": "{color.tomato.50}",
+          "$description": "Hover de outline y stepper"
+        },
+        "bg-active": {
+          "$value": "{color.tomato.100}"
+        }
+      },
+      "accent": {
+        "bg": {
+          "$value": "{color.sage.700}"
+        },
+        "bg-hover": {
+          "$value": "{color.sage.800}"
+        },
+        "fg": {
+          "$value": "{color.neutral.0}"
+        }
+      }
+    },
+    "feedback": {
+      "success": {
+        "bg": {
+          "$value": "{color.sage.50}"
+        },
+        "border": {
+          "$value": "{color.sage.200}"
+        },
+        "fg": {
+          "$value": "{color.sage.700}"
+        },
+        "solid": {
+          "$value": "{color.sage.700}",
+          "$description": "Botón en estado 'Agregado', barra de mínimo cumplido"
+        }
+      },
+      "error": {
+        "bg": {
+          "$value": "{color.tomato.50}"
+        },
+        "border": {
+          "$value": "{color.tomato.200}"
+        },
+        "fg": {
+          "$value": "{color.tomato.700}"
+        }
+      },
+      "warning": {
+        "bg": {
+          "$value": "{color.amber.50}"
+        },
+        "border": {
+          "$value": "{color.amber.200}"
+        },
+        "icon": {
+          "$value": "{color.amber.700}"
+        },
+        "fg": {
+          "$value": "{color.amber.800}"
+        }
+      },
+      "info": {
+        "bg": {
+          "$value": "{color.blue.50}"
+        },
+        "fg": {
+          "$value": "{color.blue.700}"
+        }
+      },
+      "discount": {
+        "bg": {
+          "$value": "{color.tomato.50}"
+        },
+        "border": {
+          "$value": "{color.tomato.200}"
+        },
+        "fg": {
+          "$value": "{color.tomato.700}",
+          "$description": "5.78:1 sobre discount.bg"
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$value": "{color.tomato.600}",
+        "$description": "Focus visible: 2px, offset 2px"
+      }
+    }
+  },
+  "typography": {
+    "$type": "typography",
+    "display": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.6xl}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.line-height.6xl}"
+      },
+      "$description": "Hero (h1)"
+    },
+    "heading-lg": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.3xl}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.line-height.2xl}"
+      },
+      "$description": "Títulos de sección (h2)"
+    },
+    "heading-md": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.xl}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.line-height.lg}"
+      },
+      "$description": "Subtítulos de bloque"
+    },
+    "heading-sm": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.sm}",
+        "fontWeight": "{font.weight.semibold}",
+        "lineHeight": "{font.line-height.sm}"
+      },
+      "$description": "Nombre de producto en card (h3)"
+    },
+    "body-md": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.md}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.md}"
+      },
+      "$description": "Texto base"
+    },
+    "body-sm": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.sm}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.sm}"
+      },
+      "$description": "Descripciones, footer"
+    },
+    "label": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.sm}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.line-height.sm}"
+      },
+      "$description": "Botones y controles"
+    },
+    "caption": {
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.xs}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.xs}"
+      },
+      "$description": "Precio por unidad, legales"
+    }
+  },
+  "motion": {
+    "transition": {
+      "$type": "transition",
+      "fast": {
+        "$value": {
+          "duration": "{duration.fast}",
+          "delay": "0ms",
+          "timingFunction": "{easing.standard}"
+        },
+        "$description": "Hover de botones y links"
+      },
+      "base": {
+        "$value": {
+          "duration": "{duration.base}",
+          "delay": "0ms",
+          "timingFunction": "{easing.standard}"
+        },
+        "$description": "Drawers, acordeones"
+      }
+    }
+  }
+}

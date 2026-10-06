@@ -1,0 +1,278 @@
+{
+  "button": {
+    "primary": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.action.primary.fg}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.8}"
+      },
+      "padding-y": {
+        "$type": "dimension",
+        "$value": "{space.3}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.semibold}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg-hover}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg-active}"
+      }
+    },
+    "outline": {
+      "bg": {
+        "$type": "color",
+        "$value": "transparent"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.brand}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.brand}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}",
+        "$description": "38 → 44px: target táctil mínimo en mobile"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.4}"
+      },
+      "padding-y": {
+        "$type": "dimension",
+        "$value": "{space.3}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.action.outline.bg-hover}"
+      }
+    },
+    "add-to-cart": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.action.primary.fg}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}",
+        "$description": "Comparte forma con stepper: se reemplazan en el mismo slot"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg-hover}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg-active}"
+      }
+    },
+    "focus-ring": {
+      "$type": "color",
+      "$value": "{color.focus.ring}"
+    },
+    "focus-width": {
+      "$type": "dimension",
+      "$value": "{border-width.focus}"
+    },
+    "disabled-opacity": {
+      "$type": "number",
+      "$value": "{opacity.disabled}"
+    },
+    "secondary": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.action.secondary.bg}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.action.secondary.bg-hover}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.action.secondary.fg}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.lg}"
+      }
+    }
+  },
+  "stepper": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.bg.default}"
+    },
+    "fg": {
+      "$type": "color",
+      "$value": "{color.text.default}"
+    },
+    "icon": {
+      "$type": "color",
+      "$value": "{color.text.brand}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.brand}"
+    },
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.default}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{button.add-to-cart.radius}",
+      "$description": "Siempre igual al botón Agregar"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{button.add-to-cart.height}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.3}",
+      "$description": "Mínimo para que −/+ no toquen la curva del pill"
+    },
+    "hit-area": {
+      "$type": "dimension",
+      "$value": "{size.control.md}",
+      "$description": "Área táctil de −/+ (40×40)"
+    },
+    "font-weight": {
+      "$type": "fontWeight",
+      "$value": "{font.weight.medium}"
+    },
+    "transition": {
+      "$type": "transition",
+      "$value": "{motion.transition.fast}"
+    },
+    "bg-hover": {
+      "$type": "color",
+      "$value": "{color.action.outline.bg-hover}",
+      "$description": "Hover sobre −/+"
+    }
+  },
+  "input": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.bg.default}"
+    },
+    "fg": {
+      "$type": "color",
+      "$value": "{color.text.default}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.border.default}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.full}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.control.xl}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    },
+    "padding-y": {
+      "$type": "dimension",
+      "$value": "{space.3}"
+    }
+  },
+  "badge": {
+    "discount": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.default}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.feedback.discount.fg}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.1-5}"
+      },
+      "padding-y": {
+        "$type": "dimension",
+        "$value": "2px"
+      },
+      "font-size": {
+        "$type": "dimension",
+        "$value": "{font.size.xs}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.bold}"
+      }
+    }
+  },
+  "card": {
+    "product": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.bg.default}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.default}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.2xl}"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "{space.3}"
+      }
+    }
+  }
+}

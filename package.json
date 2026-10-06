@@ -1,0 +1,22 @@
+{
+  "name": "@orali/design-tokens",
+  "version": "1.0.0",
+  "description": "Design tokens de Tienda Orali: fuente única de color, tipografía, espaciado, radios y componentes.",
+  "license": "UNLICENSED",
+  "private": true,
+  "files": [
+    "dist",
+    "tokens"
+  ],
+  "exports": {
+    "./tokens.css": "./dist/tokens.css",
+    "./tokens.json": "./dist/tokens.json",
+    "./tailwind": "./dist/tailwind.preset.js"
+  },
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.4.0"
+  }
+}
