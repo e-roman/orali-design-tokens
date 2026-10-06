@@ -233,11 +233,11 @@
   --input-pill-radius: var(--radius-full);
   --input-pill-height: var(--size-control-lg);
   --input-pill-padding-x: var(--space-4); /** Búsqueda y newsletter */
-  --badge-discount-radius: var(--radius-full);
+  --badge-discount-radius: var(--radius-sm); /** Etiqueta, no botón: esquina chica para no competir con los CTAs pill */
   --badge-discount-padding-x: var(--space-1-5);
   --badge-discount-font-size: var(--font-size-xs);
   --badge-discount-font-weight: var(--font-weight-bold);
-  --badge-dietary-radius: var(--radius-full);
+  --badge-dietary-radius: var(--radius-sm); /** Etiqueta, no botón: esquina chica para no competir con los CTAs pill */
   --badge-dietary-font-size: var(--font-size-2xs);
   --badge-counter-radius: var(--radius-full);
   --badge-counter-font-size: var(--font-size-2xs); /** Contador del carrito y filtros. Mínimo 11px */

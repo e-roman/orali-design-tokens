@@ -383,7 +383,8 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.full}"
+        "$value": "{radius.sm}",
+        "$description": "Etiqueta, no botón: esquina chica para no competir con los CTAs pill"
       },
       "padding-x": {
         "$type": "dimension",
@@ -417,7 +418,8 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.full}"
+        "$value": "{radius.sm}",
+        "$description": "Etiqueta, no botón: esquina chica para no competir con los CTAs pill"
       },
       "font-size": {
         "$type": "dimension",

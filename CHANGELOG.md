@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.1
+
+Changed
+- `badge.{discount,dietary}.radius`: `radius.full` → `radius.sm` (4px). Labels stop competing with pill CTAs. `badge.counter` stays round.
+
 ## 1.2.0
 
 Radius hierarchy: pill stops being the default button shape.
