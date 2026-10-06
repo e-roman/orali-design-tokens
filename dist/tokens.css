@@ -100,7 +100,7 @@
   --breakpoint-lg: 1024px;
   --opacity-disabled: 0.5;
   --border-width-default: 1px;
-  --border-width-focus: 1px;
+  --border-width-focus: 2px;
   --z-index-sticky: 40; /** Barra de mínimo de compra */
   --z-index-header: 50; /** Header, dropdowns del nav */
   --z-index-overlay: 60; /** Scrim del carrito */
@@ -161,7 +161,7 @@
   --color-feedback-warning-fg: var(--color-amber-800);
   --color-feedback-info-bg: var(--color-blue-50);
   --color-feedback-info-fg: var(--color-blue-700);
-  --color-focus-ring: var(--color-neutral-500); /** Focus visible: 1px, offset 0 */
+  --color-focus-ring: var(--color-tomato-600); /** Focus visible: 2px, offset 2px */
   --color-focus-ring-inverse: var(--color-neutral-0); /** Focus sobre bg.accent, bg.brand, bg.inverse y fotos */
   --color-commerce-price-current: var(--color-neutral-900); /** Precio final del pack */
   --color-commerce-price-previous: var(--color-neutral-500); /** Precio anterior, tachado */
