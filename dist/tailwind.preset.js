@@ -72,7 +72,8 @@ module.exports = {
         "error-subtle": "rgb(var(--color-feedback-error-bg-rgb) / <alpha-value>)",
         "warning-subtle": "rgb(var(--color-feedback-warning-bg-rgb) / <alpha-value>)",
         "info-subtle": "rgb(var(--color-feedback-info-bg-rgb) / <alpha-value>)",
-        "discount-subtle": "rgb(var(--color-feedback-discount-bg-rgb) / <alpha-value>)"
+        "discount": "rgb(var(--color-commerce-discount-bg-rgb) / <alpha-value>)",
+        "badge-dietary": "rgb(var(--color-commerce-badge-dietary-bg-rgb) / <alpha-value>)"
       },
       "textColor": {
         "default": "rgb(var(--color-text-default-rgb) / <alpha-value>)",
@@ -91,7 +92,12 @@ module.exports = {
         "warning-icon": "rgb(var(--color-feedback-warning-icon-rgb) / <alpha-value>)",
         "warning": "rgb(var(--color-feedback-warning-fg-rgb) / <alpha-value>)",
         "info": "rgb(var(--color-feedback-info-fg-rgb) / <alpha-value>)",
-        "discount": "rgb(var(--color-feedback-discount-fg-rgb) / <alpha-value>)"
+        "price-current": "rgb(var(--color-commerce-price-current-rgb) / <alpha-value>)",
+        "price-previous": "rgb(var(--color-commerce-price-previous-rgb) / <alpha-value>)",
+        "price-unit": "rgb(var(--color-commerce-price-unit-rgb) / <alpha-value>)",
+        "discount": "rgb(var(--color-commerce-discount-fg-rgb) / <alpha-value>)",
+        "badge-dietary": "rgb(var(--color-commerce-badge-dietary-fg-rgb) / <alpha-value>)",
+        "shipping-free": "rgb(var(--color-commerce-shipping-free-fg-rgb) / <alpha-value>)"
       },
       "borderColor": {
         "default": "rgb(var(--color-border-default-rgb) / <alpha-value>)",
@@ -103,7 +109,7 @@ module.exports = {
         "success": "rgb(var(--color-feedback-success-border-rgb) / <alpha-value>)",
         "error": "rgb(var(--color-feedback-error-border-rgb) / <alpha-value>)",
         "warning": "rgb(var(--color-feedback-warning-border-rgb) / <alpha-value>)",
-        "discount": "rgb(var(--color-feedback-discount-border-rgb) / <alpha-value>)"
+        "discount": "rgb(var(--color-commerce-discount-border-rgb) / <alpha-value>)"
       },
       "ringColor": {
         "default": "rgb(var(--color-border-default-rgb) / <alpha-value>)",
@@ -115,7 +121,7 @@ module.exports = {
         "success": "rgb(var(--color-feedback-success-border-rgb) / <alpha-value>)",
         "error": "rgb(var(--color-feedback-error-border-rgb) / <alpha-value>)",
         "warning": "rgb(var(--color-feedback-warning-border-rgb) / <alpha-value>)",
-        "discount": "rgb(var(--color-feedback-discount-border-rgb) / <alpha-value>)",
+        "discount": "rgb(var(--color-commerce-discount-border-rgb) / <alpha-value>)",
         "focus": "rgb(var(--color-focus-ring-rgb) / <alpha-value>)"
       },
       "outlineColor": {

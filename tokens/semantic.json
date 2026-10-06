@@ -1,6 +1,5 @@
 {
   "color": {
-    "$type": "color",
     "bg": {
       "default": {
         "$value": "{color.neutral.0}",
@@ -193,24 +192,56 @@
         "fg": {
           "$value": "{color.blue.700}"
         }
-      },
-      "discount": {
-        "bg": {
-          "$value": "{color.tomato.50}"
-        },
-        "border": {
-          "$value": "{color.tomato.200}"
-        },
-        "fg": {
-          "$value": "{color.tomato.700}",
-          "$description": "5.78:1 sobre discount.bg"
-        }
       }
     },
     "focus": {
       "ring": {
         "$value": "{color.tomato.600}",
         "$description": "Focus visible: 2px, offset 2px"
+      }
+    },
+    "commerce": {
+      "price": {
+        "current": {
+          "$value": "{color.neutral.900}",
+          "$description": "Precio final del pack"
+        },
+        "previous": {
+          "$value": "{color.neutral.500}",
+          "$description": "Precio anterior, tachado"
+        },
+        "unit": {
+          "$value": "{color.neutral.500}",
+          "$description": "Precio por unidad"
+        }
+      },
+      "discount": {
+        "bg": {
+          "$value": "{color.neutral.0}"
+        },
+        "fg": {
+          "$value": "{color.tomato.600}",
+          "$description": "4.88:1 sobre blanco"
+        },
+        "border": {
+          "$value": "{color.tomato.600}"
+        }
+      },
+      "badge-dietary": {
+        "bg": {
+          "$value": "{color.sage.700}",
+          "$description": "Vegano, Vegetariano, Sin TACC, Premium…"
+        },
+        "fg": {
+          "$value": "{color.neutral.0}",
+          "$description": "5.02:1"
+        }
+      },
+      "shipping-free": {
+        "fg": {
+          "$value": "{color.sage.700}",
+          "$description": "Etiqueta 'Gratis' en el resumen de compra"
+        }
       }
     }
   },

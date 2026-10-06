@@ -78,9 +78,21 @@ Gradientes sobre fotos: `from-scrim/95 via-scrim/60 to-scrim/10`.
 | error | tomato.50 | tomato.200 | tomato.700 | — |
 | warning | amber.50 | amber.200 | amber.800 (icono amber.700) | — |
 | info | blue.50 | — | blue.700 | — |
-| discount | tomato.50 | tomato.200 | tomato.700 | — |
 
 Amber y blue no son colores de marca: existen solo para feedback.
+
+## Commerce
+
+Tokens propios del e-commerce. Aunque hoy algunos resuelven al mismo valor que un semántico genérico, existen para poder cambiar el precio o el descuento sin tocar el resto de la UI.
+
+| Token | Tailwind | Valor | Uso |
+|---|---|---|---|
+| `color.commerce.price.current` | `text-price-current` | neutral.900 | Precio final del pack |
+| `color.commerce.price.previous` | `text-price-previous` | neutral.500 | Precio anterior (tachado) |
+| `color.commerce.price.unit` | `text-price-unit` | neutral.500 | "$ 4.200 por unidad" |
+| `color.commerce.discount.{bg,fg,border}` | `bg-discount text-discount border-discount` | white / tomato.600 / tomato.600 | Badge "-15%" |
+| `color.commerce.badge-dietary.{bg,fg}` | `bg-badge-dietary text-badge-dietary` | sage.700 / white | Vegano, Sin TACC, Premium |
+| `color.commerce.shipping-free.fg` | `text-shipping-free` | sage.700 | "Gratis" en el resumen |
 
 ## Accesibilidad (WCAG 2.1 AA)
 
@@ -95,7 +107,8 @@ Amber y blue no son colores de marca: existen solo para feedback.
 | text.inverse / sage.600 | 4.08:1 | ⚠️ Solo decorativo → por eso action.accent usa sage.700 |
 | text.inverse / action.accent (sage.700) | 5.02:1 | ✅ AA |
 | text.inverse / action.primary.bg-hover | 6.32:1 | ✅ AA |
-| discount.fg (tomato.700) / discount.bg | 5.78:1 | ✅ AA |
+| commerce.discount.fg / bg (tomato.600 / white) | 4.88:1 | ✅ AA |
+| commerce.badge-dietary.fg / bg (white / sage.700) | 5.02:1 | ✅ AA |
 
 **Do:** para texto verde o botones verdes usar siempre `sage.700` (vía `text.accent` / `action.accent`).
 **Don't:** texto muted sobre `bg.muted`; usar `text.default` en ese fondo.

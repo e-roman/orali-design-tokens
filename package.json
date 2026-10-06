@@ -1,8 +1,9 @@
 {
   "name": "@orali/design-tokens",
   "version": "1.0.0",
-  "description": "Design tokens de Tienda Orali: fuente única de color, tipografía, espaciado, radios y componentes.",
-  "license": "UNLICENSED",
+  "description": "Design tokens for Tienda Orali: single source of truth for color, typography, spacing, radius, motion and component decisions.",
+  "author": "Emiliano Román",
+  "license": "MIT",
   "private": true,
   "files": [
     "dist",

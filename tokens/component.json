@@ -227,11 +227,11 @@
     "discount": {
       "bg": {
         "$type": "color",
-        "$value": "{color.bg.default}"
+        "$value": "{color.commerce.discount.bg}"
       },
       "fg": {
         "$type": "color",
-        "$value": "{color.feedback.discount.fg}"
+        "$value": "{color.commerce.discount.fg}"
       },
       "radius": {
         "$type": "dimension",
@@ -252,6 +252,28 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.bold}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.commerce.discount.border}"
+      }
+    },
+    "dietary": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.commerce.badge-dietary.bg}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.commerce.badge-dietary.fg}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.full}"
+      },
+      "font-size": {
+        "$type": "dimension",
+        "$value": "{font.size.2xs}"
       }
     }
   },

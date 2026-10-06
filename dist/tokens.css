@@ -144,10 +144,16 @@
   --color-feedback-warning-fg: var(--color-amber-800);
   --color-feedback-info-bg: var(--color-blue-50);
   --color-feedback-info-fg: var(--color-blue-700);
-  --color-feedback-discount-bg: var(--color-tomato-50);
-  --color-feedback-discount-border: var(--color-tomato-200);
-  --color-feedback-discount-fg: var(--color-tomato-700); /** 5.78:1 sobre discount.bg */
   --color-focus-ring: var(--color-tomato-600); /** Focus visible: 2px, offset 2px */
+  --color-commerce-price-current: var(--color-neutral-900); /** Precio final del pack */
+  --color-commerce-price-previous: var(--color-neutral-500); /** Precio anterior, tachado */
+  --color-commerce-price-unit: var(--color-neutral-500); /** Precio por unidad */
+  --color-commerce-discount-bg: var(--color-neutral-0);
+  --color-commerce-discount-fg: var(--color-tomato-600); /** 4.88:1 sobre blanco */
+  --color-commerce-discount-border: var(--color-tomato-600);
+  --color-commerce-badge-dietary-bg: var(--color-sage-700); /** Vegano, Vegetariano, Sin TACC, Premium… */
+  --color-commerce-badge-dietary-fg: var(--color-neutral-0); /** 5.02:1 */
+  --color-commerce-shipping-free-fg: var(--color-sage-700); /** Etiqueta 'Gratis' en el resumen de compra */
   --typography-display: var(--font-weight-semibold) var(--font-size-6xl)/var(--font-line-height-6xl) var(--font-family-sans); /** Hero (h1) */
   --typography-heading-lg: var(--font-weight-semibold) var(--font-size-3xl)/var(--font-line-height-2xl) var(--font-family-sans); /** Títulos de sección (h2) */
   --typography-heading-md: var(--font-weight-semibold) var(--font-size-xl)/var(--font-line-height-lg) var(--font-family-sans); /** Subtítulos de bloque */
@@ -186,6 +192,8 @@
   --badge-discount-padding-x: var(--space-1-5);
   --badge-discount-font-size: var(--font-size-xs);
   --badge-discount-font-weight: var(--font-weight-bold);
+  --badge-dietary-radius: var(--radius-full);
+  --badge-dietary-font-size: var(--font-size-2xs);
   --card-product-radius: var(--radius-2xl);
   --card-product-gap: var(--space-3);
   --button-primary-bg: var(--color-action-primary-bg);
@@ -214,8 +222,11 @@
   --input-bg: var(--color-bg-default);
   --input-fg: var(--color-text-default);
   --input-border: var(--color-border-default);
-  --badge-discount-bg: var(--color-bg-default);
-  --badge-discount-fg: var(--color-feedback-discount-fg);
+  --badge-discount-bg: var(--color-commerce-discount-bg);
+  --badge-discount-fg: var(--color-commerce-discount-fg);
+  --badge-discount-border: var(--color-commerce-discount-border);
+  --badge-dietary-bg: var(--color-commerce-badge-dietary-bg);
+  --badge-dietary-fg: var(--color-commerce-badge-dietary-fg);
   --card-product-bg: var(--color-bg-default);
   --card-product-border: var(--color-border-default);
 
@@ -287,10 +298,16 @@
   --color-feedback-warning-fg-rgb: 146 64 14;
   --color-feedback-info-bg-rgb: 239 246 255;
   --color-feedback-info-fg-rgb: 29 78 216;
-  --color-feedback-discount-bg-rgb: 254 242 242;
-  --color-feedback-discount-border-rgb: 254 202 202;
-  --color-feedback-discount-fg-rgb: 194 5 16;
   --color-focus-ring-rgb: 227 6 19;
+  --color-commerce-price-current-rgb: 26 26 26;
+  --color-commerce-price-previous-rgb: 107 107 107;
+  --color-commerce-price-unit-rgb: 107 107 107;
+  --color-commerce-discount-bg-rgb: 255 255 255;
+  --color-commerce-discount-fg-rgb: 227 6 19;
+  --color-commerce-discount-border-rgb: 227 6 19;
+  --color-commerce-badge-dietary-bg-rgb: 21 128 61;
+  --color-commerce-badge-dietary-fg-rgb: 255 255 255;
+  --color-commerce-shipping-free-fg-rgb: 21 128 61;
   --button-primary-bg-rgb: 227 6 19;
   --button-primary-fg-rgb: 255 255 255;
   --button-primary-bg-hover-rgb: 194 5 16;
@@ -315,7 +332,10 @@
   --input-fg-rgb: 26 26 26;
   --input-border-rgb: 228 228 228;
   --badge-discount-bg-rgb: 255 255 255;
-  --badge-discount-fg-rgb: 194 5 16;
+  --badge-discount-fg-rgb: 227 6 19;
+  --badge-discount-border-rgb: 227 6 19;
+  --badge-dietary-bg-rgb: 21 128 61;
+  --badge-dietary-fg-rgb: 255 255 255;
   --card-product-bg-rgb: 255 255 255;
   --card-product-border-rgb: 228 228 228;
 }

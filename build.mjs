@@ -33,6 +33,7 @@ StyleDictionary.registerFormat({
  *   color.border.default   → border-default
  *   color.action.primary.* → bg-action-primary, hover:bg-action-primary-hover, text-on-primary
  *   color.feedback.*       → bg-success-subtle, text-error, border-warning …
+ *   color.commerce.*       → text-price-current, bg-discount, bg-badge-dietary, text-shipping-free
  */
 StyleDictionary.registerFormat({
   name: 'tailwind/preset',
@@ -62,6 +63,13 @@ StyleDictionary.registerFormat({
       if (prop === 'fg') textColor[kind] = ref(t);
       if (prop === 'icon') textColor[`${kind}-icon`] = ref(t);
       if (prop === 'border') borderColor[kind] = ref(t);
+    }
+    for (const t of by(['color', 'commerce'])) {
+      const [, , group, prop] = t.path; // color.commerce.discount.bg | color.commerce.price.current
+      if (prop === 'bg') backgroundColor[group] = ref(t);
+      else if (prop === 'border') borderColor[group] = ref(t);
+      else if (prop === 'fg') textColor[group] = ref(t);
+      else textColor[`${group}-${prop}`] = ref(t);
     }
     const focus = sem.find((t) => t.path.join('.') === 'color.focus.ring');
     Object.assign(ringColor, borderColor);
