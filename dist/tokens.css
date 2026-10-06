@@ -228,7 +228,7 @@
   --stepper-height-sm: var(--size-control-xs); /** Carrito y drawer */
   --stepper-hit-area-sm: var(--size-control-xs); /** Área de −/+ en el tamaño sm (32×32, mínimo WCAG 24) */
   --input-form-radius: var(--radius-lg);
-  --input-form-height: var(--size-control-lg);
+  --input-form-height: var(--size-control-md);
   --input-form-padding-x: var(--space-3); /** Checkout, login, cupón, filtros */
   --input-pill-radius: var(--radius-full);
   --input-pill-height: var(--size-control-lg);
@@ -279,7 +279,7 @@
   --stepper-height: var(--button-add-to-cart-height);
   --stepper-transition: var(--motion-transition-fast);
   --stepper-bg-hover: var(--color-action-outline-bg-hover); /** Hover sobre −/+ */
-  --input-form-bg: var(--color-bg-subtle);
+  --input-form-bg: var(--color-bg-default);
   --input-form-fg: var(--color-text-default);
   --input-form-border: var(--color-border-default);
   --input-form-border-focus: var(--color-border-strong);
