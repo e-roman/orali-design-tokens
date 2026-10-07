@@ -289,11 +289,11 @@
     },
     "sm": {
       "$value": "4px",
-      "$description": "Tailwind: rounded"
+      "$description": "Badges de descuento y dietarios, skeletons (Tailwind: rounded)"
     },
     "lg": {
       "$value": "8px",
-      "$description": "Inputs, selects, botones secundarios"
+      "$description": "Botones de compra y formulario, stepper, inputs, cards de producto"
     },
     "xl": {
       "$value": "12px",
@@ -301,7 +301,7 @@
     },
     "2xl": {
       "$value": "16px",
-      "$description": "Cards"
+      "$description": "Cards de contenido"
     },
     "3xl": {
       "$value": "24px",
@@ -309,7 +309,7 @@
     },
     "full": {
       "$value": "9999px",
-      "$description": "CTAs, inputs pill, badges, stepper"
+      "$description": "CTAs de marketing, filtros, inputs pill, contador del carrito"
     }
   },
   "shadow": {

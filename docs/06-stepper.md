@@ -10,7 +10,7 @@ Control de cantidad. Reemplaza al botón **Agregar** en la card de producto una 
 | Cantidad ≥ 1 | Stepper (− cantidad +) |
 | Cantidad llega a 0 con − | Vuelve a Button / Add to cart |
 
-El cambio botón ↔ stepper es un **cambio de estado del mismo control**, no dos componentes distintos. Por eso comparten forma y altura: el slot no salta.
+El cambio botón ↔ stepper es un **cambio de estado del mismo control**, no dos componentes distintos. Por eso, en la card, comparten forma y altura: el slot no salta.
 
 ## Anatomía
 
@@ -40,7 +40,17 @@ El cambio botón ↔ stepper es un **cambio de estado del mismo control**, no do
 
 `stepper.radius` y `stepper.height` **referencian** los tokens del botón: si cambia el botón, el stepper lo sigue.
 
-El tamaño acompaña la densidad del contexto: en el carrito y el drawer el stepper es una línea más de la fila (sm), en la card reemplaza al botón Agregar (md) y en la PDP es la acción principal (lg).
+## Un control, tres tamaños
+
+En la card, el Stepper hereda altura y radio del botón Agregar por referencia: comparten slot y el cambio de estado no lo hace saltar.
+
+En el carrito esa regla no aplica. El Stepper es una línea más de la fila y a 40px quedaba demasiado grande, así que usa su propio tamaño: 32px (`stepper.height-sm`). En la página de producto es la acción principal y sube a 44px (`stepper.height-lg`).
+
+| Tamaño | Token | Altura | Dónde |
+|---|---|---|---|
+| sm | `stepper.height-sm` → `size.control.xs` | 32px | Carrito, drawer |
+| md | `stepper.height` → `button.add-to-cart.height` | 40px | Card de producto |
+| lg | `stepper.height-lg` → `size.control.lg` | 44px | Página de producto |
 
 ## Estados
 
@@ -56,10 +66,12 @@ El tamaño acompaña la densidad del contexto: en el carrito y el drawer el step
 ## Uso
 
 **Do**
+
 - Mismo ancho que el botón Agregar (full-width de la card).
 - Actualizar el contador del carrito en el header en cada cambio.
 
 **Don't**
+
 - Usar radius distinto al del botón Agregar.
 - Permitir edición por teclado del número sin validar stock.
 

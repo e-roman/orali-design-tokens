@@ -1,13 +1,13 @@
 # Button
 
-Los botones disparan acciones. Orali tiene tres variantes, cada una con un rol claro en el flujo de compra.
+Los botones disparan acciones. Orali tiene cuatro variantes, cada una con un rol claro en el flujo de compra.
 
 ## Variantes
 
 | Variante | Uso | Ejemplo |
 |---|---|---|
 | **Primary** | Acción principal de una sección. Una por bloque. | Ver todos los productos, Suscribirme |
-| **Add to cart** | Agregar producto desde card o PDP. Al agregar, se reemplaza por el [Stepper](#) | Agregar |
+| **Add to cart** | Agregar producto desde card o PDP. Al agregar, se reemplaza por el Stepper | Agregar |
 | **Outline** | Acción de cuenta o alternativa | Ingresar |
 | **Secondary** | Acción secundaria oscura | Aplicar cupón, Continuar en checkout |
 
@@ -50,10 +50,12 @@ Badges (`-15%`, Vegano, Sin TACC) no son botones: usan `radius.sm` y no compiten
 ## Uso
 
 **Do**
+
 - Un solo Primary por sección visible.
 - Labels de 1–2 palabras en infinitivo o imperativo: "Agregar", "Ver productos".
 
 **Don't**
+
 - Usar sage como fondo de CTA de compra.
 - Cambiar el radius de Add to cart sin cambiar el del Stepper: comparten slot y forma.
 - Usar pill en acciones de compra o de formulario. Pill es solo marketing y filtros.

@@ -14,16 +14,17 @@ Orali usa una sola familia, **Montserrat**, en cuatro pesos. La jerarquía se co
 
 ## Estilos tipográficos
 
-| Token | Tamaño / Interlínea | Peso | Uso |
-|---|---|---|---|
-| `typography.display` | 60 / 60 | 600 | Hero (h1) |
-| `typography.heading-lg` | 30 / 36 | 600 | Títulos de sección (h2) |
-| `typography.heading-md` | 20 / 28 | 600 | Subtítulos de bloque |
-| `typography.heading-sm` | 14 / 20 | 600 | Nombre de producto (h3 en card) |
-| `typography.body-md` | 16 / 24 | 400 | Texto base |
-| `typography.body-sm` | 14 / 20 | 400 | Descripciones, footer |
-| `typography.label` | 14 / 20 | 500 | Botones y controles |
-| `typography.caption` | 12 / 16 | 400 | Precio por unidad, legales |
+| Token | Tailwind | Tamaño / Interlínea | Peso | Uso |
+|---|---|---|---|---|
+| `typography.display` | `text-display` | 60 / 60 | 600 | Hero (h1) |
+| `typography.heading-xl` | `text-heading-xl` | 36 / 40 | 600 | Títulos de página (h1) desde md |
+| `typography.heading-lg` | `text-heading-lg` | 30 / 36 | 600 | Títulos de página en mobile y de sección (h2) |
+| `typography.heading-md` | `text-heading-md` | 20 / 28 | 600 | Subtítulos de bloque |
+| `typography.heading-sm` | `text-heading-sm` | 14 / 20 | 600 | Nombre de producto (h3 en card) |
+| `typography.body-md` | `text-body-md` | 16 / 24 | 400 | Texto base |
+| `typography.body-sm` | `text-body-sm` | 14 / 20 | 400 | Descripciones, footer |
+| `typography.label` | `text-label` | 14 / 20 | 500 | Botones y controles |
+| `typography.caption` | `text-caption` | 12 / 16 | 400 | Precio por unidad, legales |
 
 ## Escala de tamaños
 
@@ -35,5 +36,3 @@ Orali usa una sola familia, **Montserrat**, en cuatro pesos. La jerarquía se co
 - `heading-sm` en cards: máximo 2 líneas, truncar con ellipsis.
 - Precios: `body-md` semibold para el precio final, `caption` + `text.muted` para el precio por unidad.
 - **Don't:** usar 11px (`2xs`) para información crítica; queda solo para metadatos decorativos.
-
-> Embed sugerido: bloque **Typography** de zeroheight conectado a los tokens `typography.*`.
