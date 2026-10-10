@@ -411,7 +411,7 @@
       },
       "font-size": {
         "$type": "dimension",
-        "$value": "{font.size.xs}"
+        "$value": "{font.size.2xs}"
       }
     },
     "counter": {
@@ -429,7 +429,7 @@
       },
       "font-size": {
         "$type": "dimension",
-        "$value": "{font.size.xs}"
+        "$value": "{font.size.2xs}"
       },
       "min-size": {
         "$type": "dimension",

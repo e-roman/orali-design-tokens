@@ -89,8 +89,8 @@
   --color-alpha-white-80: rgba(255, 255, 255, 0.8);
   --color-alpha-white-90: rgba(255, 255, 255, 0.9);
   --color-external-mercadopago: #009ee3; /** Botón de Mercado Pago */
-  --font-family-sans: Montserrat;
-  --font-family-display: Montserrat;
+  --font-family-sans: Montserrat, system-ui, sans-serif;
+  --font-family-display: Montserrat, system-ui, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -199,7 +199,7 @@
   --color-surface-mercadopago: var(--color-external-mercadopago); /** Botón de Mercado Pago */
   --color-text-primary: var(--color-neutral-900); /** Texto principal (17.4:1) */
   --color-text-secondary: var(--color-neutral-500); /** Gramaje, metadatos (5.33:1) */
-  --color-text-tertiary: var(--color-neutral-400); /** Solo decorativo: numerales, flechas. Nunca información (2.5:1) */
+  --color-text-tertiary: var(--color-neutral-200); /** Solo decorativo: numerales y flechas. Nunca información */
   --color-text-disabled: var(--color-neutral-300);
   --color-text-inverse: var(--color-base-white);
   --color-text-inverse-muted: var(--color-alpha-white-80);
@@ -209,7 +209,7 @@
   --color-text-brand: var(--color-tomato-500);
   --color-text-accent: var(--color-sage-600); /** Texto verde (5.02:1) */
   --color-border-default: var(--color-neutral-200);
-  --color-border-strong: var(--color-neutral-300);
+  --color-border-strong: var(--color-neutral-900); /** Hover y selección de chips y filtros */
   --color-border-focus: var(--color-tomato-500); /** Campos en foco: reemplaza el color del borde */
   --color-border-brand: var(--color-tomato-500);
   --color-border-brand-subtle: var(--color-tomato-200);
@@ -330,9 +330,9 @@
   --badge-discount-font-size: var(--font-size-xs);
   --badge-discount-font-weight: var(--font-weight-bold);
   --badge-dietary-radius: var(--radius-sm);
-  --badge-dietary-font-size: var(--font-size-xs);
+  --badge-dietary-font-size: var(--font-size-2xs);
   --badge-counter-radius: var(--radius-full);
-  --badge-counter-font-size: var(--font-size-xs);
+  --badge-counter-font-size: var(--font-size-2xs);
   --card-product-radius: var(--radius-md);
   --card-product-gap: var(--space-3);
   --card-content-radius: var(--radius-xl);
@@ -490,7 +490,7 @@
   --color-surface-mercadopago-rgb: 0 158 227;
   --color-text-primary-rgb: 26 26 26;
   --color-text-secondary-rgb: 107 107 107;
-  --color-text-tertiary-rgb: 163 163 163;
+  --color-text-tertiary-rgb: 228 228 228;
   --color-text-disabled-rgb: 212 212 212;
   --color-text-inverse-rgb: 255 255 255;
   --color-text-on-brand-rgb: 255 255 255;
@@ -499,7 +499,7 @@
   --color-text-brand-rgb: 227 6 19;
   --color-text-accent-rgb: 21 128 61;
   --color-border-default-rgb: 228 228 228;
-  --color-border-strong-rgb: 212 212 212;
+  --color-border-strong-rgb: 26 26 26;
   --color-border-focus-rgb: 227 6 19;
   --color-border-brand-rgb: 227 6 19;
   --color-border-brand-subtle-rgb: 255 199 202;
