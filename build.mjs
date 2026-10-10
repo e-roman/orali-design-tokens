@@ -28,8 +28,10 @@ StyleDictionary.registerFormat({
 
 /**
  * Tailwind preset (CJS). Los nombres de utilidades siguen a los tokens semánticos:
- *   color.bg.subtle        → bg-subtle
- *   color.text.muted       → text-muted
+ *   color.surface.subtle   → bg-subtle
+ *   color.text.secondary   → text-secondary
+ *   color.icon.brand       → text-icon-brand
+ *   color.form.*           → bg-form, border-form, border-form-focus, text-form-placeholder
  *   color.border.default   → border-default
  *   color.action.primary.* → bg-action-primary, hover:bg-action-primary-hover, text-on-primary
  *   color.feedback.*       → bg-success-subtle, text-error, border-warning …
@@ -50,9 +52,21 @@ StyleDictionary.registerFormat({
     const borderColor = {};
     const ringColor = {};
 
-    for (const t of by(['color', 'bg'])) backgroundColor[t.path[2]] = ref(t);
+    // Fondos: color.surface.* → bg-default, bg-subtle, bg-page, bg-brand, bg-accent…
+    for (const t of by(['color', 'surface'])) backgroundColor[t.path[2]] = ref(t);
     for (const t of by(['color', 'text'])) textColor[t.path[2]] = ref(t);
     for (const t of by(['color', 'border'])) borderColor[t.path[2]] = ref(t);
+    // Íconos (lucide usa currentColor): text-icon-default, text-icon-brand…
+    for (const t of by(['color', 'icon'])) textColor[`icon-${t.path[2]}`] = ref(t);
+    // Formularios: bg-form, border-form, focus:border-form-focus, placeholder:text-form-placeholder…
+    for (const t of by(['color', 'form'])) {
+      const k = t.path[2];
+      if (k === 'bg') backgroundColor.form = ref(t);
+      else if (k.startsWith('bg-')) backgroundColor[`form-${k.slice(3)}`] = ref(t);
+      else if (k === 'border') borderColor.form = ref(t);
+      else if (k.startsWith('border-')) borderColor[`form-${k.slice(7)}`] = ref(t);
+      else textColor[`form-${k}`] = ref(t);
+    }
 
     for (const t of by(['color', 'action'])) {
       const [, , role, prop] = t.path; // color.action.primary.bg-hover
@@ -63,8 +77,7 @@ StyleDictionary.registerFormat({
       const [, , kind, prop] = t.path; // color.feedback.success.bg
       if (prop === 'bg') backgroundColor[`${kind}-subtle`] = ref(t);
       if (prop === 'solid') backgroundColor[kind] = ref(t);
-      if (prop === 'fg') textColor[kind] = ref(t);
-      if (prop === 'icon') textColor[`${kind}-icon`] = ref(t);
+      if (prop === 'text') textColor[kind] = ref(t);
       if (prop === 'border') borderColor[kind] = ref(t);
     }
     for (const t of by(['color', 'commerce'])) {
@@ -85,8 +98,8 @@ StyleDictionary.registerFormat({
     for (const t of all.filter((t) => t.filePath.includes('primitive') && t.$type === 'color' && t.path[1] !== 'alpha')) {
       (colors[t.path[1]] ??= {})[t.path[2]] = ref(t);
     }
-    colors.tomato.DEFAULT = colors.tomato['600'];
-    colors.sage.DEFAULT = colors.sage['600'];
+    colors.tomato.DEFAULT = colors.tomato['500'];
+    colors.sage.DEFAULT = colors.sage['500'];
 
     const neutral900 = all.find((t) => t.path.join('.') === 'color.neutral.900');
     const gradientColorStops = { scrim: ref(neutral900) };
@@ -125,7 +138,7 @@ StyleDictionary.registerFormat({
           outlineColor: { focus: ref(focus), 'focus-inverse': ref(focusInverse) },
           gradientColorStops,
           fontSize,
-          fontFamily: { sans: ['var(--font-family-sans)'] },
+          fontFamily: { sans: ['var(--font-family-sans)', 'system-ui', 'sans-serif'] },
           maxWidth: { container: 'var(--size-container)' },
         },
       },

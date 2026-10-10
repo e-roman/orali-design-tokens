@@ -1,261 +1,467 @@
 {
   "color": {
-    "bg": {
+    "brand": {
+      "$description": "Rojo de marca como rol",
       "default": {
-        "$value": "{color.neutral.0}",
-        "$description": "Página, nav, cards"
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$description": "Logo, acentos de marca"
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{color.tomato.600}"
+      },
+      "active": {
+        "$type": "color",
+        "$value": "{color.tomato.700}"
       },
       "subtle": {
+        "$type": "color",
+        "$value": "{color.tomato.50}"
+      }
+    },
+    "surface": {
+      "$description": "Fondos",
+      "page": {
+        "$type": "color",
         "$value": "{color.neutral.50}",
-        "$description": "Bandas de sección, inputs secundarios"
+        "$description": "Fondo de página"
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$description": "Cards, modales, header"
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$description": "Secciones alternadas, hover neutro"
       },
       "muted": {
-        "$value": "{color.neutral.100}",
-        "$description": "Skeletons, placeholders, chips inactivos"
-      },
-      "brand": {
-        "$value": "{color.tomato.600}",
-        "$description": "Badges de contador, barra de progreso, banners"
-      },
-      "brand-subtle": {
-        "$value": "{color.tomato.50}",
-        "$description": "Tinte de marca: iconos de empty state, tarjetas de '¿Cómo funciona?', track de progreso"
-      },
-      "accent": {
-        "$value": "{color.sage.700}",
-        "$description": "Topbar y superficies verdes con texto"
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$description": "Skeletons, divisores gruesos"
       },
       "inverse": {
+        "$type": "color",
         "$value": "{color.neutral.900}",
-        "$description": "Superficies oscuras"
+        "$description": "Footer, secciones oscuras"
       },
       "overlay": {
+        "$type": "color",
         "$value": "{color.alpha.black-50}",
-        "$description": "Scrim de modales, drawers y fotos"
+        "$description": "Detrás de drawers y modales"
       },
       "overlay-strong": {
-        "$value": "{color.alpha.black-60}",
-        "$description": "Scrim del carrito"
+        "$type": "color",
+        "$value": "{color.alpha.black-60}"
       },
-      "external-mercadopago": {
+      "brand": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$description": "Contador del carrito, bloques de marca"
+      },
+      "brand-subtle": {
+        "$type": "color",
+        "$value": "{color.tomato.50}"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.sage.600}",
+        "$description": "Barra superior, superficies verdes con texto (5.02:1)"
+      },
+      "mercadopago": {
+        "$type": "color",
         "$value": "{color.external.mercadopago}",
-        "$description": "Solo el botón de pago de Mercado Pago"
+        "$description": "Botón de Mercado Pago"
       }
     },
     "text": {
-      "default": {
+      "$description": "Texto",
+      "primary": {
+        "$type": "color",
         "$value": "{color.neutral.900}",
-        "$description": "Títulos y cuerpo"
+        "$description": "Texto principal (17.4:1)"
       },
-      "muted": {
+      "secondary": {
+        "$type": "color",
         "$value": "{color.neutral.500}",
-        "$description": "Gramaje, precio por unidad, metadatos"
+        "$description": "Gramaje, metadatos (5.33:1)"
       },
-      "decorative": {
-        "$value": "{color.neutral.100}",
-        "$description": "Numerales y flechas decorativas. Nunca información"
+      "tertiary": {
+        "$type": "color",
+        "$value": "{color.neutral.400}",
+        "$description": "Solo decorativo: numerales, flechas. Nunca información (2.5:1)"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.300}"
       },
       "inverse": {
-        "$value": "{color.neutral.0}",
-        "$description": "Texto sobre superficies de marca u oscuras"
+        "$type": "color",
+        "$value": "{color.base.white}"
       },
       "inverse-muted": {
-        "$value": "{color.alpha.white-80}",
-        "$description": "Secundario sobre marca"
+        "$type": "color",
+        "$value": "{color.alpha.white-80}"
+      },
+      "on-brand": {
+        "$type": "color",
+        "$value": "{color.base.white}"
+      },
+      "link": {
+        "$type": "color",
+        "$value": "{color.tomato.500}"
+      },
+      "link-hover": {
+        "$type": "color",
+        "$value": "{color.tomato.600}"
       },
       "brand": {
-        "$value": "{color.tomato.600}",
-        "$description": "Links, precio en oferta, iconos de acción"
-      },
-      "brand-hover": {
-        "$value": "{color.tomato.700}"
+        "$type": "color",
+        "$value": "{color.tomato.500}"
       },
       "accent": {
-        "$value": "{color.sage.700}",
-        "$description": "Eyebrows, etiquetas veganas"
+        "$type": "color",
+        "$value": "{color.sage.600}",
+        "$description": "Texto verde (5.02:1)"
       }
     },
     "border": {
+      "$description": "Bordes",
       "default": {
-        "$value": "{color.neutral.100}",
-        "$description": "Divisores, inputs, cards"
+        "$type": "color",
+        "$value": "{color.neutral.200}"
       },
       "strong": {
-        "$value": "{color.neutral.900}",
-        "$description": "Hover/focus de inputs y chips"
+        "$type": "color",
+        "$value": "{color.neutral.300}"
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$description": "Campos en foco: reemplaza el color del borde"
       },
       "brand": {
-        "$value": "{color.tomato.600}",
-        "$description": "Botón outline, stepper, badge de descuento"
+        "$type": "color",
+        "$value": "{color.tomato.500}"
       },
       "brand-subtle": {
+        "$type": "color",
         "$value": "{color.tomato.200}"
       },
       "accent": {
-        "$value": "{color.sage.700}"
+        "$type": "color",
+        "$value": "{color.sage.600}"
       },
       "inverse": {
-        "$value": "{color.alpha.white-30}",
-        "$description": "Divisores sobre marca"
+        "$type": "color",
+        "$value": "{color.alpha.white-30}"
+      }
+    },
+    "icon": {
+      "$description": "Íconos (mínimo 3:1)",
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.600}"
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.500}"
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.tomato.500}"
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.base.white}"
       }
     },
     "action": {
       "primary": {
         "bg": {
-          "$value": "{color.tomato.600}",
-          "$description": "CTA principal"
+          "$type": "color",
+          "$value": "{color.tomato.500}"
         },
         "bg-hover": {
-          "$value": "{color.tomato.700}"
+          "$type": "color",
+          "$value": "{color.tomato.600}"
         },
         "bg-active": {
-          "$value": "{color.tomato.800}"
+          "$type": "color",
+          "$value": "{color.tomato.700}"
         },
         "fg": {
-          "$value": "{color.neutral.0}"
+          "$type": "color",
+          "$value": "{color.base.white}"
         }
       },
       "secondary": {
         "bg": {
-          "$value": "{color.neutral.900}",
-          "$description": "Acción secundaria oscura: aplicar cupón, confirmar paso"
+          "$type": "color",
+          "$value": "{color.neutral.900}"
         },
         "bg-hover": {
+          "$type": "color",
           "$value": "{color.neutral.500}"
         },
         "fg": {
-          "$value": "{color.neutral.0}"
+          "$type": "color",
+          "$value": "{color.base.white}"
         }
       },
       "outline": {
         "bg-hover": {
-          "$value": "{color.tomato.50}",
-          "$description": "Hover de outline y stepper"
+          "$type": "color",
+          "$value": "{color.tomato.50}"
         },
         "bg-active": {
+          "$type": "color",
           "$value": "{color.tomato.100}"
         }
       },
       "accent": {
         "bg": {
-          "$value": "{color.sage.700}"
+          "$type": "color",
+          "$value": "{color.sage.600}"
         },
         "bg-hover": {
-          "$value": "{color.sage.800}"
+          "$type": "color",
+          "$value": "{color.sage.700}"
         },
         "fg": {
-          "$value": "{color.neutral.0}"
+          "$type": "color",
+          "$value": "{color.base.white}"
         }
       }
     },
     "feedback": {
       "success": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.green.700}"
+        },
         "bg": {
-          "$value": "{color.sage.50}"
+          "$type": "color",
+          "$value": "{color.green.50}"
         },
         "border": {
-          "$value": "{color.sage.200}"
-        },
-        "fg": {
-          "$value": "{color.sage.700}"
+          "$type": "color",
+          "$value": "{color.green.300}"
         },
         "solid": {
-          "$value": "{color.sage.700}",
-          "$description": "Botón en estado 'Agregado', barra de mínimo cumplido"
-        }
-      },
-      "error": {
-        "bg": {
-          "$value": "{color.tomato.50}"
-        },
-        "border": {
-          "$value": "{color.tomato.200}"
-        },
-        "fg": {
-          "$value": "{color.tomato.700}"
+          "$type": "color",
+          "$value": "{color.green.700}",
+          "$description": "Fondo sólido: botón \"Agregado\" en PDP"
         }
       },
       "warning": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.yellow.700}"
+        },
         "bg": {
-          "$value": "{color.amber.50}"
+          "$type": "color",
+          "$value": "{color.yellow.50}"
         },
         "border": {
-          "$value": "{color.amber.200}"
+          "$type": "color",
+          "$value": "{color.yellow.300}"
+        }
+      },
+      "error": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.tomato.600}"
         },
-        "icon": {
-          "$value": "{color.amber.700}"
+        "bg": {
+          "$type": "color",
+          "$value": "{color.tomato.50}"
         },
-        "fg": {
-          "$value": "{color.amber.800}"
+        "border": {
+          "$type": "color",
+          "$value": "{color.tomato.200}"
         }
       },
       "info": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.blue.700}"
+        },
         "bg": {
+          "$type": "color",
           "$value": "{color.blue.50}"
         },
-        "fg": {
-          "$value": "{color.blue.700}"
+        "border": {
+          "$type": "color",
+          "$value": "{color.blue.300}"
         }
       }
     },
+    "form": {
+      "$description": "Campos de formulario",
+      "bg": {
+        "$type": "color",
+        "$value": "{color.base.white}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.neutral.200}"
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{color.neutral.400}"
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{color.tomato.500}"
+      },
+      "border-error": {
+        "$type": "color",
+        "$value": "{color.tomato.600}"
+      },
+      "bg-error": {
+        "$type": "color",
+        "$value": "{color.tomato.50}"
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.100}"
+      },
+      "placeholder": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$description": "AA 5.33:1"
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.400}"
+      }
+    },
     "focus": {
+      "$description": "Foco de teclado en botones y links",
       "ring": {
-        "$value": "{color.tomato.600}",
-        "$description": "Focus visible: 2px, offset 2px"
+        "$type": "color",
+        "$value": "{color.tomato.500}"
       },
       "ring-inverse": {
-        "$value": "{color.neutral.0}",
-        "$description": "Focus sobre bg.accent, bg.brand, bg.inverse y fotos"
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$description": "Sobre fotos, superficies oscuras o de marca"
       }
     },
     "commerce": {
       "price": {
         "current": {
-          "$value": "{color.neutral.900}",
-          "$description": "Precio final del pack"
+          "$type": "color",
+          "$value": "{color.neutral.900}"
         },
         "previous": {
-          "$value": "{color.neutral.500}",
-          "$description": "Precio anterior, tachado"
+          "$type": "color",
+          "$value": "{color.neutral.500}"
         },
         "unit": {
-          "$value": "{color.neutral.500}",
-          "$description": "Precio por unidad"
+          "$type": "color",
+          "$value": "{color.neutral.500}"
         }
       },
       "discount": {
         "bg": {
-          "$value": "{color.neutral.0}"
+          "$type": "color",
+          "$value": "{color.base.white}"
         },
         "fg": {
-          "$value": "{color.tomato.600}",
-          "$description": "4.88:1 sobre blanco"
+          "$type": "color",
+          "$value": "{color.tomato.500}"
         },
         "border": {
-          "$value": "{color.tomato.600}"
+          "$type": "color",
+          "$value": "{color.tomato.500}"
         }
       },
       "badge-dietary": {
         "bg": {
-          "$value": "{color.sage.700}",
-          "$description": "Vegano, Vegetariano, Sin TACC, Premium…"
+          "$type": "color",
+          "$value": "{color.sage.600}"
         },
         "fg": {
-          "$value": "{color.neutral.0}",
-          "$description": "5.02:1"
+          "$type": "color",
+          "$value": "{color.base.white}"
         }
       },
       "shipping-free": {
         "fg": {
-          "$value": "{color.sage.700}",
-          "$description": "Etiqueta 'Gratis' en el resumen de compra"
+          "$type": "color",
+          "$value": "{color.sage.600}"
         }
       }
     }
   },
+  "elevation": {
+    "subtle": {
+      "$type": "shadow",
+      "$value": "{shadow.sm}",
+      "$description": "Cards de contenido en reposo"
+    },
+    "card": {
+      "$type": "shadow",
+      "$value": "{shadow.md}",
+      "$description": "Card de producto en reposo"
+    },
+    "card-hover": {
+      "$type": "shadow",
+      "$value": "{shadow.lg}",
+      "$description": "Card de producto en hover, barra flotante"
+    },
+    "dropdown": {
+      "$type": "shadow",
+      "$value": "{shadow.xl}",
+      "$description": "Menús del nav, resultados de búsqueda"
+    },
+    "overlay": {
+      "$type": "shadow",
+      "$value": "{shadow.2xl}",
+      "$description": "Drawers, modales, bottom sheets"
+    }
+  },
+  "layer": {
+    "sticky": {
+      "$type": "number",
+      "$value": "{z-index.sticky}"
+    },
+    "header": {
+      "$type": "number",
+      "$value": "{z-index.header}"
+    },
+    "overlay": {
+      "$type": "number",
+      "$value": "{z-index.overlay}"
+    },
+    "mobile-menu": {
+      "$type": "number",
+      "$value": "{z-index.mobile-menu}"
+    },
+    "drawer": {
+      "$type": "number",
+      "$value": "{z-index.drawer}"
+    },
+    "modal": {
+      "$type": "number",
+      "$value": "{z-index.modal}"
+    },
+    "modal-top": {
+      "$type": "number",
+      "$value": "{z-index.modal-top}"
+    },
+    "progress": {
+      "$type": "number",
+      "$value": "{z-index.progress}"
+    }
+  },
   "typography": {
-    "$type": "typography",
     "display": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.6xl}",
@@ -265,6 +471,7 @@
       "$description": "Hero (h1)"
     },
     "heading-xl": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.4xl}",
@@ -274,6 +481,7 @@
       "$description": "Títulos de página (h1) desde md"
     },
     "heading-lg": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.3xl}",
@@ -283,6 +491,7 @@
       "$description": "Títulos de página (h1) mobile y de sección (h2)"
     },
     "heading-md": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.xl}",
@@ -292,6 +501,7 @@
       "$description": "Subtítulos de bloque"
     },
     "heading-sm": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.sm}",
@@ -301,6 +511,7 @@
       "$description": "Nombre de producto en card (h3)"
     },
     "body-md": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.md}",
@@ -310,6 +521,7 @@
       "$description": "Texto base"
     },
     "body-sm": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.sm}",
@@ -319,6 +531,7 @@
       "$description": "Descripciones, footer"
     },
     "label": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.sm}",
@@ -328,6 +541,7 @@
       "$description": "Botones y controles"
     },
     "caption": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{font.family.sans}",
         "fontSize": "{font.size.xs}",
@@ -339,8 +553,8 @@
   },
   "motion": {
     "transition": {
-      "$type": "transition",
       "fast": {
+        "$type": "transition",
         "$value": {
           "duration": "{duration.fast}",
           "delay": "0ms",
@@ -349,6 +563,7 @@
         "$description": "Hover de botones y links"
       },
       "base": {
+        "$type": "transition",
         "$value": {
           "duration": "{duration.base}",
           "delay": "0ms",
@@ -356,56 +571,6 @@
         },
         "$description": "Drawers, acordeones"
       }
-    }
-  },
-  "elevation": {
-    "$type": "shadow",
-    "subtle": {
-      "$value": "{shadow.sm}",
-      "$description": "Cards de contenido en reposo"
-    },
-    "card": {
-      "$value": "{shadow.md}",
-      "$description": "Card de producto en reposo"
-    },
-    "card-hover": {
-      "$value": "{shadow.lg}",
-      "$description": "Card de producto en hover, barra flotante"
-    },
-    "dropdown": {
-      "$value": "{shadow.xl}",
-      "$description": "Menús del nav, resultados de búsqueda"
-    },
-    "overlay": {
-      "$value": "{shadow.2xl}",
-      "$description": "Drawers, modales, bottom sheets"
-    }
-  },
-  "layer": {
-    "$type": "number",
-    "sticky": {
-      "$value": "{z-index.sticky}"
-    },
-    "header": {
-      "$value": "{z-index.header}"
-    },
-    "overlay": {
-      "$value": "{z-index.overlay}"
-    },
-    "mobile-menu": {
-      "$value": "{z-index.mobile-menu}"
-    },
-    "drawer": {
-      "$value": "{z-index.drawer}"
-    },
-    "modal": {
-      "$value": "{z-index.modal}"
-    },
-    "modal-top": {
-      "$value": "{z-index.modal-top}"
-    },
-    "progress": {
-      "$value": "{z-index.progress}"
     }
   }
 }

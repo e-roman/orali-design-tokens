@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.0.0 (figma-ds, in progress)
+
+Design system rebuilt from the Figma file. Breaking for consumers.
+
+- Complete primitive scales (50–950) for neutral, tomato, sage, green, yellow, red, blue; `color.base.white|black`
+- Brand steps renumbered: `tomato.500` = #E30613, `sage.600` = #15803D. Semantic values unchanged (AA)
+- Radius scale: `sm 4 · md 8 · lg 12 · xl 16 · 2xl 20 · 3xl 24 · full`. Buttons, stepper, inputs and product cards use `md` (8px)
+- Semantic groups: `surface`, `text`, `border`, `icon`, `brand`, `form`, `feedback.{kind}.{text,bg,border}`. `color.bg.*` → `color.surface.*`
+- `border-width.focus` = 1px (fields recolor their border). Buttons keep a 2px outline (`border-width.lg`)
+- Tailwind: `bg-*` from `surface`, `text-icon-*`, `bg-form`, `border-form*`, `text-form-*`
+
 ## 1.2.1
 
 Changed
