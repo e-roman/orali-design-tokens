@@ -14,9 +14,12 @@ Spacing sobre una grilla base de **4px**. Los tokens usan la misma escala que Ta
 | `space.5` | 20px | Padding de cards de beneficio |
 | `space.6` | 24px | Gutter desktop, padding de bloques |
 | `space.8` | 32px | Padding horizontal de CTA principal |
+| `space.7` | 28px | — |
 | `space.10` | 40px | Separación entre grupos |
 | `space.12` | 48px | Separación entre bloques |
+| `space.14` | 56px | — |
 | `space.16` | 64px | Separación entre secciones |
+| `space.20`–`space.64` | 80–256px | Layout de página |
 
 ## Alturas de control
 
@@ -41,14 +44,16 @@ La escala usa los mismos nombres que Tailwind y **reemplaza** la de Tailwind: so
 
 | Token | Tailwind | Valor | Uso |
 |---|---|---|---|
+| `radius.none` | `rounded-none` | 0 | — |
 | `radius.sm` | `rounded` | 4px | Badges de descuento y dietarios, skeletons |
-| `radius.lg` | `rounded-lg` | 8px | Botones de compra y formulario, stepper, inputs, cards de producto |
-| `radius.xl` | `rounded-xl` | 12px | Modales, bloques de checkout |
-| `radius.2xl` | `rounded-2xl` | 16px | Cards de contenido, "¿Cómo funciona?" |
+| `radius.md` | `rounded-md` | 8px | Botones de compra y formulario, stepper, inputs, cards de producto |
+| `radius.lg` | `rounded-lg` | 12px | Modales, bloques de checkout |
+| `radius.xl` | `rounded-xl` | 16px | Cards de contenido, "¿Cómo funciona?" |
+| `radius.2xl` | `rounded-2xl` | 20px | Disponible para escalar |
 | `radius.3xl` | `rounded-3xl` | 24px | Contenedores destacados |
 | `radius.full` | `rounded-full` | 9999px | CTAs de marketing, filtros, contador del carrito |
 
-`rounded-md` (6px) se eliminó: los 5 usos pasaron a `rounded-lg`.
+En v2 la escala se corrió un paso para sumar `md`: lo que antes era `rounded-lg` (8px) ahora es `rounded-md`, sin cambio de píxeles.
 
 ## Elevación
 

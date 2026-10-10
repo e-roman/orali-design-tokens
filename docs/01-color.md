@@ -1,114 +1,129 @@
 # Color
 
-El color en Orali comunica marca, acción y estado. La paleta es corta a propósito: un rojo de marca para todo lo accionable, un verde para lo natural y lo confirmado, y una escala de neutros cálidos para estructura.
+El color en Orali comunica marca, acción y estado. Un rojo de marca para todo lo accionable, un verde para lo natural y lo confirmado, y neutros para estructura. Las escalas primitivas son completas (50–950) para poder escalar; la UI solo usa la capa semántica.
 
 ## Principios
 
-- **El rojo es acción.** `tomato.600` se reserva para CTAs, precios en oferta y links. Si todo es rojo, nada es prioritario.
-- **El verde es producto y confirmación.** `sage.600` es el verde de marca para fondos e ilustración; `sage.700` se usa para texto y botones porque `sage.600` no llega a AA con texto chico. No se usa en CTAs de compra.
-- **Siempre semánticos en UI.** Los componentes consumen `color.text.*`, `color.bg.*`, `color.border.*`, `color.action.*`. Los primitivos solo se referencian desde la capa semántica.
+- **El rojo es acción.** `tomato.500` (#E30613) se reserva para CTAs, precios en oferta y links. Si todo es rojo, nada es prioritario.
+- **El verde es producto y confirmación.** `sage.500` (#1A9139) es el verde de marca para ilustración; `sage.600` (#15803D) se usa para texto y fondos con texto porque `sage.500` no llega a AA. No se usa en CTAs de compra.
+- **Siempre semánticos en UI.** Los componentes consumen `surface`, `text`, `border`, `icon`, `action`, `form`, `feedback`. Los primitivos están ocultos en los selectores de Figma y solo se referencian desde la capa semántica.
 
 ## Paleta primitiva
 
-| Token | Valor | Nombre de marca | Uso |
-|---|---|---|---|
-| `color.tomato.800` | #9A040D | — | Active / pressed |
-| `color.tomato.700` | #C20510 | — | Hover, texto de descuento |
-| `color.tomato.600` | #E30613 | Tomato | Rojo de marca |
-| `color.tomato.200` | #FECACA | — | Bordes de tinte de marca |
-| `color.tomato.100` | #FEE2E2 | — | Active de outline |
-| `color.tomato.50` | #FEF2F2 | — | Fondo de descuento |
-| `color.sage.800` | #146C33 | — | Hover de acciones accent |
-| `color.sage.700` | #15803D | — | Verde accesible: texto y botones |
-| `color.sage.600` | #1A9139 | Sage | Verde de marca: solo ilustración y superficies sin texto chico |
-| `color.sage.200` / `.50` | #BFE0C8 / #EFF7F1 | — | Borde / fondo de éxito |
-| `color.neutral.900` | #1A1A1A | Charcoal | Texto principal |
-| `color.neutral.500` | #6B6B6B | — | Texto secundario |
-| `color.neutral.100` | #E4E4E4 | Dough | Bordes, fondos muted |
-| `color.neutral.50` | #F5F5F5 | Cream | Bandas de sección |
-| `color.neutral.0` | #FFFFFF | White | Superficies |
+Siete escalas de 11 pasos (50–950): `neutral`, `tomato`, `sage`, `green`, `yellow`, `red`, `blue`. Más `base.white`, `base.black`, `alpha.*` (negro y blanco con transparencia) y `external.mercadopago`.
+
+| Escala | Pasos de referencia | Rol |
+|---|---|---|
+| `tomato` | 500 = #E30613 · 600 = #C20510 · 700 = #9A040D | Rojo de marca, hover, activo |
+| `sage` | 500 = #1A9139 · 600 = #15803D · 700 = #126528 | Verde de marca (ilustración), verde accesible, hover |
+| `neutral` | 100 = #F5F5F5 · 200 = #E4E4E4 · 500 = #6B6B6B · 900 = #1A1A1A | Fondo subtle, bordes, texto secundario, texto principal |
+| `green` | 700 = #15803D | Feedback de éxito |
+| `yellow` | 700 = #A16207 | Feedback de advertencia |
+| `red` | — | Reserva para escalar feedback |
+| `blue` | 700 = #1D4ED8 | Feedback informativo |
 
 > Embed sugerido en zeroheight: bloque **Color palette** conectado al set `primitive` vía Tokens Studio / GitHub.
 
 ## Tokens semánticos
 
-### Fondos
+### Superficies (`color.surface.*`)
 | Token | Tailwind | Referencia | Cuándo usarlo |
 |---|---|---|---|
-| `color.bg.default` | `bg-default` | neutral.0 | Página, nav, cards |
-| `color.bg.subtle` | `bg-subtle` | neutral.50 | Bandas de sección, inputs secundarios |
-| `color.bg.muted` | `bg-muted` | neutral.100 | Skeletons, placeholders, chips inactivos |
-| `color.bg.brand` | `bg-brand` | tomato.600 | Contador del carrito, barra de progreso |
-| `color.bg.brand-subtle` | `bg-brand-subtle` | tomato.50 | Iconos de empty state, paso activo de "¿Cómo funciona?" |
-| `color.bg.accent` | `bg-accent` | sage.700 | Topbar, badges dietarios |
-| `color.bg.inverse` | `bg-inverse` | neutral.900 | Superficies oscuras |
-| `color.bg.overlay` / `-strong` | `bg-overlay` / `bg-overlay-strong` | black 50% / 60% | Scrim de modales, carrito y fotos |
+| `surface.default` | `bg-default` | base.white | Página, nav, cards, modales |
+| `surface.page` | `bg-page` | neutral.50 | Fondo de página alternativo |
+| `surface.subtle` | `bg-subtle` | neutral.100 | Bandas de sección, hover neutro |
+| `surface.muted` | `bg-muted` | neutral.200 | Skeletons, chips inactivos |
+| `surface.brand` | `bg-brand` | tomato.500 | Contador del carrito, barra de progreso |
+| `surface.brand-subtle` | `bg-brand-subtle` | tomato.50 | Paso destacado de "¿Cómo funciona?", empty states |
+| `surface.accent` | `bg-accent` | sage.600 | Barra superior, superficies verdes con texto |
+| `surface.inverse` | `bg-inverse` | neutral.900 | Footer, superficies oscuras |
+| `surface.overlay` / `overlay-strong` | `bg-overlay` / `bg-overlay-strong` | negro 50% / 60% | Scrim de modales y drawers |
+| `surface.mercadopago` | `bg-mercadopago` | external.mercadopago | Botón de Mercado Pago |
 
-Gradientes sobre fotos: `from-scrim/95 via-scrim/60 to-scrim/10`.
+Gradientes sobre fotos: `from-scrim/75 via-scrim/45 to-scrim/5`.
 
-### Texto
+### Texto (`color.text.*`)
 | Token | Tailwind | Referencia | Cuándo usarlo |
 |---|---|---|---|
-| `color.text.default` | `text-default` | neutral.900 | Títulos y cuerpo |
-| `color.text.muted` | `text-muted` | neutral.500 | Gramaje, "por unidad", metadatos |
-| `color.text.decorative` | `text-decorative` | neutral.100 | Numerales y flechas decorativas. Nunca información |
-| `color.text.brand` | `text-brand` | tomato.600 | Links, precio en oferta, iconos de acción |
-| `color.text.accent` | `text-accent` | sage.700 | Eyebrows, etiquetas veganas |
-| `color.text.inverse` | `text-inverse` | neutral.0 | Sobre superficies de marca u oscuras |
+| `text.primary` | `text-primary` | neutral.900 | Títulos y cuerpo |
+| `text.secondary` | `text-secondary` | neutral.500 | Gramaje, "por unidad", metadatos |
+| `text.tertiary` | `text-tertiary` | neutral.200 | Solo decorativo: numerales y flechas. Nunca información |
+| `text.disabled` | `text-disabled` | neutral.300 | Texto deshabilitado |
+| `text.brand` / `text.link` | `text-brand` / `text-link` | tomato.500 | Links, precio en oferta, íconos de acción |
+| `text.link-hover` | `text-link-hover` | tomato.600 | Hover de links |
+| `text.accent` | `text-accent` | sage.600 | Eyebrows, etiquetas veganas |
+| `text.inverse` / `on-brand` | `text-inverse` / `text-on-brand` | base.white | Sobre superficies de marca u oscuras |
+| `text.inverse-muted` | `text-inverse-muted` | blanco 80% | Texto secundario sobre superficies oscuras |
 
-### Bordes y acciones
+### Bordes (`color.border.*`) e íconos (`color.icon.*`)
+| Token | Tailwind | Referencia | Cuándo usarlo |
+|---|---|---|---|
+| `border.default` | `border-default` | neutral.200 | Divisores, cards |
+| `border.strong` | `border-strong` | neutral.900 | Hover y selección de chips y filtros |
+| `border.focus` | `border-focus` | tomato.500 | Campo en foco |
+| `border.brand` / `brand-subtle` | `border-brand` / `border-brand-subtle` | tomato.500 / tomato.200 | Botón outline, stepper / tintes de marca |
+| `border.accent` | `border-accent` | sage.600 | Bordes verdes |
+| `border.inverse` | `border-inverse` | blanco 30% | Sobre fotos y superficies oscuras |
+| `icon.default` / `subtle` | `text-icon-default` / `text-icon-subtle` | neutral.600 / neutral.500 | Íconos de UI |
+| `icon.brand` / `inverse` | `text-icon-brand` / `text-icon-inverse` | tomato.500 / base.white | Íconos de acción / sobre oscuro |
+
+### Acciones y foco
 | Token | Referencia | Cuándo usarlo |
 |---|---|---|
-| `color.border.default` | neutral.100 | Divisores, inputs, cards |
-| `color.border.strong` | neutral.900 | Hover/focus de inputs y chips |
-| `color.border.brand` | tomato.600 | Botón outline |
-| `color.action.primary.bg` / `.fg` | tomato.600 / white | Agregar, Ver productos, Suscribirme |
-| `color.action.primary.bg-hover` / `-active` | tomato.700 / tomato.800 | Estados de CTA |
-| `color.action.outline.bg-hover` | tomato.50 | Hover de outline y stepper |
-| `color.action.secondary.bg` / `.fg` | neutral.900 / white | Acción secundaria oscura (aplicar cupón, confirmar paso) |
-| `color.action.accent.bg` / `.fg` | sage.700 / white | Confirmaciones |
-| `color.action.accent.bg-hover` | sage.800 | Hover de accent |
-| `color.focus.ring` | tomato.600 | Focus visible: 2px, offset 2px |
+| `action.primary.bg` / `.fg` | tomato.500 / white | Agregar, Ver productos, Suscribirme |
+| `action.primary.bg-hover` / `-active` | tomato.600 / tomato.700 | Estados de CTA |
+| `action.outline.bg-hover` / `-active` | tomato.50 / tomato.100 | Hover de outline y stepper |
+| `action.secondary.bg` / `.fg` | neutral.900 / white | Acción secundaria oscura (aplicar cupón) |
+| `action.accent.bg` / `.fg` / `-hover` | sage.600 / white / sage.700 | Confirmaciones |
+| `focus.ring` | tomato.500 | Foco de teclado en links y botones: 2px, offset 2px |
+| `focus.ring-inverse` | white | Foco sobre fotos y superficies oscuras o de marca |
 
-## Feedback
+### Formularios (`color.form.*`)
+| Token | Tailwind | Referencia |
+|---|---|---|
+| `form.bg` / `bg-disabled` / `bg-error` | `bg-form` / `bg-form-disabled` / `bg-form-error` | white / neutral.100 / tomato.50 |
+| `form.border` / `border-hover` | `border-form` / `border-form-hover` | neutral.200 / neutral.400 |
+| `form.border-focus` | `focus:border-form-focus` | tomato.500. **En foco el borde de 1px cambia de color, sin línea extra** |
+| `form.border-error` | `border-form-error` | tomato.600 |
+| `form.placeholder` / `text-disabled` | `placeholder:text-form-placeholder` / `text-form-text-disabled` | neutral.500 / neutral.400 |
 
-| Rol | Fondo (`bg-*-subtle`) | Borde | Texto | Sólido |
+## Feedback (`color.feedback.{tipo}.*`)
+
+| Tipo | Fondo (`bg-*-subtle`) | Borde (`border-*`) | Texto (`text-*`) | Sólido (`bg-*`) |
 |---|---|---|---|---|
-| success | sage.50 | sage.200 | sage.700 | sage.700 (`bg-success`) |
-| error | tomato.50 | tomato.200 | tomato.700 | — |
-| warning | amber.50 | amber.200 | amber.800 (icono amber.700) | — |
-| info | blue.50 | — | blue.700 | — |
-
-Amber y blue no son colores de marca: existen solo para feedback.
+| success | green.50 | green.300 | green.700 | green.700 |
+| warning | yellow.50 | yellow.300 | yellow.700 | — |
+| error | tomato.50 | tomato.200 | tomato.600 | — |
+| info | blue.50 | blue.300 | blue.700 | — |
 
 ## Commerce
 
-Tokens propios del e-commerce. Aunque hoy algunos resuelven al mismo valor que un semántico genérico, existen para poder cambiar el precio o el descuento sin tocar el resto de la UI.
+Tokens propios del e-commerce. Aunque resuelven al mismo valor que un semántico genérico, existen para poder cambiar el precio o el descuento sin tocar el resto de la UI.
 
 | Token | Tailwind | Valor | Uso |
 |---|---|---|---|
-| `color.commerce.price.current` | `text-price-current` | neutral.900 | Precio final del pack |
-| `color.commerce.price.previous` | `text-price-previous` | neutral.500 | Precio anterior (tachado) |
-| `color.commerce.price.unit` | `text-price-unit` | neutral.500 | "$ 4.200 por unidad" |
-| `color.commerce.discount.{bg,fg,border}` | `bg-discount text-discount border-discount` | white / tomato.600 / tomato.600 | Badge "-15%" |
-| `color.commerce.badge-dietary.{bg,fg}` | `bg-badge-dietary text-badge-dietary` | sage.700 / white | Vegano, Sin TACC, Premium |
-| `color.commerce.shipping-free.fg` | `text-shipping-free` | sage.700 | "Gratis" en el resumen |
+| `commerce.price.current` | `text-price-current` | neutral.900 | Precio final del pack |
+| `commerce.price.previous` | `text-price-previous` | neutral.500 | Precio anterior (tachado) |
+| `commerce.price.unit` | `text-price-unit` | neutral.500 | "$ 4.200 por unidad" |
+| `commerce.discount.{bg,fg,border}` | `bg-discount text-discount border-discount` | white / tomato.500 / tomato.500 | Badge "-15%" |
+| `commerce.badge-dietary.{bg,fg}` | `bg-badge-dietary text-badge-dietary` | sage.600 / white | Vegano, Sin TACC, Premium |
+| `commerce.shipping-free.fg` | `text-shipping-free` | sage.600 | "Gratis" en el resumen |
 
-## Accesibilidad (WCAG 2.1 AA)
+## Accesibilidad (WCAG 2.2 AA)
 
 | Combinación | Ratio | Resultado |
 |---|---|---|
-| text.default / bg.default | 17.40:1 | ✅ AA/AAA |
-| text.muted / bg.default | 5.33:1 | ✅ AA |
-| text.muted / bg.subtle | 4.89:1 | ✅ AA |
-| text.muted / bg.muted | 4.19:1 | ⚠️ Solo texto grande |
-| text.inverse / action.primary | 4.88:1 | ✅ AA |
-| text.brand / bg.default | 4.88:1 | ✅ AA |
-| text.inverse / sage.600 | 4.08:1 | ⚠️ Solo decorativo → por eso action.accent usa sage.700 |
-| text.inverse / action.accent (sage.700) | 5.02:1 | ✅ AA |
-| text.inverse / action.primary.bg-hover | 6.32:1 | ✅ AA |
-| commerce.discount.fg / bg (tomato.600 / white) | 4.88:1 | ✅ AA |
-| commerce.badge-dietary.fg / bg (white / sage.700) | 5.02:1 | ✅ AA |
+| text.primary / surface.default | 17.40:1 | ✅ AA/AAA |
+| text.secondary / surface.default | 5.33:1 | ✅ AA |
+| text.secondary / surface.subtle | 4.89:1 | ✅ AA |
+| text.secondary / surface.muted | 4.19:1 | ⚠️ Solo texto grande |
+| white / action.primary.bg | 4.88:1 | ✅ AA |
+| white / action.primary.bg-hover | 6.32:1 | ✅ AA |
+| white / action.accent.bg (sage.600) | 5.02:1 | ✅ AA |
+| white / sage.500 | 4.08:1 | ⚠️ Solo decorativo → por eso accent usa sage.600 |
+| feedback success / warning / error / info (texto sobre su fondo) | 4.79 / 4.76 / 5.75 / 6.16 | ✅ AA |
+| icon.default / icon.subtle sobre blanco | 7.81 / 5.33 | ✅ (mínimo 3:1) |
+| text.tertiary / surface.default | 1.27:1 | Solo decorativo, con `aria-hidden` |
 
-**Do:** para texto verde o botones verdes usar siempre `sage.700` (vía `text.accent` / `action.accent`).
-**Don't:** texto muted sobre `bg.muted`; usar `text.default` en ese fondo.
+**Do:** texto o fondos verdes con texto → siempre `sage.600` (vía `text.accent`, `surface.accent`, `action.accent`).
+**Don't:** `text.secondary` sobre `surface.muted`; usar `text.primary` en ese fondo.

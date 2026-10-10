@@ -147,13 +147,25 @@ StyleDictionary.registerFormat({
   },
 });
 
+/**
+ * Familias tipográficas: el token guarda solo el nombre (Figma necesita una familia),
+ * el CSS agrega fallbacks para la carga de la fuente o si no está disponible.
+ */
+StyleDictionary.registerTransform({
+  name: 'font/stack',
+  type: 'value',
+  filter: (t) => t.$type === 'fontFamily' && typeof t.$value === 'string' && !t.$value.includes(','),
+  transform: (t) => `${t.$value}, system-ui, sans-serif`,
+});
+const cssTransforms = [...StyleDictionary.hooks.transformGroups.css, 'font/stack'];
+
 const sd = new StyleDictionary({
   source: ['tokens/primitive.json', 'tokens/semantic.json', 'tokens/component.json'],
   usesDtcg: true,
   log: { verbosity: 'default' },
   platforms: {
     css: {
-      transformGroup: 'css',
+      transforms: cssTransforms,
       buildPath: 'dist/',
       files: [{ destination: 'tokens.css', format: 'css/variables-with-rgb' }],
     },

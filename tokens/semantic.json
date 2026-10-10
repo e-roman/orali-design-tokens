@@ -90,8 +90,8 @@
       },
       "tertiary": {
         "$type": "color",
-        "$value": "{color.neutral.400}",
-        "$description": "Solo decorativo: numerales, flechas. Nunca información (2.5:1)"
+        "$value": "{color.neutral.200}",
+        "$description": "Solo decorativo: numerales y flechas. Nunca información"
       },
       "disabled": {
         "$type": "color",
@@ -135,7 +135,8 @@
       },
       "strong": {
         "$type": "color",
-        "$value": "{color.neutral.300}"
+        "$value": "{color.neutral.900}",
+        "$description": "Hover y selección de chips y filtros"
       },
       "focus": {
         "$type": "color",
