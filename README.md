@@ -10,8 +10,8 @@ Design token pipeline for [Tienda Orali](https://staging.tiendaorali.com), an Ar
 
 ```
 tokens/
-  primitive.json        ← raw values: palette, scales, radius, motion
-  semantic.json         ← intent: bg, text, border, action, feedback, commerce
+  primitive.json        ← raw values: 50–950 color scales, spacing, radius, type, motion
+  semantic.json         ← intent: surface, text, border, icon, brand, action, form, feedback, commerce
   component.json        ← per-component decisions: button, stepper, input, badge, card
   $metadata.json        ← Tokens Studio set order
   $themes.json          ← Tokens Studio theme config
@@ -32,9 +32,9 @@ docs/                   ← zeroheight page sources (Color, Typography, Spacing,
 Three layers, each depending only on the one above it:
 
 ```
-Primitive   →  color.tomato.600 = #E30613
+Primitive   →  color.tomato.500 = #E30613
                  ↓
-Semantic    →  color.action.primary.bg = {color.tomato.600}
+Semantic    →  color.action.primary.bg = {color.tomato.500}
                  ↓
 Component   →  button.add-to-cart.bg = {color.action.primary.bg}
 ```
@@ -42,67 +42,56 @@ Component   →  button.add-to-cart.bg = {color.action.primary.bg}
 Components consume semantic tokens only. The CSS output keeps the reference chain:
 
 ```css
---color-tomato-600: #e30613;
---color-action-primary-bg: var(--color-tomato-600);
+--color-tomato-500: #e30613;
+--color-action-primary-bg: var(--color-tomato-500);
 --button-add-to-cart-bg: var(--color-action-primary-bg);
 ```
 
 ---
 
-## Collections (298 tokens)
+## Collections (390 tokens)
 
 | Collection | Tokens | Description |
 |---|---|---|
-| `color` (primitive) | 30 | tomato, sage, neutral, plus amber/blue for feedback only, alpha, external (Mercado Pago) |
-| `color` (semantic) | 51 | bg, text, border, action, feedback, focus (+ inverse ring) |
-| `color.commerce` | 9 | price, discount, dietary badge, free shipping |
-| `font` + `typography` | 33 | Montserrat, 4 weights, size and line-height scales, 9 composite styles |
-| `space` + `size` + `breakpoint` | 23 | base-4 scale, control heights, container, breakpoints |
-| `radius` | 7 | none → full, aligned with Tailwind names |
+| `color` (primitive) | 86 | 7 scales × 11 steps (neutral, tomato, sage, green, yellow, red, blue), base, alpha, external (Mercado Pago) |
+| `color` (semantic) | 82 | surface, text, border, icon, brand, action, form, feedback, focus, commerce |
+| `font` + `typography` | 35 | Montserrat, 4 weights, size and line-height scales, 9 composite styles |
+| `space` + `size` + `breakpoint` | 30 | base-4 scale (0–256), control heights, container, breakpoints |
+| `radius` | 8 | none · sm 4 · md 8 · lg 12 · xl 16 · 2xl 20 · 3xl 24 · full |
 | `shadow` + `elevation` | 10 | 5 primitives → subtle, card, card-hover, dropdown, overlay |
 | `z-index` + `layer` | 16 | sticky → header → overlay → drawer → modal → progress |
-| `border-width` + `opacity` | 3 | default/focus widths, disabled opacity |
+| `border-width` + `opacity` | 7 | sm/md/lg/focus widths, disabled/overlay/hover opacity |
 | `duration` + `easing` + `motion` | 8 | 150–1000 ms, standard easing, transitions |
 | component | 108 | button (shape, primary, add-to-cart, secondary, outline, neutral, inverse, sizes), stepper (sm/md/lg), input (form, pill), badge (discount, dietary, counter), card (product, content) |
-
 
 ---
 
 ## Semantic token groups
 
-### Brand & action
+| Group | Tokens | Tailwind |
+|---|---|---|
+| `color.surface` | default, page, subtle, muted, inverse, overlay, overlay-strong, brand, brand-subtle, accent, mercadopago | `bg-*` |
+| `color.text` | primary, secondary, tertiary (decorative only), disabled, inverse, inverse-muted, on-brand, link, link-hover, brand, accent | `text-*` |
+| `color.border` | default, strong, focus, brand, brand-subtle, accent, inverse | `border-*`, `ring-*`, `divide-*` |
+| `color.icon` | default, subtle, brand, inverse | `text-icon-*` |
+| `color.brand` | default, hover, active, subtle | CSS variables |
+| `color.action` | primary, secondary, outline, accent (bg, bg-hover, bg-active, fg) | `bg-action-*`, `text-on-*` |
+| `color.form` | bg, border, border-hover, border-focus, border-error, bg-error, bg-disabled, placeholder, text-disabled | `bg-form`, `border-form*`, `text-form-*` |
+| `color.feedback` | success, warning, error, info → text, bg, border (+ success solid) | `text-success`, `bg-success-subtle`, `border-error`… |
+| `color.commerce` | price (current, previous, unit), discount, badge-dietary, shipping-free | `text-price-current`, `bg-discount`… |
+| `color.focus` | ring, ring-inverse | `outline-focus`, `outline-focus-inverse` |
+
+### Key values
 | Token | Value | Use |
 |---|---|---|
-| `color.action.primary.bg` | `tomato.600` (#E30613) | CTAs: Agregar, Ver productos |
-| `color.action.primary.bg-hover` | `tomato.700` (#C20510) | Hover on primary actions |
-| `color.action.primary.bg-active` | `tomato.800` (#9A040D) | Pressed |
-| `color.action.secondary.bg` | `neutral.900` (#1A1A1A) | Dark secondary actions: apply coupon, checkout steps |
-| `color.bg.accent` | `sage.700` (#15803D) | Top bar, green surfaces with text |
-| `color.focus.ring` | `tomato.600` | 2px focus outline, 2px offset |
-
-### Shape
-| Token | Value | Use |
-|---|---|---|
-| `button.shape.default` | `radius.lg` (8px) | Purchase and UI actions: Add to cart, stepper, checkout, forms, empty states |
-| `button.shape.pill` | `radius.full` | Marketing only: hero, category banners, newsletter. Filters use `rounded-full` too |
-
-### Commerce (e-commerce specific)
-| Token | Value | Use |
-|---|---|---|
-| `color.commerce.price.current` | `neutral.900` | Pack price |
-| `color.commerce.price.previous` | `neutral.500` | Strikethrough price |
-| `color.commerce.price.unit` | `neutral.500` | "$ 4.200 por unidad" |
-| `color.commerce.discount.*` | white / `tomato.600` | "-15%" badge |
-| `color.commerce.badge-dietary.*` | `sage.700` / white | Vegano, Sin TACC, Premium |
-| `color.commerce.shipping-free.fg` | `sage.700` | "Gratis" in order summary |
-
-### Feedback
-| Token | Use |
-|---|---|
-| `color.feedback.success.*` | Minimum order reached, item added |
-| `color.feedback.error.*` | Form validation |
-| `color.feedback.warning.*` | Delivery zone notices |
-| `color.feedback.info.*` | Informational notes on product pages |
+| `color.action.primary.bg` | `tomato.500` (#E30613) | CTAs: Agregar, Ver productos |
+| `color.action.primary.bg-hover` / `-active` | `tomato.600` (#C20510) / `tomato.700` (#9A040D) | Hover, pressed |
+| `color.surface.accent` | `sage.600` (#15803D) | Top bar, green surfaces with text (5.02:1) |
+| `color.text.secondary` | `neutral.500` (#6B6B6B) | Metadata, unit price (5.33:1) |
+| `button.shape.default` | `radius.md` (8px) | Purchase and UI actions |
+| `button.shape.pill` | `radius.full` | Marketing only: hero, category banners, newsletter |
+| `border-width.focus` | 1px | Fields: focus recolors the border, no extra outline |
+| `button.focus-width` | `border-width.lg` (2px) | Buttons and links: outline with 2px offset |
 
 ---
 
@@ -141,7 +130,7 @@ export default {
 ```
 
 ```tsx
-<button className="h-10 w-full rounded-lg bg-action-primary text-on-primary hover:bg-action-primary-hover">
+<button className="h-10 w-full rounded-md bg-action-primary text-on-primary hover:bg-action-primary-hover">
   Agregar
 </button>
 <span className="text-price-current">$ 12.600</span>
@@ -150,44 +139,44 @@ export default {
 
 | Token | Tailwind utility |
 |---|---|
-| `color.bg.*` | `bg-default`, `bg-subtle`, `bg-muted`, `bg-brand`, `bg-accent`… |
-| `color.text.*` | `text-default`, `text-muted`, `text-brand`, `text-accent`… |
+| `color.surface.*` | `bg-default`, `bg-subtle`, `bg-muted`, `bg-brand`, `bg-accent`… |
+| `color.text.*` | `text-primary`, `text-secondary`, `text-brand`, `text-accent`… |
 | `color.border.*` | `border-default`, `border-strong`, `border-brand`… (also `ring-*`, `divide-*`) |
+| `color.icon.*` | `text-icon-default`, `text-icon-brand`… |
+| `color.form.*` | `bg-form`, `border-form`, `focus:border-form-focus`, `placeholder:text-form-placeholder` |
 | `color.action.{role}.bg[-state]` | `bg-action-primary`, `hover:bg-action-primary-hover` |
 | `color.action.{role}.fg` | `text-on-primary` |
 | `color.feedback.{kind}.*` | `bg-success-subtle`, `bg-success`, `text-error`, `border-warning` |
 | `color.commerce.*` | `text-price-current`, `bg-discount`, `bg-badge-dietary`, `text-shipping-free` |
-| `radius.*` | `rounded-lg`, `rounded-2xl`, `rounded-full` (replaces Tailwind's scale) |
+| `radius.*` | `rounded`, `rounded-md`, `rounded-xl`, `rounded-full` (replaces Tailwind's scale) |
 | `elevation.*` | `shadow-subtle`, `shadow-card`, `shadow-card-hover`, `shadow-dropdown`, `shadow-overlay` (replaces Tailwind's scale) |
 | `layer.*` | `z-sticky`, `z-header`, `z-overlay`, `z-drawer`, `z-modal`, `z-modal-top`, `z-progress` (replaces Tailwind's scale) |
 | `typography.*` | `text-display`, `text-heading-xl`, `text-heading-lg`, `text-body-md`, `text-label`, `text-caption`… (size + line-height + weight) |
 | `color.focus.ring-inverse` | `outline-focus-inverse`, `ring-focus-inverse` (focus on dark/green surfaces and photos) |
 
-**Opacity modifiers work.** Every opaque color also ships as RGB channels (`--color-bg-muted-rgb: 228 228 228`), so `bg-muted/70` and `from-scrim/95` compile. With plain `var()` colors, Tailwind 3 drops those classes without a warning. That was happening on the site before the migration: hero and category image gradients never rendered.
+**Opacity modifiers work.** Every opaque color also ships as RGB channels (`--color-surface-muted-rgb: 228 228 228`), so `bg-muted/70` and `from-scrim/75` compile. With plain `var()` colors, Tailwind 3 drops those classes without a warning.
 
-Spacing and font sizes follow Tailwind's scale 1:1, so the preset doesn't redefine them.
+Spacing and font sizes follow Tailwind's scale 1:1, so the preset doesn't redefine them. Font families keep a single name for Figma; the CSS appends `system-ui, sans-serif`.
 
 ---
 
 ## Sync workflow
 
 ```
-Figma Variables
-      ↕  (Tokens Studio plugin)
-GitHub (this repo): tokens/
-      ↓  (GitHub Actions on push)
-Style Dictionary build
-      ↓
-dist/tokens.css · dist/tailwind.preset.js · dist/tokens.json
-      ↓  (npm update @orali/design-tokens)
-Tienda Orali (Next.js + Tailwind)
+Tokens Studio (edit tokens)  ──push──▶  GitHub branch (figma-ds)
+        │                                     │
+        ▼                                     ▼  GitHub Actions
+Export to Figma Variables            Style Dictionary → dist/
+                                              │
+                                              ▼  tag (v2.0.0)
+                                 Tienda Orali (Next.js + Tailwind)
 ```
 
 To update tokens:
-1. Edit variables in Figma
-2. Tokens Studio → Push to GitHub
-3. GitHub Actions rebuilds `dist/` and commits it
-4. In the site: `npm update @orali/design-tokens`
+1. Edit tokens **in Tokens Studio** (not in Figma's variables panel: those edits don't reach GitHub on the free plan)
+2. Push to a branch, never to `main`
+3. Export styles & variables to Figma (by token sets, without removing unlinked variables)
+4. Merge, tag, and point the site to the tag
 
 Local build:
 
@@ -202,28 +191,30 @@ npm run build
 
 | Before | After |
 |---|---|
-| 6 brand colors in `globals.css`, used directly (`text-charcoal`, `bg-tomato`) | Semantic utilities only (`text-default`, `bg-action-primary`) |
+| 6 brand colors in `globals.css`, used directly (`text-charcoal`, `bg-tomato`) | Semantic utilities only (`text-primary`, `bg-action-primary`) |
 | Tailwind's default palette mixed in (`green-600`, `red-50`, `amber-*`, `blue-*`) | Mapped to `feedback.*`, `commerce.*` and brand-tint tokens |
 | 12 opacity-modified classes (39 usages) silently dropped | Compiled via RGB channels |
 | Hover = `opacity: 0.9` | Hover = `action.primary.bg-hover` |
 | 7 border radii, including Tailwind's `md` (6px) | 6 radii, enforced by the preset |
 | Mixed radii with no rule: pill on some purchase actions, 8px on others | Two shapes with a rule: 8px (`button.shape.default`) for purchase and UI actions, pill (`button.shape.pill`) only for marketing CTAs and filters |
 | One stepper size everywhere | Stepper sm 32px (cart, drawer), md 40px (card, shares slot with Add to cart), lg 44px (product page) |
-| Green text on white at 4.08:1 | `sage.700` at 5.02:1 |
+| Green text on white at 4.08:1 | `sage.600` at 5.02:1 |
+| v2: `bg`/`text` names and partial scales | `surface`, `text.primary/secondary`, `icon`, `form`; full 50–950 scales; radius `md` added |
 
-Verified with before/after screenshots across 9 routes × 2 viewports: pixel-identical except for the intended changes.
+Verified with before/after screenshots across 9 routes × 2 viewports. The v2 migration (33 files) is pixel-identical to v1.
 
 ---
 
 ## Accessibility
 
-Color tokens are audited against WCAG 2.1 AA:
-- `text.default` on `bg.default`: 17.40:1
-- `text.muted` on `bg.default`: 5.33:1, on `bg.subtle`: 4.89:1
+Color tokens are audited against WCAG 2.2 AA:
+- `text.primary` on `surface.default`: 17.40:1
+- `text.secondary` on `surface.default`: 5.33:1, on `surface.subtle`: 4.89:1
 - White on `action.primary.bg`: 4.88:1
-- White on `action.accent.bg` / `commerce.badge-dietary.bg` (`sage.700`): 5.02:1
-- `sage.600` (#1A9139) is kept as a brand color for illustration only: 4.08:1 with white
-- Focus: 2px `focus.ring` with 2px offset, `:focus-visible` only
+- White on `action.accent.bg` / `commerce.badge-dietary.bg` (`sage.600`): 5.02:1
+- `sage.500` (#1A9139) is kept as a brand color for illustration only: 4.08:1 with white
+- `text.tertiary` (1.27:1) is decorative only, always with `aria-hidden`
+- Focus: buttons and links 2px `focus.ring` with 2px offset; fields recolor their 1px border (`form.border-focus`)
 - Touch targets: primary and outline buttons 44px (`size.control.lg`); compact stepper buttons 32×32 (above the 24px WCAG 2.2 minimum)
 
 ---
@@ -240,7 +231,7 @@ Color tokens are audited against WCAG 2.1 AA:
 | Tool | Role |
 |---|---|
 | Figma + Variables | Single source of truth for design |
-| Tokens Studio | Figma ↔ GitHub sync |
+| Tokens Studio | Token editing, GitHub sync, export to Figma Variables |
 | Style Dictionary v4 | DTCG → CSS / JSON / Tailwind preset |
 | GitHub Actions | Auto-build pipeline |
 | Tailwind CSS 3 | Frontend consumption via preset |

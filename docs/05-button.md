@@ -15,7 +15,7 @@ Los botones disparan acciones. Orali tiene cuatro variantes, cada una con un rol
 
 | Propiedad | Primary | Add to cart | Outline |
 |---|---|---|---|
-| Fondo | `button.primary.bg` → tomato.600 | `button.add-to-cart.bg` → tomato.600 | transparent |
+| Fondo | `button.primary.bg` → tomato.500 | `button.add-to-cart.bg` → tomato.500 | transparent |
 | Texto | white | white | `text.brand` |
 | Borde | — | — | 1px `border.brand` |
 | Altura | 44px (`size.control.lg`) | 40px (`size.control.md`) | 44px (`size.control.lg`) |
@@ -29,7 +29,7 @@ El radius separa **marketing** de **compra**. Mezclar las dos formas en una mism
 
 | Forma | Token | Dónde |
 |---|---|---|
-| **Default, 8px** | `button.shape.default` → `radius.lg` | Agregar, Stepper, Finalizar compra, Continuar con el pago, Aplicar cupón, Ingresar, estados vacíos, formularios |
+| **Default, 8px** | `button.shape.default` → `radius.md` | Agregar, Stepper, Finalizar compra, Continuar con el pago, Aplicar cupón, Ingresar, estados vacíos, formularios |
 | **Pill** | `button.shape.pill` → `radius.full` | CTAs de hero, banners de categoría ("Ver productos"), newsletter ("Suscribirme"), filtros/chips |
 
 En código: `<Button shape="pill">` o `buttonClasses({ shape: "pill" })`. La variante `inverse` (botón blanco sobre foto) ya es pill.
@@ -41,9 +41,9 @@ Badges (`-15%`, Vegano, Sin TACC) no son botones: usan `radius.sm` y no compiten
 | Estado | Spec |
 |---|---|
 | Default | Según tabla |
-| Hover | Primary / Add to cart: `action.primary.bg-hover` (tomato.700). Outline: `action.outline.bg-hover` (tomato.50). Transición `motion.transition.fast` |
-| Active | `action.primary.bg-active` (tomato.800) |
-| Focus | `button.focus-ring` 2px (`border-width.focus`), offset 2px, solo con `:focus-visible` |
+| Hover | Primary / Add to cart: `action.primary.bg-hover` (tomato.600). Outline: `action.outline.bg-hover` (tomato.50). Transición `motion.transition.fast` |
+| Active | `action.primary.bg-active` (tomato.700) |
+| Focus | `button.focus-ring` 2px (`button.focus-width` → `border-width.lg`), offset 2px, solo con `:focus-visible`. Los campos usan 1px (`border-width.focus`) recoloreando el borde |
 | Disabled | `opacity.disabled` (0.5), sin hover, `aria-disabled` |
 | Loading | Spinner reemplaza el label, mantiene ancho |
 

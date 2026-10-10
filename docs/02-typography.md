@@ -6,7 +6,7 @@ Orali usa una sola familia, **Montserrat**, en cuatro pesos. La jerarquía se co
 
 | Token | Valor |
 |---|---|
-| `font.family.sans` | Montserrat, system-ui, sans-serif |
+| `font.family.sans` | Montserrat (en CSS: `Montserrat, system-ui, sans-serif`) |
 | `font.weight.regular` | 400 — cuerpo |
 | `font.weight.medium` | 500 — botones, controles |
 | `font.weight.semibold` | 600 — títulos |
@@ -28,11 +28,11 @@ Orali usa una sola familia, **Montserrat**, en cuatro pesos. La jerarquía se co
 
 ## Escala de tamaños
 
-`2xs 11` · `xs 12` · `sm 14` · `md 16` · `lg 18` · `xl 20` · `2xl 24` · `3xl 30` · `4xl 36` · `6xl 60`
+`2xs 11` · `xs 12` · `sm 14` · `md 16` · `lg 18` · `xl 20` · `2xl 24` · `3xl 30` · `4xl 36` · `5xl 48` · `6xl 60`
 
 ## Reglas
 
 - Un solo `display` por página.
 - `heading-sm` en cards: máximo 2 líneas, truncar con ellipsis.
-- Precios: `body-md` semibold para el precio final, `caption` + `text.muted` para el precio por unidad.
+- Precios: `body-md` semibold para el precio final, `caption` + `text.secondary` para el precio por unidad.
 - **Don't:** usar 11px (`2xs`) para información crítica; queda solo para metadatos decorativos.

@@ -1,8 +1,8 @@
 # Changelog
 
-## 2.0.0 (figma-ds, in progress)
+## 2.0.0
 
-Design system rebuilt from the Figma file. Breaking for consumers.
+Design system rebuilt from the Figma file. Breaking for consumers: class and variable names change, rendered values don't (site migration verified pixel-identical).
 
 - Complete primitive scales (50–950) for neutral, tomato, sage, green, yellow, red, blue; `color.base.white|black`
 - Brand steps renumbered: `tomato.500` = #E30613, `sage.600` = #15803D. Semantic values unchanged (AA)
@@ -10,6 +10,21 @@ Design system rebuilt from the Figma file. Breaking for consumers.
 - Semantic groups: `surface`, `text`, `border`, `icon`, `brand`, `form`, `feedback.{kind}.{text,bg,border}`. `color.bg.*` → `color.surface.*`
 - `border-width.focus` = 1px (fields recolor their border). Buttons keep a 2px outline (`border-width.lg`)
 - Tailwind: `bg-*` from `surface`, `text-icon-*`, `bg-form`, `border-form*`, `text-form-*`
+- `border.strong` (neutral.900) and `text.tertiary` (neutral.200, decorative only) keep v1 values
+- CSS: font families get `system-ui, sans-serif` fallbacks; the token keeps a single family for Figma
+- Figma: variable scopes set by use; primitive colors and type hidden from pickers
+
+Migration map for consumers:
+
+| v1 | v2 |
+|---|---|
+| `text-default` / `text-muted` / `text-decorative` | `text-primary` / `text-secondary` / `text-tertiary` |
+| `text-brand-hover` / `text-warning-icon` | `text-link-hover` / `text-warning` |
+| `bg-external-mercadopago` | `bg-mercadopago` |
+| `rounded-lg` / `rounded-xl` / `rounded-2xl` | `rounded-md` / `rounded-lg` / `rounded-xl` (same px) |
+| `--color-bg-*` / `--color-text-default` | `--color-surface-*` / `--color-text-primary` |
+| `--color-feedback-{kind}-fg` | `--color-feedback-{kind}-text` |
+| `--border-width-default` | `--border-width-sm` |
 
 ## 1.2.1
 

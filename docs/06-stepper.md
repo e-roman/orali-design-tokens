@@ -27,8 +27,8 @@ El cambio botón ↔ stepper es un **cambio de estado del mismo control**, no do
 |---|---|---|
 | Fondo | `stepper.bg` | white |
 | Texto cantidad | `stepper.fg` | neutral.900 |
-| Iconos −/+ | `stepper.icon` | tomato.600 |
-| Borde | `stepper.border` / `stepper.border-width` | tomato.600 / 1px |
+| Iconos −/+ | `stepper.icon` → `icon.brand` | tomato.500 |
+| Borde | `stepper.border` → `border.brand` / `stepper.border-width` | tomato.500 / 1px |
 | Radius | `stepper.radius` → `button.add-to-cart.radius` | 8px |
 | Altura sm | `stepper.height-sm` → `size.control.xs` | 32px (carrito, drawer) |
 | Altura md | `stepper.height` → `button.add-to-cart.height` | 40px (card) |
@@ -61,7 +61,7 @@ En el carrito esa regla no aplica. El Stepper es una línea más de la fila y a 
 | Máximo (stock) | + deshabilitado, opacidad 50% |
 | Loading | Valor reemplazado por spinner mientras se actualiza el carrito; −/+ bloqueados |
 | Hover −/+ | `stepper.bg-hover` (tomato.50) |
-| Focus | `color.focus.ring` 2px en cada botón −/+, no en el contenedor |
+| Focus | `button.focus-ring` 2px en cada botón −/+, no en el contenedor |
 
 ## Uso
 
