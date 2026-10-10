@@ -1,9 +1,52 @@
 {
   "button": {
+    "shape": {
+      "default": {
+        "$type": "dimension",
+        "$value": "{radius.md}",
+        "$description": "Acciones de compra y UI: 8px"
+      },
+      "pill": {
+        "$type": "dimension",
+        "$value": "{radius.full}",
+        "$description": "Solo marketing: hero, banners, newsletter"
+      }
+    },
+    "size": {
+      "md": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      }
+    },
+    "focus-ring": {
+      "$type": "color",
+      "$value": "{color.focus.ring}"
+    },
+    "focus-width": {
+      "$type": "dimension",
+      "$value": "{border-width.lg}",
+      "$description": "Botones: 2px por fuera (no tienen borde que recolorear)"
+    },
+    "disabled-opacity": {
+      "$type": "number",
+      "$value": "{opacity.disabled}"
+    },
     "primary": {
       "bg": {
         "$type": "color",
         "$value": "{color.action.primary.bg}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg-hover}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg-active}"
       },
       "fg": {
         "$type": "color",
@@ -28,6 +71,12 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.semibold}"
+      }
+    },
+    "add-to-cart": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.action.primary.bg}"
       },
       "bg-hover": {
         "$type": "color",
@@ -36,82 +85,6 @@
       "bg-active": {
         "$type": "color",
         "$value": "{color.action.primary.bg-active}"
-      }
-    },
-    "outline": {
-      "bg": {
-        "$type": "color",
-        "$value": "transparent"
-      },
-      "fg": {
-        "$type": "color",
-        "$value": "{color.text.brand}"
-      },
-      "border": {
-        "$type": "color",
-        "$value": "{color.border.brand}"
-      },
-      "radius": {
-        "$type": "dimension",
-        "$value": "{button.shape.default}"
-      },
-      "height": {
-        "$type": "dimension",
-        "$value": "{size.control.lg}",
-        "$description": "38 → 44px: target táctil mínimo en mobile"
-      },
-      "padding-x": {
-        "$type": "dimension",
-        "$value": "{space.4}"
-      },
-      "padding-y": {
-        "$type": "dimension",
-        "$value": "{space.3}"
-      },
-      "font-weight": {
-        "$type": "fontWeight",
-        "$value": "{font.weight.medium}"
-      },
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{color.action.outline.bg-hover}"
-      }
-    },
-    "neutral": {
-      "bg": {
-        "$type": "color",
-        "$value": "{color.bg.default}"
-      },
-      "fg": {
-        "$type": "color",
-        "$value": "{color.text.default}"
-      },
-      "border": {
-        "$type": "color",
-        "$value": "{color.border.default}"
-      },
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{color.bg.subtle}"
-      },
-      "radius": {
-        "$type": "dimension",
-        "$value": "{button.shape.default}"
-      },
-      "padding-x": {
-        "$type": "dimension",
-        "$value": "{space.6}"
-      },
-      "font-weight": {
-        "$type": "fontWeight",
-        "$value": "{font.weight.medium}",
-        "$description": "Acción alternativa sin peso de marca: Continuar con Google, Cancelar"
-      }
-    },
-    "add-to-cart": {
-      "bg": {
-        "$type": "color",
-        "$value": "{color.action.primary.bg}"
       },
       "fg": {
         "$type": "color",
@@ -120,7 +93,7 @@
       "radius": {
         "$type": "dimension",
         "$value": "{button.shape.default}",
-        "$description": "Comparte forma con stepper: se reemplazan en el mismo slot"
+        "$description": "Comparte forma con stepper"
       },
       "height": {
         "$type": "dimension",
@@ -129,27 +102,7 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
-      },
-      "bg-hover": {
-        "$type": "color",
-        "$value": "{color.action.primary.bg-hover}"
-      },
-      "bg-active": {
-        "$type": "color",
-        "$value": "{color.action.primary.bg-active}"
       }
-    },
-    "focus-ring": {
-      "$type": "color",
-      "$value": "{color.focus.ring}"
-    },
-    "focus-width": {
-      "$type": "dimension",
-      "$value": "{border-width.focus}"
-    },
-    "disabled-opacity": {
-      "$type": "number",
-      "$value": "{opacity.disabled}"
     },
     "secondary": {
       "bg": {
@@ -181,18 +134,86 @@
         "$value": "{font.weight.medium}"
       }
     },
-    "inverse": {
+    "outline": {
       "bg": {
         "$type": "color",
-        "$value": "{color.bg.default}"
-      },
-      "fg": {
-        "$type": "color",
-        "$value": "{color.text.default}"
+        "$value": "rgba(0, 0, 0, 0)"
       },
       "bg-hover": {
         "$type": "color",
-        "$value": "{color.bg.subtle}"
+        "$value": "{color.action.outline.bg-hover}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.brand}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.brand}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{button.shape.default}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.4}"
+      },
+      "padding-y": {
+        "$type": "dimension",
+        "$value": "{space.3}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      }
+    },
+    "neutral": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.surface.default}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.surface.subtle}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.primary}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.default}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{button.shape.default}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.6}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      }
+    },
+    "inverse": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.surface.default}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.surface.subtle}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.primary}"
       },
       "radius": {
         "$type": "dimension",
@@ -209,47 +230,26 @@
       },
       "font-weight": {
         "$type": "fontWeight",
-        "$value": "{font.weight.medium}",
-        "$description": "Sobre fotos o superficies oscuras: 'Ver productos' en categorías"
-      }
-    },
-    "size": {
-      "md": {
-        "$type": "dimension",
-        "$value": "{size.control.md}",
-        "$description": "40px: dentro de cards, drawers, inline con inputs"
-      },
-      "lg": {
-        "$type": "dimension",
-        "$value": "{size.control.lg}",
-        "$description": "44px: CTAs de sección y de formulario (default)"
-      }
-    },
-    "shape": {
-      "default": {
-        "$type": "dimension",
-        "$value": "{radius.lg}",
-        "$description": "Acciones de compra y de UI: agregar, checkout, formularios, estados vacíos"
-      },
-      "pill": {
-        "$type": "dimension",
-        "$value": "{radius.full}",
-        "$description": "Solo marketing: CTAs de hero, banners y newsletter"
+        "$value": "{font.weight.medium}"
       }
     }
   },
   "stepper": {
     "bg": {
       "$type": "color",
-      "$value": "{color.bg.default}"
+      "$value": "{color.surface.default}"
+    },
+    "bg-hover": {
+      "$type": "color",
+      "$value": "{color.action.outline.bg-hover}"
     },
     "fg": {
       "$type": "color",
-      "$value": "{color.text.default}"
+      "$value": "{color.text.primary}"
     },
     "icon": {
       "$type": "color",
-      "$value": "{color.text.brand}"
+      "$value": "{color.icon.brand}"
     },
     "border": {
       "$type": "color",
@@ -257,7 +257,7 @@
     },
     "border-width": {
       "$type": "dimension",
-      "$value": "{border-width.default}"
+      "$value": "{border-width.sm}"
     },
     "radius": {
       "$type": "dimension",
@@ -268,15 +268,27 @@
       "$type": "dimension",
       "$value": "{button.add-to-cart.height}"
     },
+    "height-sm": {
+      "$type": "dimension",
+      "$value": "{size.control.xs}",
+      "$description": "Carrito y drawer"
+    },
+    "height-lg": {
+      "$type": "dimension",
+      "$value": "{size.control.lg}",
+      "$description": "PDP"
+    },
     "padding-x": {
       "$type": "dimension",
-      "$value": "{space.3}",
-      "$description": "Mínimo para que −/+ no toquen la curva del pill"
+      "$value": "{space.3}"
     },
     "hit-area": {
       "$type": "dimension",
-      "$value": "{size.control.md}",
-      "$description": "Área táctil de −/+ (40×40)"
+      "$value": "{size.control.md}"
+    },
+    "hit-area-sm": {
+      "$type": "dimension",
+      "$value": "{size.control.xs}"
     },
     "font-weight": {
       "$type": "fontWeight",
@@ -285,49 +297,29 @@
     "transition": {
       "$type": "transition",
       "$value": "{motion.transition.fast}"
-    },
-    "bg-hover": {
-      "$type": "color",
-      "$value": "{color.action.outline.bg-hover}",
-      "$description": "Hover sobre −/+"
-    },
-    "height-lg": {
-      "$type": "dimension",
-      "$value": "{size.control.lg}",
-      "$description": "Variante lg (PDP)"
-    },
-    "height-sm": {
-      "$type": "dimension",
-      "$value": "{size.control.xs}",
-      "$description": "Carrito y drawer"
-    },
-    "hit-area-sm": {
-      "$type": "dimension",
-      "$value": "{size.control.xs}",
-      "$description": "Área de −/+ en el tamaño sm (32×32, mínimo WCAG 24)"
     }
   },
   "input": {
     "form": {
       "bg": {
         "$type": "color",
-        "$value": "{color.bg.subtle}"
+        "$value": "{color.form.bg}"
       },
       "fg": {
         "$type": "color",
-        "$value": "{color.text.default}"
+        "$value": "{color.text.primary}"
       },
       "border": {
         "$type": "color",
-        "$value": "{color.border.default}"
+        "$value": "{color.form.border}"
       },
       "border-focus": {
         "$type": "color",
-        "$value": "{color.border.strong}"
+        "$value": "{color.form.border-focus}"
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.lg}"
+        "$value": "{radius.md}"
       },
       "height": {
         "$type": "dimension",
@@ -335,26 +327,25 @@
       },
       "padding-x": {
         "$type": "dimension",
-        "$value": "{space.3}",
-        "$description": "Checkout, login, cupón, filtros"
+        "$value": "{space.3}"
       }
     },
     "pill": {
       "bg": {
         "$type": "color",
-        "$value": "{color.bg.default}"
+        "$value": "{color.form.bg}"
       },
       "fg": {
         "$type": "color",
-        "$value": "{color.text.default}"
+        "$value": "{color.text.primary}"
       },
       "border": {
         "$type": "color",
-        "$value": "{color.border.default}"
+        "$value": "{color.form.border}"
       },
       "border-focus": {
         "$type": "color",
-        "$value": "{color.border.strong}"
+        "$value": "{color.form.border-focus}"
       },
       "radius": {
         "$type": "dimension",
@@ -366,8 +357,7 @@
       },
       "padding-x": {
         "$type": "dimension",
-        "$value": "{space.4}",
-        "$description": "Búsqueda y newsletter"
+        "$value": "{space.4}"
       }
     }
   },
@@ -381,10 +371,13 @@
         "$type": "color",
         "$value": "{color.commerce.discount.fg}"
       },
+      "border": {
+        "$type": "color",
+        "$value": "{color.commerce.discount.border}"
+      },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.sm}",
-        "$description": "Etiqueta, no botón: esquina chica para no competir con los CTAs pill"
+        "$value": "{radius.sm}"
       },
       "padding-x": {
         "$type": "dimension",
@@ -401,10 +394,6 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.bold}"
-      },
-      "border": {
-        "$type": "color",
-        "$value": "{color.commerce.discount.border}"
       }
     },
     "dietary": {
@@ -418,18 +407,17 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.sm}",
-        "$description": "Etiqueta, no botón: esquina chica para no competir con los CTAs pill"
+        "$value": "{radius.sm}"
       },
       "font-size": {
         "$type": "dimension",
-        "$value": "{font.size.2xs}"
+        "$value": "{font.size.xs}"
       }
     },
     "counter": {
       "bg": {
         "$type": "color",
-        "$value": "{color.bg.brand}"
+        "$value": "{color.surface.brand}"
       },
       "fg": {
         "$type": "color",
@@ -441,8 +429,7 @@
       },
       "font-size": {
         "$type": "dimension",
-        "$value": "{font.size.2xs}",
-        "$description": "Contador del carrito y filtros. Mínimo 11px"
+        "$value": "{font.size.xs}"
       },
       "min-size": {
         "$type": "dimension",
@@ -454,7 +441,7 @@
     "product": {
       "bg": {
         "$type": "color",
-        "$value": "{color.bg.default}"
+        "$value": "{color.surface.default}"
       },
       "border": {
         "$type": "color",
@@ -462,7 +449,7 @@
       },
       "radius": {
         "$type": "dimension",
-        "$value": "{radius.lg}"
+        "$value": "{radius.md}"
       },
       "gap": {
         "$type": "dimension",
@@ -478,14 +465,13 @@
       }
     },
     "content": {
-      "radius": {
-        "$type": "dimension",
-        "$value": "{radius.2xl}",
-        "$description": "Pasos, banners de categoría, newsletter"
-      },
       "border": {
         "$type": "color",
         "$value": "{color.border.default}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.xl}"
       },
       "shadow": {
         "$type": "shadow",
