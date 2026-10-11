@@ -367,6 +367,10 @@
   --color-action-link-fg: var(--color-text-link);
   --color-action-link-fg-hover: var(--color-text-link-hover);
   --color-action-link-fg-active: var(--color-brand-active);
+  --color-form-label: var(--color-text-primary); /** Etiqueta del campo */
+  --color-form-label-disabled: var(--color-form-text-disabled); /** Etiqueta de campo deshabilitado */
+  --color-form-text: var(--color-text-secondary); /** Valor ingresado en el campo */
+  --color-form-helper: var(--color-text-secondary); /** Texto de ayuda debajo del campo */
   --button-focus-ring: var(--color-focus-ring);
   --button-primary-bg: var(--color-action-primary-bg);
   --button-primary-bg-hover: var(--color-action-primary-bg-hover);
@@ -594,7 +598,11 @@
   --color-form-border-error-rgb: 220 38 38;
   --color-form-bg-error-rgb: 254 242 242;
   --color-form-bg-disabled-rgb: 245 245 245;
+  --color-form-label-rgb: 26 26 26;
+  --color-form-label-disabled-rgb: 163 163 163;
+  --color-form-text-rgb: 107 107 107;
   --color-form-placeholder-rgb: 107 107 107;
+  --color-form-helper-rgb: 107 107 107;
   --color-form-text-disabled-rgb: 163 163 163;
   --color-focus-ring-rgb: 227 6 19;
   --color-focus-ring-inverse-rgb: 255 255 255;

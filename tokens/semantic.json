@@ -388,10 +388,30 @@
         "$type": "color",
         "$value": "{color.neutral.100}"
       },
+      "label": {
+        "$type": "color",
+        "$value": "{color.text.primary}",
+        "$description": "Etiqueta del campo"
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{color.form.text-disabled}",
+        "$description": "Etiqueta de campo deshabilitado"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.text.secondary}",
+        "$description": "Valor ingresado en el campo"
+      },
       "placeholder": {
         "$type": "color",
         "$value": "{color.neutral.500}",
         "$description": "AA 5.33:1"
+      },
+      "helper": {
+        "$type": "color",
+        "$value": "{color.text.secondary}",
+        "$description": "Texto de ayuda debajo del campo"
       },
       "text-disabled": {
         "$type": "color",
