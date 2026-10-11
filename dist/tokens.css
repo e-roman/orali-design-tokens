@@ -241,14 +241,15 @@
   --color-action-disabled-border: var(--color-neutral-200);
   --color-feedback-success-text: var(--color-green-700);
   --color-feedback-success-bg: var(--color-green-50);
-  --color-feedback-success-border: var(--color-green-300);
-  --color-feedback-success-solid: var(--color-green-700); /** Fondo sólido: botón "Agregado" en PDP */
+  --color-feedback-success-border: var(--color-green-600); /** Borde de alertas y estados de éxito. 3.30:1 sobre blanco (1.4.11) */
+  --color-feedback-success-solid: var(--color-green-600); /** Relleno: barras, íconos sobre fondo. No usar con texto blanco (3.30:1) */
   --color-feedback-warning-text: var(--color-yellow-700);
   --color-feedback-warning-bg: var(--color-yellow-50);
   --color-feedback-warning-border: var(--color-yellow-300);
   --color-feedback-error-text: var(--color-red-700); /** 6.47:1 sobre blanco, 5.91:1 sobre error.bg */
   --color-feedback-error-bg: var(--color-red-50);
-  --color-feedback-error-border: var(--color-red-300); /** Mismo paso que success, warning e info */
+  --color-feedback-error-border: var(--color-red-600); /** Borde de alertas y estados de error. 4.83:1 sobre blanco */
+  --color-feedback-error-solid: var(--color-red-600); /** Relleno: barras, íconos sobre fondo. Texto blanco OK (4.83:1) */
   --color-feedback-info-text: var(--color-blue-700);
   --color-feedback-info-bg: var(--color-blue-50);
   --color-feedback-info-border: var(--color-blue-300);
@@ -650,14 +651,15 @@
   --color-action-disabled-border-rgb: 228 228 228;
   --color-feedback-success-text-rgb: 21 128 61;
   --color-feedback-success-bg-rgb: 240 253 244;
-  --color-feedback-success-border-rgb: 134 239 172;
-  --color-feedback-success-solid-rgb: 21 128 61;
+  --color-feedback-success-border-rgb: 22 163 74;
+  --color-feedback-success-solid-rgb: 22 163 74;
   --color-feedback-warning-text-rgb: 161 98 7;
   --color-feedback-warning-bg-rgb: 254 252 232;
   --color-feedback-warning-border-rgb: 253 224 71;
   --color-feedback-error-text-rgb: 185 28 28;
   --color-feedback-error-bg-rgb: 254 242 242;
-  --color-feedback-error-border-rgb: 252 165 165;
+  --color-feedback-error-border-rgb: 220 38 38;
+  --color-feedback-error-solid-rgb: 220 38 38;
   --color-feedback-info-text-rgb: 29 78 216;
   --color-feedback-info-bg-rgb: 239 246 255;
   --color-feedback-info-border-rgb: 147 197 253;

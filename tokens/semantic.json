@@ -316,12 +316,13 @@
         },
         "border": {
           "$type": "color",
-          "$value": "{color.green.300}"
+          "$value": "{color.green.600}",
+          "$description": "Borde de alertas y estados de éxito. 3.30:1 sobre blanco (1.4.11)"
         },
         "solid": {
           "$type": "color",
-          "$value": "{color.green.700}",
-          "$description": "Fondo sólido: botón \"Agregado\" en PDP"
+          "$value": "{color.green.600}",
+          "$description": "Relleno: barras, íconos sobre fondo. No usar con texto blanco (3.30:1)"
         }
       },
       "warning": {
@@ -350,8 +351,13 @@
         },
         "border": {
           "$type": "color",
-          "$value": "{color.red.300}",
-          "$description": "Mismo paso que success, warning e info"
+          "$value": "{color.red.600}",
+          "$description": "Borde de alertas y estados de error. 4.83:1 sobre blanco"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.red.600}",
+          "$description": "Relleno: barras, íconos sobre fondo. Texto blanco OK (4.83:1)"
         }
       },
       "info": {

@@ -167,6 +167,7 @@ module.exports = {
         "success": "rgb(var(--color-feedback-success-solid-rgb) / <alpha-value>)",
         "warning-subtle": "rgb(var(--color-feedback-warning-bg-rgb) / <alpha-value>)",
         "error-subtle": "rgb(var(--color-feedback-error-bg-rgb) / <alpha-value>)",
+        "error": "rgb(var(--color-feedback-error-solid-rgb) / <alpha-value>)",
         "info-subtle": "rgb(var(--color-feedback-info-bg-rgb) / <alpha-value>)",
         "discount": "rgb(var(--color-commerce-discount-bg-rgb) / <alpha-value>)",
         "badge-dietary": "rgb(var(--color-commerce-badge-dietary-bg-rgb) / <alpha-value>)"

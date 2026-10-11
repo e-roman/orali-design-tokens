@@ -14,6 +14,7 @@ Botón reorganizado en tres ejes: jerarquía, tamaño y estado.
 - Toggle: `toggle.*` con apagado, encendido, hover, focus y disabled (apagado y encendido). Tamaños sm 32×20 y md 40×24
 - Semántico: `color.form.label`, `label-disabled`, `text`, `helper`, `control-off`, `control-off-hover`
 - Error pasa a la paleta de sistema `red` (antes `tomato`, de marca): `feedback.error.*`, `form.border-error`, `form.bg-error`
+- `feedback.success.border` y `.solid` → green.600; `feedback.error.border` y `.solid` → red.600 (nuevo `bg-error`). `bg-success` ya no lleva texto blanco (3.30:1)
 - Primitivo: `space.0-5` (2px)
 
 Rompe en código:
