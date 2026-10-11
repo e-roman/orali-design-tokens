@@ -260,6 +260,7 @@
   --color-form-control-off-hover: var(--color-neutral-500);
   --color-form-border-focus: var(--color-tomato-500);
   --color-form-border-error: var(--color-red-600);
+  --color-form-text-error: var(--color-red-600); /** Mensaje de error debajo del campo, mismo tono que form.border-error. 4.83:1 sobre blanco. Dentro de alertas con fondo error.bg usar feedback.error.text */
   --color-form-bg-error: var(--color-red-50);
   --color-form-bg-disabled: var(--color-neutral-100);
   --color-form-placeholder: var(--color-neutral-500); /** 5.33:1. Es el gris más claro que pasa AA para texto */
@@ -450,6 +451,8 @@
   --input-form-fg: var(--color-text-primary);
   --input-form-border: var(--color-form-border);
   --input-form-border-focus: var(--color-form-border-focus);
+  --input-form-border-error: var(--color-form-border-error);
+  --input-form-text-error: var(--color-form-text-error);
   --input-pill-bg: var(--color-form-bg);
   --input-pill-fg: var(--color-text-primary);
   --input-pill-border: var(--color-form-border);
@@ -476,6 +479,7 @@
   --select-border-disabled: var(--color-action-disabled-border);
   --select-placeholder: var(--color-form-placeholder);
   --select-text-disabled: var(--color-form-text-disabled);
+  --select-text-error: var(--color-form-text-error);
   --select-icon: var(--color-icon-default); /** Chevron */
   --select-icon-disabled: var(--color-form-text-disabled);
   --select-height: var(--select-size-lg-height); /** Por defecto: lg (formularios) */
@@ -689,6 +693,7 @@
   --color-form-control-off-hover-rgb: 107 107 107;
   --color-form-border-focus-rgb: 227 6 19;
   --color-form-border-error-rgb: 220 38 38;
+  --color-form-text-error-rgb: 220 38 38;
   --color-form-bg-error-rgb: 254 242 242;
   --color-form-bg-disabled-rgb: 245 245 245;
   --color-form-label-rgb: 26 26 26;
@@ -752,6 +757,8 @@
   --input-form-fg-rgb: 26 26 26;
   --input-form-border-rgb: 142 142 142;
   --input-form-border-focus-rgb: 227 6 19;
+  --input-form-border-error-rgb: 220 38 38;
+  --input-form-text-error-rgb: 220 38 38;
   --input-pill-bg-rgb: 255 255 255;
   --input-pill-fg-rgb: 26 26 26;
   --input-pill-border-rgb: 142 142 142;
@@ -779,6 +786,7 @@
   --select-placeholder-rgb: 107 107 107;
   --select-text-disabled-rgb: 142 142 142;
   --select-helper-rgb: 107 107 107;
+  --select-text-error-rgb: 220 38 38;
   --select-icon-rgb: 82 82 82;
   --select-icon-disabled-rgb: 142 142 142;
   --select-menu-bg-rgb: 255 255 255;

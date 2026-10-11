@@ -462,6 +462,14 @@
         "$type": "color",
         "$value": "{color.form.border-focus}"
       },
+      "border-error": {
+        "$type": "color",
+        "$value": "{color.form.border-error}"
+      },
+      "text-error": {
+        "$type": "color",
+        "$value": "{color.form.text-error}"
+      },
       "radius": {
         "$type": "dimension",
         "$value": "{radius.md}"
@@ -680,6 +688,10 @@
     "helper": {
       "$type": "color",
       "$value": "{color.form.helper}"
+    },
+    "text-error": {
+      "$type": "color",
+      "$value": "{color.form.text-error}"
     },
     "icon": {
       "$type": "color",

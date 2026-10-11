@@ -407,6 +407,11 @@
         "$type": "color",
         "$value": "{color.red.600}"
       },
+      "text-error": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$description": "Mensaje de error debajo del campo, mismo tono que form.border-error. 4.83:1 sobre blanco. Dentro de alertas con fondo error.bg usar feedback.error.text"
+      },
       "bg-error": {
         "$type": "color",
         "$value": "{color.red.50}"

@@ -190,6 +190,7 @@ module.exports = {
         "icon-inverse": "rgb(var(--color-icon-inverse-rgb) / <alpha-value>)",
         "form-control-off": "rgb(var(--color-form-control-off-rgb) / <alpha-value>)",
         "form-control-off-hover": "rgb(var(--color-form-control-off-hover-rgb) / <alpha-value>)",
+        "form-text-error": "rgb(var(--color-form-text-error-rgb) / <alpha-value>)",
         "form-label": "rgb(var(--color-form-label-rgb) / <alpha-value>)",
         "form-label-disabled": "rgb(var(--color-form-label-disabled-rgb) / <alpha-value>)",
         "form-text": "rgb(var(--color-form-text-rgb) / <alpha-value>)",

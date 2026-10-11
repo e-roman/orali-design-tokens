@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.1
+
+- `color.form.text-error` (red.600): mensaje de error debajo del campo, mismo tono que `form.border-error`. Tailwind: `text-form-text-error`
+- `input.form.border-error` y `input.form.text-error`; `select.text-error`
+- `feedback.error.text` sigue en red.700 para texto dentro de alertas con fondo `error.bg` (red.600 ahí da 4.41:1)
+
 ## 3.0.0
 
 Botón reorganizado en tres ejes: jerarquía, tamaño y estado.
