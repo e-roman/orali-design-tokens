@@ -16,6 +16,9 @@ Botón reorganizado en tres ejes: jerarquía, tamaño y estado.
 - Error pasa a la paleta de sistema `red` (antes `tomato`, de marca): `feedback.error.*`, `form.border-error`, `form.bg-error`
 - `feedback.success.border` y `.solid` → green.600; `feedback.error.border` y `.solid` → red.600 (nuevo `bg-error`). `bg-success` ya no lleva texto blanco (3.30:1)
 - Primitivo: `space.0-5` (2px)
+- `badge.dietary.font-size` 11 → 12px
+- Chip de filtro: `chip.*`, alto 36px (`size.control.sm`), pill
+- `select.size.md` (40px, barras de herramientas) y `select.size.lg` (44px, formularios, por defecto)
 
 Rompe en código:
 

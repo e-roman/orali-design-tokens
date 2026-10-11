@@ -357,14 +357,15 @@
   --badge-discount-font-size: var(--font-size-xs);
   --badge-discount-font-weight: var(--font-weight-bold);
   --badge-dietary-radius: var(--radius-sm);
-  --badge-dietary-font-size: var(--font-size-2xs);
+  --badge-dietary-font-size: var(--font-size-xs); /** 12px. 11px (2xs) queda solo para metadatos decorativos */
   --badge-counter-radius: var(--radius-full);
   --badge-counter-font-size: var(--font-size-2xs);
   --card-product-radius: var(--radius-md);
   --card-product-gap: var(--space-3);
   --card-content-radius: var(--radius-xl);
   --select-radius: var(--radius-md);
-  --select-height: var(--size-control-lg);
+  --select-size-md-height: var(--size-control-md); /** 40px: barras de herramientas (Ordenar por) */
+  --select-size-lg-height: var(--size-control-lg); /** 44px: formularios, igual que input */
   --select-padding-x: var(--space-3);
   --select-gap: var(--space-2);
   --select-icon-size: var(--space-5);
@@ -386,6 +387,13 @@
   --toggle-size-md-width: var(--space-10); /** 40×24 */
   --toggle-size-md-height: var(--space-6);
   --toggle-size-md-thumb: var(--space-5);
+  --chip-height: var(--size-control-sm); /** 36px: el alto más chico de controles del DS */
+  --chip-padding-x: var(--space-4);
+  --chip-gap: var(--space-1-5);
+  --chip-font-size: var(--font-size-sm);
+  --chip-font-weight: var(--font-weight-medium);
+  --chip-border-width: var(--border-width-sm);
+  --chip-focus-width: var(--border-width-lg);
   --color-action-outline-fg-hover: var(--color-brand-hover); /** 5.75:1 sobre outline.bg-hover */
   --color-action-outline-fg-active: var(--color-brand-active); /** 7.15:1 sobre outline.bg-active */
   --color-action-neutral-bg: var(--color-surface-default);
@@ -470,6 +478,7 @@
   --select-text-disabled: var(--color-form-text-disabled);
   --select-icon: var(--color-icon-default); /** Chevron */
   --select-icon-disabled: var(--color-form-text-disabled);
+  --select-height: var(--select-size-lg-height); /** Por defecto: lg (formularios) */
   --select-menu-bg: var(--color-surface-default);
   --select-menu-border: var(--color-border-default);
   --select-menu-elevation: var(--elevation-dropdown);
@@ -491,6 +500,16 @@
   --toggle-thumb-elevation: var(--elevation-subtle);
   --toggle-focus-ring: var(--color-focus-ring);
   --toggle-transition: var(--motion-transition-fast);
+  --chip-radius: var(--button-shape-pill); /** Filtros: siempre pill */
+  --chip-bg: var(--color-surface-default);
+  --chip-fg: var(--color-text-primary);
+  --chip-border: var(--color-form-border); /** 3:1 (1.4.11) */
+  --chip-bg-hover: var(--color-surface-subtle);
+  --chip-bg-selected: var(--color-action-primary-bg);
+  --chip-fg-selected: var(--color-action-primary-fg);
+  --chip-border-selected: var(--color-action-primary-bg);
+  --chip-bg-selected-hover: var(--color-action-primary-bg-hover);
+  --chip-focus-ring: var(--color-focus-ring);
   --button-outline-fg-hover: var(--color-action-outline-fg-hover);
   --button-outline-fg-active: var(--color-action-outline-fg-active);
   --button-neutral-bg: var(--color-action-neutral-bg);
@@ -781,4 +800,13 @@
   --toggle-label-rgb: 26 26 26;
   --toggle-label-disabled-rgb: 142 142 142;
   --toggle-focus-ring-rgb: 227 6 19;
+  --chip-bg-rgb: 255 255 255;
+  --chip-fg-rgb: 26 26 26;
+  --chip-border-rgb: 142 142 142;
+  --chip-bg-hover-rgb: 245 245 245;
+  --chip-bg-selected-rgb: 227 6 19;
+  --chip-fg-selected-rgb: 255 255 255;
+  --chip-border-selected-rgb: 227 6 19;
+  --chip-bg-selected-hover-rgb: 194 5 16;
+  --chip-focus-ring-rgb: 227 6 19;
 }

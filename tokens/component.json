@@ -556,7 +556,8 @@
       },
       "font-size": {
         "$type": "dimension",
-        "$value": "{font.size.2xs}"
+        "$value": "{font.size.xs}",
+        "$description": "12px. 11px (2xs) queda solo para metadatos decorativos"
       }
     },
     "counter": {
@@ -695,7 +696,24 @@
     },
     "height": {
       "$type": "dimension",
-      "$value": "{size.control.lg}"
+      "$value": "{select.size.lg.height}",
+      "$description": "Por defecto: lg (formularios)"
+    },
+    "size": {
+      "md": {
+        "height": {
+          "$type": "dimension",
+          "$value": "{size.control.md}",
+          "$description": "40px: barras de herramientas (Ordenar por)"
+        }
+      },
+      "lg": {
+        "height": {
+          "$type": "dimension",
+          "$value": "{size.control.lg}",
+          "$description": "44px: formularios, igual que input"
+        }
+      }
     },
     "padding-x": {
       "$type": "dimension",
@@ -895,6 +913,79 @@
           "$value": "{space.5}"
         }
       }
+    }
+  },
+  "chip": {
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.control.sm}",
+      "$description": "36px: el alto más chico de controles del DS"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.1-5}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{button.shape.pill}",
+      "$description": "Filtros: siempre pill"
+    },
+    "font-size": {
+      "$type": "dimension",
+      "$value": "{font.size.sm}"
+    },
+    "font-weight": {
+      "$type": "fontWeight",
+      "$value": "{font.weight.medium}"
+    },
+    "border-width": {
+      "$type": "dimension",
+      "$value": "{border-width.sm}"
+    },
+    "bg": {
+      "$type": "color",
+      "$value": "{color.surface.default}"
+    },
+    "fg": {
+      "$type": "color",
+      "$value": "{color.text.primary}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.form.border}",
+      "$description": "3:1 (1.4.11)"
+    },
+    "bg-hover": {
+      "$type": "color",
+      "$value": "{color.surface.subtle}"
+    },
+    "bg-selected": {
+      "$type": "color",
+      "$value": "{color.action.primary.bg}"
+    },
+    "fg-selected": {
+      "$type": "color",
+      "$value": "{color.action.primary.fg}"
+    },
+    "border-selected": {
+      "$type": "color",
+      "$value": "{color.action.primary.bg}"
+    },
+    "bg-selected-hover": {
+      "$type": "color",
+      "$value": "{color.action.primary.bg-hover}"
+    },
+    "focus-ring": {
+      "$type": "color",
+      "$value": "{color.focus.ring}"
+    },
+    "focus-width": {
+      "$type": "dimension",
+      "$value": "{border-width.lg}"
     }
   }
 }
