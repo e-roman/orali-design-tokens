@@ -330,16 +330,17 @@
       "error": {
         "text": {
           "$type": "color",
-          "$value": "{color.tomato.500}",
-          "$description": "4.88:1 sobre blanco (AA). Más claro que tomato.600 para no verse marrón"
+          "$value": "{color.red.600}",
+          "$description": "4.83:1 sobre blanco (AA). Paleta de sistema, no de marca"
         },
         "bg": {
           "$type": "color",
-          "$value": "{color.tomato.50}"
+          "$value": "{color.red.50}"
         },
         "border": {
           "$type": "color",
-          "$value": "{color.tomato.200}"
+          "$value": "{color.red.300}",
+          "$description": "Mismo paso que success, warning e info"
         }
       },
       "info": {
@@ -377,11 +378,11 @@
       },
       "border-error": {
         "$type": "color",
-        "$value": "{color.tomato.600}"
+        "$value": "{color.red.600}"
       },
       "bg-error": {
         "$type": "color",
-        "$value": "{color.tomato.50}"
+        "$value": "{color.red.50}"
       },
       "bg-disabled": {
         "$type": "color",

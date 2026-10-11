@@ -245,9 +245,9 @@
   --color-feedback-warning-text: var(--color-yellow-700);
   --color-feedback-warning-bg: var(--color-yellow-50);
   --color-feedback-warning-border: var(--color-yellow-300);
-  --color-feedback-error-text: var(--color-tomato-500); /** 4.88:1 sobre blanco (AA). Más claro que tomato.600 para no verse marrón */
-  --color-feedback-error-bg: var(--color-tomato-50);
-  --color-feedback-error-border: var(--color-tomato-200);
+  --color-feedback-error-text: var(--color-red-600); /** 4.83:1 sobre blanco (AA). Paleta de sistema, no de marca */
+  --color-feedback-error-bg: var(--color-red-50);
+  --color-feedback-error-border: var(--color-red-300); /** Mismo paso que success, warning e info */
   --color-feedback-info-text: var(--color-blue-700);
   --color-feedback-info-bg: var(--color-blue-50);
   --color-feedback-info-border: var(--color-blue-300);
@@ -255,8 +255,8 @@
   --color-form-border: var(--color-neutral-200);
   --color-form-border-hover: var(--color-neutral-400);
   --color-form-border-focus: var(--color-tomato-500);
-  --color-form-border-error: var(--color-tomato-600);
-  --color-form-bg-error: var(--color-tomato-50);
+  --color-form-border-error: var(--color-red-600);
+  --color-form-bg-error: var(--color-red-50);
   --color-form-bg-disabled: var(--color-neutral-100);
   --color-form-placeholder: var(--color-neutral-500); /** AA 5.33:1 */
   --color-form-text-disabled: var(--color-neutral-400);
@@ -581,9 +581,9 @@
   --color-feedback-warning-text-rgb: 161 98 7;
   --color-feedback-warning-bg-rgb: 254 252 232;
   --color-feedback-warning-border-rgb: 253 224 71;
-  --color-feedback-error-text-rgb: 227 6 19;
-  --color-feedback-error-bg-rgb: 255 241 242;
-  --color-feedback-error-border-rgb: 255 199 202;
+  --color-feedback-error-text-rgb: 220 38 38;
+  --color-feedback-error-bg-rgb: 254 242 242;
+  --color-feedback-error-border-rgb: 252 165 165;
   --color-feedback-info-text-rgb: 29 78 216;
   --color-feedback-info-bg-rgb: 239 246 255;
   --color-feedback-info-border-rgb: 147 197 253;
@@ -591,8 +591,8 @@
   --color-form-border-rgb: 228 228 228;
   --color-form-border-hover-rgb: 163 163 163;
   --color-form-border-focus-rgb: 227 6 19;
-  --color-form-border-error-rgb: 194 5 16;
-  --color-form-bg-error-rgb: 255 241 242;
+  --color-form-border-error-rgb: 220 38 38;
+  --color-form-bg-error-rgb: 254 242 242;
   --color-form-bg-disabled-rgb: 245 245 245;
   --color-form-placeholder-rgb: 107 107 107;
   --color-form-text-disabled-rgb: 163 163 163;
