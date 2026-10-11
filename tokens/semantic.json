@@ -372,6 +372,15 @@
         "$type": "color",
         "$value": "{color.neutral.400}"
       },
+      "control-off": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$description": "Track de toggle apagado. 5.33:1 contra blanco (WCAG 1.4.11 pide 3:1)"
+      },
+      "control-off-hover": {
+        "$type": "color",
+        "$value": "{color.neutral.600}"
+      },
       "border-focus": {
         "$type": "color",
         "$value": "{color.tomato.500}"

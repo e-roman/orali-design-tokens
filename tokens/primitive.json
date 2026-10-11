@@ -492,6 +492,11 @@
       "$type": "dimension",
       "$value": "0px"
     },
+    "0-5": {
+      "$type": "dimension",
+      "$value": "2px",
+      "$description": "Separación entre thumb y track del toggle"
+    },
     "1": {
       "$type": "dimension",
       "$value": "4px"

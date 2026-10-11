@@ -10,6 +10,11 @@ Botón reorganizado en tres ejes: jerarquía, tamaño y estado.
 - Semántico: `color.action.neutral.*`, `color.action.link.*`, `color.action.disabled.*`, `color.action.secondary.bg-active`
 - Primitivo: `space.2-5` (10px). `size.control.sm` 38 → 36px y `size.control.xl` 46 → 48px (grilla de 4)
 - `stepper.height` → `{button.size.md.height}` (mismo valor, 40px)
+- Select: `select.*` (campo, menú y opciones) con default, hover, focus/abierto, error y disabled
+- Toggle: `toggle.*` con apagado, encendido, hover, focus y disabled (apagado y encendido). Tamaños sm 32×20 y md 40×24
+- Semántico: `color.form.label`, `label-disabled`, `text`, `helper`, `control-off`, `control-off-hover`
+- Error pasa a la paleta de sistema `red` (antes `tomato`, de marca): `feedback.error.*`, `form.border-error`, `form.bg-error`
+- Primitivo: `space.0-5` (2px)
 
 Rompe en código:
 

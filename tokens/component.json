@@ -615,5 +615,277 @@
         "$value": "{elevation.subtle}"
       }
     }
+  },
+  "select": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.form.bg}"
+    },
+    "bg-disabled": {
+      "$type": "color",
+      "$value": "{color.form.bg-disabled}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{color.form.border}",
+      "$description": "Default"
+    },
+    "border-hover": {
+      "$type": "color",
+      "$value": "{color.form.border-hover}"
+    },
+    "border-focus": {
+      "$type": "color",
+      "$value": "{color.form.border-focus}",
+      "$description": "Focus y abierto (active)"
+    },
+    "border-error": {
+      "$type": "color",
+      "$value": "{color.form.border-error}"
+    },
+    "border-disabled": {
+      "$type": "color",
+      "$value": "{color.action.disabled.border}"
+    },
+    "label": {
+      "$type": "color",
+      "$value": "{color.form.label}"
+    },
+    "label-disabled": {
+      "$type": "color",
+      "$value": "{color.form.label-disabled}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{color.form.text}",
+      "$description": "Opción elegida"
+    },
+    "placeholder": {
+      "$type": "color",
+      "$value": "{color.form.placeholder}"
+    },
+    "text-disabled": {
+      "$type": "color",
+      "$value": "{color.form.text-disabled}"
+    },
+    "helper": {
+      "$type": "color",
+      "$value": "{color.form.helper}"
+    },
+    "icon": {
+      "$type": "color",
+      "$value": "{color.icon.default}",
+      "$description": "Chevron"
+    },
+    "icon-disabled": {
+      "$type": "color",
+      "$value": "{color.form.text-disabled}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.md}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.control.lg}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.3}"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.2}"
+    },
+    "icon-size": {
+      "$type": "dimension",
+      "$value": "{space.5}"
+    },
+    "focus-width": {
+      "$type": "dimension",
+      "$value": "{border-width.focus}",
+      "$description": "1px recoloreando el borde, igual que input"
+    },
+    "menu": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.surface.default}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.border.default}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.md}"
+      },
+      "padding": {
+        "$type": "dimension",
+        "$value": "{space.1}"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "{space.1}",
+        "$description": "Entre menú y campo"
+      },
+      "elevation": {
+        "$type": "shadow",
+        "$value": "{elevation.dropdown}"
+      },
+      "layer": {
+        "$type": "number",
+        "$value": "{layer.overlay}"
+      }
+    },
+    "option": {
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.primary}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.surface.subtle}"
+      },
+      "bg-selected": {
+        "$type": "color",
+        "$value": "{color.brand.subtle}"
+      },
+      "fg-selected": {
+        "$type": "color",
+        "$value": "{color.text.brand}"
+      },
+      "check": {
+        "$type": "color",
+        "$value": "{color.icon.brand}",
+        "$description": "Tilde de la opción elegida"
+      },
+      "fg-disabled": {
+        "$type": "color",
+        "$value": "{color.form.text-disabled}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.3}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.sm}"
+      }
+    }
+  },
+  "toggle": {
+    "track-off": {
+      "$type": "color",
+      "$value": "{color.form.control-off}",
+      "$description": "Default"
+    },
+    "track-off-hover": {
+      "$type": "color",
+      "$value": "{color.form.control-off-hover}"
+    },
+    "track-on": {
+      "$type": "color",
+      "$value": "{color.action.primary.bg}",
+      "$description": "Active"
+    },
+    "track-on-hover": {
+      "$type": "color",
+      "$value": "{color.action.primary.bg-hover}"
+    },
+    "track-disabled-off": {
+      "$type": "color",
+      "$value": "{color.action.disabled.bg}"
+    },
+    "track-disabled-on": {
+      "$type": "color",
+      "$value": "{color.border.brand-subtle}",
+      "$description": "Deshabilitado y encendido: se sigue leyendo como encendido"
+    },
+    "thumb": {
+      "$type": "color",
+      "$value": "{color.surface.default}"
+    },
+    "thumb-disabled": {
+      "$type": "color",
+      "$value": "{color.surface.default}"
+    },
+    "thumb-elevation": {
+      "$type": "shadow",
+      "$value": "{elevation.subtle}"
+    },
+    "label": {
+      "$type": "color",
+      "$value": "{color.form.label}"
+    },
+    "label-disabled": {
+      "$type": "color",
+      "$value": "{color.form.label-disabled}"
+    },
+    "focus-ring": {
+      "$type": "color",
+      "$value": "{color.focus.ring}"
+    },
+    "focus-width": {
+      "$type": "dimension",
+      "$value": "{border-width.lg}"
+    },
+    "focus-offset": {
+      "$type": "dimension",
+      "$value": "{border-width.lg}"
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.full}"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.0-5}",
+      "$description": "Separación thumb–track"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.2}",
+      "$description": "Entre toggle y label"
+    },
+    "transition": {
+      "$type": "transition",
+      "$value": "{motion.transition.fast}"
+    },
+    "size": {
+      "sm": {
+        "width": {
+          "$type": "dimension",
+          "$value": "{space.8}",
+          "$description": "32×20"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "{space.5}"
+        },
+        "thumb": {
+          "$type": "dimension",
+          "$value": "{space.4}"
+        }
+      },
+      "md": {
+        "width": {
+          "$type": "dimension",
+          "$value": "{space.10}",
+          "$description": "40×24"
+        },
+        "height": {
+          "$type": "dimension",
+          "$value": "{space.6}"
+        },
+        "thumb": {
+          "$type": "dimension",
+          "$value": "{space.5}"
+        }
+      }
+    }
   }
 }
