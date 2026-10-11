@@ -131,7 +131,8 @@
       "$description": "Bordes",
       "default": {
         "$type": "color",
-        "$value": "{color.neutral.200}"
+        "$value": "{color.neutral.200}",
+        "$description": "Solo divisores y bordes decorativos. Controles usan form.border"
       },
       "strong": {
         "$type": "color",
@@ -224,6 +225,16 @@
         "bg-active": {
           "$type": "color",
           "$value": "{color.tomato.100}"
+        },
+        "fg-hover": {
+          "$type": "color",
+          "$value": "{color.brand.hover}",
+          "$description": "5.75:1 sobre outline.bg-hover"
+        },
+        "fg-active": {
+          "$type": "color",
+          "$value": "{color.brand.active}",
+          "$description": "7.15:1 sobre outline.bg-active"
         }
       },
       "accent": {
@@ -330,8 +341,8 @@
       "error": {
         "text": {
           "$type": "color",
-          "$value": "{color.red.600}",
-          "$description": "4.83:1 sobre blanco (AA). Paleta de sistema, no de marca"
+          "$value": "{color.red.700}",
+          "$description": "6.47:1 sobre blanco, 5.91:1 sobre error.bg"
         },
         "bg": {
           "$type": "color",
@@ -366,20 +377,21 @@
       },
       "border": {
         "$type": "color",
-        "$value": "{color.neutral.200}"
+        "$value": "{color.neutral.400}",
+        "$description": "Borde de controles: 3.28:1 (WCAG 1.4.11)"
       },
       "border-hover": {
         "$type": "color",
-        "$value": "{color.neutral.400}"
+        "$value": "{color.neutral.500}"
       },
       "control-off": {
         "$type": "color",
-        "$value": "{color.neutral.500}",
-        "$description": "Track de toggle apagado. 5.33:1 contra blanco (WCAG 1.4.11 pide 3:1)"
+        "$value": "{color.neutral.400}",
+        "$description": "Track de toggle apagado: 3.28:1"
       },
       "control-off-hover": {
         "$type": "color",
-        "$value": "{color.neutral.600}"
+        "$value": "{color.neutral.500}"
       },
       "border-focus": {
         "$type": "color",
@@ -409,13 +421,13 @@
       },
       "text": {
         "$type": "color",
-        "$value": "{color.text.secondary}",
-        "$description": "Valor ingresado en el campo"
+        "$value": "{color.text.primary}",
+        "$description": "Valor ingresado. Se distingue del placeholder por contraste"
       },
       "placeholder": {
         "$type": "color",
         "$value": "{color.neutral.500}",
-        "$description": "AA 5.33:1"
+        "$description": "5.33:1. Es el gris más claro que pasa AA para texto"
       },
       "helper": {
         "$type": "color",

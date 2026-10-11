@@ -7,7 +7,7 @@
   --color-neutral-100: #f5f5f5;
   --color-neutral-200: #e4e4e4;
   --color-neutral-300: #d4d4d4;
-  --color-neutral-400: #a3a3a3;
+  --color-neutral-400: #8e8e8e; /** Gris más claro que llega a 3:1 sobre blanco, página y subtle (WCAG 1.4.11). Antes #A3A3A3 */
   --color-neutral-500: #6b6b6b;
   --color-neutral-600: #525252;
   --color-neutral-700: #404040;
@@ -212,7 +212,7 @@
   --color-text-link-hover: var(--color-tomato-600);
   --color-text-brand: var(--color-tomato-500);
   --color-text-accent: var(--color-sage-600); /** Texto verde (5.02:1) */
-  --color-border-default: var(--color-neutral-200);
+  --color-border-default: var(--color-neutral-200); /** Solo divisores y bordes decorativos. Controles usan form.border */
   --color-border-strong: var(--color-neutral-900); /** Hover y selección de chips y filtros */
   --color-border-focus: var(--color-tomato-500); /** Campos en foco: reemplaza el color del borde */
   --color-border-brand: var(--color-tomato-500);
@@ -246,22 +246,22 @@
   --color-feedback-warning-text: var(--color-yellow-700);
   --color-feedback-warning-bg: var(--color-yellow-50);
   --color-feedback-warning-border: var(--color-yellow-300);
-  --color-feedback-error-text: var(--color-red-600); /** 4.83:1 sobre blanco (AA). Paleta de sistema, no de marca */
+  --color-feedback-error-text: var(--color-red-700); /** 6.47:1 sobre blanco, 5.91:1 sobre error.bg */
   --color-feedback-error-bg: var(--color-red-50);
   --color-feedback-error-border: var(--color-red-300); /** Mismo paso que success, warning e info */
   --color-feedback-info-text: var(--color-blue-700);
   --color-feedback-info-bg: var(--color-blue-50);
   --color-feedback-info-border: var(--color-blue-300);
   --color-form-bg: var(--color-base-white);
-  --color-form-border: var(--color-neutral-200);
-  --color-form-border-hover: var(--color-neutral-400);
-  --color-form-control-off: var(--color-neutral-500); /** Track de toggle apagado. 5.33:1 contra blanco (WCAG 1.4.11 pide 3:1) */
-  --color-form-control-off-hover: var(--color-neutral-600);
+  --color-form-border: var(--color-neutral-400); /** Borde de controles: 3.28:1 (WCAG 1.4.11) */
+  --color-form-border-hover: var(--color-neutral-500);
+  --color-form-control-off: var(--color-neutral-400); /** Track de toggle apagado: 3.28:1 */
+  --color-form-control-off-hover: var(--color-neutral-500);
   --color-form-border-focus: var(--color-tomato-500);
   --color-form-border-error: var(--color-red-600);
   --color-form-bg-error: var(--color-red-50);
   --color-form-bg-disabled: var(--color-neutral-100);
-  --color-form-placeholder: var(--color-neutral-500); /** AA 5.33:1 */
+  --color-form-placeholder: var(--color-neutral-500); /** 5.33:1. Es el gris más claro que pasa AA para texto */
   --color-form-text-disabled: var(--color-neutral-400);
   --color-focus-ring: var(--color-tomato-500);
   --color-focus-ring-inverse: var(--color-base-white); /** Sobre fotos, superficies oscuras o de marca */
@@ -385,6 +385,8 @@
   --toggle-size-md-width: var(--space-10); /** 40×24 */
   --toggle-size-md-height: var(--space-6);
   --toggle-size-md-thumb: var(--space-5);
+  --color-action-outline-fg-hover: var(--color-brand-hover); /** 5.75:1 sobre outline.bg-hover */
+  --color-action-outline-fg-active: var(--color-brand-active); /** 7.15:1 sobre outline.bg-active */
   --color-action-neutral-bg: var(--color-surface-default);
   --color-action-neutral-bg-hover: var(--color-surface-subtle);
   --color-action-neutral-bg-active: var(--color-surface-muted);
@@ -395,7 +397,7 @@
   --color-action-link-fg-active: var(--color-brand-active);
   --color-form-label: var(--color-text-primary); /** Etiqueta del campo */
   --color-form-label-disabled: var(--color-form-text-disabled); /** Etiqueta de campo deshabilitado */
-  --color-form-text: var(--color-text-secondary); /** Valor ingresado en el campo */
+  --color-form-text: var(--color-text-primary); /** Valor ingresado. Se distingue del placeholder por contraste */
   --color-form-helper: var(--color-text-secondary); /** Texto de ayuda debajo del campo */
   --button-focus-ring: var(--color-focus-ring);
   --button-primary-bg: var(--color-action-primary-bg);
@@ -474,7 +476,7 @@
   --select-option-fg: var(--color-text-primary);
   --select-option-bg-hover: var(--color-surface-subtle);
   --select-option-bg-selected: var(--color-brand-subtle);
-  --select-option-fg-selected: var(--color-text-brand);
+  --select-option-fg-selected: var(--color-brand-hover); /** 5.75:1 sobre brand.subtle */
   --select-option-check: var(--color-icon-brand); /** Tilde de la opción elegida */
   --select-option-fg-disabled: var(--color-form-text-disabled);
   --toggle-track-off: var(--color-form-control-off); /** Default */
@@ -488,6 +490,8 @@
   --toggle-thumb-elevation: var(--elevation-subtle);
   --toggle-focus-ring: var(--color-focus-ring);
   --toggle-transition: var(--motion-transition-fast);
+  --button-outline-fg-hover: var(--color-action-outline-fg-hover);
+  --button-outline-fg-active: var(--color-action-outline-fg-active);
   --button-neutral-bg: var(--color-action-neutral-bg);
   --button-neutral-bg-hover: var(--color-action-neutral-bg-hover);
   --button-neutral-bg-active: var(--color-action-neutral-bg-active);
@@ -509,7 +513,7 @@
   --color-neutral-100-rgb: 245 245 245;
   --color-neutral-200-rgb: 228 228 228;
   --color-neutral-300-rgb: 212 212 212;
-  --color-neutral-400-rgb: 163 163 163;
+  --color-neutral-400-rgb: 142 142 142;
   --color-neutral-500-rgb: 107 107 107;
   --color-neutral-600-rgb: 82 82 82;
   --color-neutral-700-rgb: 64 64 64;
@@ -628,6 +632,8 @@
   --color-action-secondary-bg-active-rgb: 64 64 64;
   --color-action-outline-bg-hover-rgb: 255 241 242;
   --color-action-outline-bg-active-rgb: 255 225 227;
+  --color-action-outline-fg-hover-rgb: 194 5 16;
+  --color-action-outline-fg-active-rgb: 154 4 13;
   --color-action-accent-bg-rgb: 21 128 61;
   --color-action-accent-bg-hover-rgb: 18 101 40;
   --color-action-accent-fg-rgb: 255 255 255;
@@ -640,7 +646,7 @@
   --color-action-link-fg-hover-rgb: 194 5 16;
   --color-action-link-fg-active-rgb: 154 4 13;
   --color-action-disabled-bg-rgb: 245 245 245;
-  --color-action-disabled-fg-rgb: 163 163 163;
+  --color-action-disabled-fg-rgb: 142 142 142;
   --color-action-disabled-border-rgb: 228 228 228;
   --color-feedback-success-text-rgb: 21 128 61;
   --color-feedback-success-bg-rgb: 240 253 244;
@@ -649,27 +655,27 @@
   --color-feedback-warning-text-rgb: 161 98 7;
   --color-feedback-warning-bg-rgb: 254 252 232;
   --color-feedback-warning-border-rgb: 253 224 71;
-  --color-feedback-error-text-rgb: 220 38 38;
+  --color-feedback-error-text-rgb: 185 28 28;
   --color-feedback-error-bg-rgb: 254 242 242;
   --color-feedback-error-border-rgb: 252 165 165;
   --color-feedback-info-text-rgb: 29 78 216;
   --color-feedback-info-bg-rgb: 239 246 255;
   --color-feedback-info-border-rgb: 147 197 253;
   --color-form-bg-rgb: 255 255 255;
-  --color-form-border-rgb: 228 228 228;
-  --color-form-border-hover-rgb: 163 163 163;
-  --color-form-control-off-rgb: 107 107 107;
-  --color-form-control-off-hover-rgb: 82 82 82;
+  --color-form-border-rgb: 142 142 142;
+  --color-form-border-hover-rgb: 107 107 107;
+  --color-form-control-off-rgb: 142 142 142;
+  --color-form-control-off-hover-rgb: 107 107 107;
   --color-form-border-focus-rgb: 227 6 19;
   --color-form-border-error-rgb: 220 38 38;
   --color-form-bg-error-rgb: 254 242 242;
   --color-form-bg-disabled-rgb: 245 245 245;
   --color-form-label-rgb: 26 26 26;
-  --color-form-label-disabled-rgb: 163 163 163;
-  --color-form-text-rgb: 107 107 107;
+  --color-form-label-disabled-rgb: 142 142 142;
+  --color-form-text-rgb: 26 26 26;
   --color-form-placeholder-rgb: 107 107 107;
   --color-form-helper-rgb: 107 107 107;
-  --color-form-text-disabled-rgb: 163 163 163;
+  --color-form-text-disabled-rgb: 142 142 142;
   --color-focus-ring-rgb: 227 6 19;
   --color-focus-ring-inverse-rgb: 255 255 255;
   --color-commerce-price-current-rgb: 26 26 26;
@@ -697,6 +703,8 @@
   --button-outline-bg-hover-rgb: 255 241 242;
   --button-outline-bg-active-rgb: 255 225 227;
   --button-outline-fg-rgb: 227 6 19;
+  --button-outline-fg-hover-rgb: 194 5 16;
+  --button-outline-fg-active-rgb: 154 4 13;
   --button-outline-border-rgb: 227 6 19;
   --button-neutral-bg-rgb: 255 255 255;
   --button-neutral-bg-hover-rgb: 245 245 245;
@@ -711,9 +719,9 @@
   --button-link-fg-hover-rgb: 194 5 16;
   --button-link-fg-active-rgb: 154 4 13;
   --button-disabled-bg-rgb: 245 245 245;
-  --button-disabled-fg-rgb: 163 163 163;
+  --button-disabled-fg-rgb: 142 142 142;
   --button-disabled-border-rgb: 228 228 228;
-  --button-disabled-link-fg-rgb: 163 163 163;
+  --button-disabled-link-fg-rgb: 142 142 142;
   --stepper-bg-rgb: 255 255 255;
   --stepper-bg-hover-rgb: 255 241 242;
   --stepper-fg-rgb: 26 26 26;
@@ -721,11 +729,11 @@
   --stepper-border-rgb: 227 6 19;
   --input-form-bg-rgb: 255 255 255;
   --input-form-fg-rgb: 26 26 26;
-  --input-form-border-rgb: 228 228 228;
+  --input-form-border-rgb: 142 142 142;
   --input-form-border-focus-rgb: 227 6 19;
   --input-pill-bg-rgb: 255 255 255;
   --input-pill-fg-rgb: 26 26 26;
-  --input-pill-border-rgb: 228 228 228;
+  --input-pill-border-rgb: 142 142 142;
   --input-pill-border-focus-rgb: 227 6 19;
   --badge-discount-bg-rgb: 255 255 255;
   --badge-discount-fg-rgb: 227 6 19;
@@ -739,29 +747,29 @@
   --card-content-border-rgb: 228 228 228;
   --select-bg-rgb: 255 255 255;
   --select-bg-disabled-rgb: 245 245 245;
-  --select-border-rgb: 228 228 228;
-  --select-border-hover-rgb: 163 163 163;
+  --select-border-rgb: 142 142 142;
+  --select-border-hover-rgb: 107 107 107;
   --select-border-focus-rgb: 227 6 19;
   --select-border-error-rgb: 220 38 38;
   --select-border-disabled-rgb: 228 228 228;
   --select-label-rgb: 26 26 26;
-  --select-label-disabled-rgb: 163 163 163;
-  --select-text-rgb: 107 107 107;
+  --select-label-disabled-rgb: 142 142 142;
+  --select-text-rgb: 26 26 26;
   --select-placeholder-rgb: 107 107 107;
-  --select-text-disabled-rgb: 163 163 163;
+  --select-text-disabled-rgb: 142 142 142;
   --select-helper-rgb: 107 107 107;
   --select-icon-rgb: 82 82 82;
-  --select-icon-disabled-rgb: 163 163 163;
+  --select-icon-disabled-rgb: 142 142 142;
   --select-menu-bg-rgb: 255 255 255;
   --select-menu-border-rgb: 228 228 228;
   --select-option-fg-rgb: 26 26 26;
   --select-option-bg-hover-rgb: 245 245 245;
   --select-option-bg-selected-rgb: 255 241 242;
-  --select-option-fg-selected-rgb: 227 6 19;
+  --select-option-fg-selected-rgb: 194 5 16;
   --select-option-check-rgb: 227 6 19;
-  --select-option-fg-disabled-rgb: 163 163 163;
-  --toggle-track-off-rgb: 107 107 107;
-  --toggle-track-off-hover-rgb: 82 82 82;
+  --select-option-fg-disabled-rgb: 142 142 142;
+  --toggle-track-off-rgb: 142 142 142;
+  --toggle-track-off-hover-rgb: 107 107 107;
   --toggle-track-on-rgb: 227 6 19;
   --toggle-track-on-hover-rgb: 194 5 16;
   --toggle-track-disabled-off-rgb: 245 245 245;
@@ -769,6 +777,6 @@
   --toggle-thumb-rgb: 255 255 255;
   --toggle-thumb-disabled-rgb: 255 255 255;
   --toggle-label-rgb: 26 26 26;
-  --toggle-label-disabled-rgb: 163 163 163;
+  --toggle-label-disabled-rgb: 142 142 142;
   --toggle-focus-ring-rgb: 227 6 19;
 }

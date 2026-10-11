@@ -73,6 +73,7 @@ Gradientes sobre fotos: `from-scrim/75 via-scrim/45 to-scrim/5`.
 | `action.primary.bg` / `.fg` | tomato.500 / white | Agregar, Ver productos, Suscribirme |
 | `action.primary.bg-hover` / `-active` | tomato.600 / tomato.700 | Estados de CTA |
 | `action.outline.bg-hover` / `-active` | tomato.50 / tomato.100 | Hover de outline y stepper |
+| `action.outline.fg-hover` / `-active` | tomato.600 / tomato.700 | Texto de outline en hover y active (tomato.500 no llega a 4.5:1 sobre tomato.50) |
 | `action.secondary.bg` / `.fg` | neutral.900 / white | Acción secundaria oscura (aplicar cupón) |
 | `action.accent.bg` / `.fg` / `-hover` | sage.600 / white / sage.700 | Confirmaciones |
 | `focus.ring` | tomato.500 | Foco de teclado en links y botones: 2px, offset 2px |
@@ -81,10 +82,10 @@ Gradientes sobre fotos: `from-scrim/75 via-scrim/45 to-scrim/5`.
 ### Formularios (`color.form.*`)
 | Token | Tailwind | Referencia |
 |---|---|---|
-| `form.bg` / `bg-disabled` / `bg-error` | `bg-form` / `bg-form-disabled` / `bg-form-error` | white / neutral.100 / tomato.50 |
-| `form.border` / `border-hover` | `border-form` / `border-form-hover` | neutral.200 / neutral.400 |
+| `form.bg` / `bg-disabled` / `bg-error` | `bg-form` / `bg-form-disabled` / `bg-form-error` | white / neutral.100 / red.50 |
+| `form.border` / `border-hover` | `border-form` / `border-form-hover` | neutral.400 / neutral.500 (3:1, WCAG 1.4.11) |
 | `form.border-focus` | `focus:border-form-focus` | tomato.500. **En foco el borde de 1px cambia de color, sin línea extra** |
-| `form.border-error` | `border-form-error` | tomato.600 |
+| `form.border-error` | `border-form-error` | red.600 |
 | `form.placeholder` / `text-disabled` | `placeholder:text-form-placeholder` / `text-form-text-disabled` | neutral.500 / neutral.400 |
 
 ## Feedback (`color.feedback.{tipo}.*`)
@@ -93,7 +94,7 @@ Gradientes sobre fotos: `from-scrim/75 via-scrim/45 to-scrim/5`.
 |---|---|---|---|---|
 | success | green.50 | green.300 | green.700 | green.700 |
 | warning | yellow.50 | yellow.300 | yellow.700 | — |
-| error | tomato.50 | tomato.200 | tomato.600 | — |
+| error | red.50 | red.300 | red.700 | — |
 | info | blue.50 | blue.300 | blue.700 | — |
 
 ## Commerce
@@ -121,9 +122,22 @@ Tokens propios del e-commerce. Aunque resuelven al mismo valor que un semántico
 | white / action.primary.bg-hover | 6.32:1 | ✅ AA |
 | white / action.accent.bg (sage.600) | 5.02:1 | ✅ AA |
 | white / sage.500 | 4.08:1 | ⚠️ Solo decorativo → por eso accent usa sage.600 |
-| feedback success / warning / error / info (texto sobre su fondo) | 4.79 / 4.76 / 5.75 / 6.16 | ✅ AA |
+| feedback success / warning / error / info (texto sobre su fondo) | 4.79 / 4.76 / 5.91 / 6.16 | ✅ AA |
 | icon.default / icon.subtle sobre blanco | 7.81 / 5.33 | ✅ (mínimo 3:1) |
 | text.tertiary / surface.default | 1.27:1 | Solo decorativo, con `aria-hidden` |
 
 **Do:** texto o fondos verdes con texto → siempre `sage.600` (vía `text.accent`, `surface.accent`, `action.accent`).
 **Don't:** `text.secondary` sobre `surface.muted`; usar `text.primary` en ese fondo.
+
+## Contraste: reglas del sistema
+
+Todo el sistema cumple **WCAG 2.1 AA**:
+
+| Qué | Mínimo | Token más claro que lo cumple |
+|---|---|---|
+| Texto (incluido placeholder) | 4.5:1 | `neutral.500` (5.33:1) |
+| Bordes de controles, track de toggle, íconos | 3:1 | `neutral.400` (3.28:1) |
+| Bordes decorativos y divisores | exentos | `border.default` (neutral.200) |
+| Elementos deshabilitados | exentos | `action.disabled.*` |
+
+Excepción conocida: el botón de Mercado Pago (blanco sobre #009EE3, 3.00:1) usa el color oficial de la marca. Cumple solo como texto grande (≥18.66px en negrita).
