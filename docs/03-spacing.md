@@ -9,6 +9,7 @@ Spacing sobre una grilla base de **4px**. Los tokens usan la misma escala que Ta
 | `space.1` | 4px | Ícono + texto compacto |
 | `space.1-5` | 6px | Gap en chips y badges |
 | `space.2` | 8px | Gap entre elementos relacionados |
+| `space.2-5` | 10px | Padding vertical de botón md y lg (`p-2.5`) |
 | `space.3` | 12px | Gap interno de card, padding vertical de input |
 | `space.4` | 16px | Gutter mobile, padding de controles |
 | `space.5` | 20px | Padding de cards de beneficio |
@@ -26,8 +27,10 @@ Spacing sobre una grilla base de **4px**. Los tokens usan la misma escala que Ta
 | Token | Valor | Uso |
 |---|---|---|
 | `size.control.xs` | 32px | Stepper en carrito y drawer |
+| `size.control.sm` | 36px | Botón sm |
 | `size.control.md` | 40px | Agregar y Stepper en card |
 | `size.control.lg` | 44px | Primary, Outline, Stepper en página de producto |
+| `size.control.xl` | 48px | Botón xl |
 
 ## Layout
 

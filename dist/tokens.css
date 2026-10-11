@@ -136,11 +136,12 @@
   --space-56: 224px;
   --space-64: 256px;
   --space-1-5: 6px;
+  --space-2-5: 10px; /** Padding vertical de botón md y lg */
   --size-control-xs: 32px;
-  --size-control-sm: 38px;
+  --size-control-sm: 36px; /** Botón sm. Antes 38px (fuera de la grilla de 4) */
   --size-control-md: 40px;
   --size-control-lg: 44px;
-  --size-control-xl: 46px;
+  --size-control-xl: 48px; /** Botón xl. Antes 46px (fuera de la grilla de 4) */
   --size-container: 1280px;
   --radius-none: 0px;
   --radius-sm: 4px; /** Badges, skeletons */
@@ -180,6 +181,8 @@
   --z-index-modal-top: 110;
   --z-index-progress: 200;
   --button-outline-bg: rgba(0, 0, 0, 0);
+  --button-link-text-decoration: none;
+  --button-link-text-decoration-hover: underline;
   --badge-discount-padding-y: 2px;
   --badge-counter-min-size: 16px;
   --color-brand-default: var(--color-tomato-500); /** Logo, acentos de marca */
@@ -226,11 +229,15 @@
   --color-action-secondary-bg: var(--color-neutral-900);
   --color-action-secondary-bg-hover: var(--color-neutral-500);
   --color-action-secondary-fg: var(--color-base-white);
+  --color-action-secondary-bg-active: var(--color-neutral-700);
   --color-action-outline-bg-hover: var(--color-tomato-50);
   --color-action-outline-bg-active: var(--color-tomato-100);
   --color-action-accent-bg: var(--color-sage-600);
   --color-action-accent-bg-hover: var(--color-sage-700);
   --color-action-accent-fg: var(--color-base-white);
+  --color-action-disabled-bg: var(--color-neutral-100); /** Fondo de cualquier botón deshabilitado */
+  --color-action-disabled-fg: var(--color-neutral-400); /** Texto e ícono deshabilitado. WCAG no exige contraste en deshabilitados */
+  --color-action-disabled-border: var(--color-neutral-200);
   --color-feedback-success-text: var(--color-green-700);
   --color-feedback-success-bg: var(--color-green-50);
   --color-feedback-success-border: var(--color-green-300);
@@ -290,28 +297,44 @@
   --motion-transition-base: var(--duration-base) var(--easing-standard) 0ms; /** Drawers, acordeones */
   --button-shape-default: var(--radius-md); /** Acciones de compra y UI: 8px */
   --button-shape-pill: var(--radius-full); /** Solo marketing: hero, banners, newsletter */
-  --button-size-md: var(--size-control-md);
-  --button-size-lg: var(--size-control-lg);
   --button-focus-width: var(--border-width-lg); /** Botones: 2px por fuera (no tienen borde que recolorear) */
-  --button-disabled-opacity: var(--opacity-disabled);
-  --button-primary-height: var(--size-control-lg);
-  --button-primary-padding-x: var(--space-8);
-  --button-primary-padding-y: var(--space-3);
+  --button-focus-offset: var(--border-width-lg); /** Separación entre botón y anillo: 2px */
+  --button-size-sm-height: var(--size-control-sm); /** 36px: 20 interlineado + 8×2 */
+  --button-size-sm-padding-y: var(--space-2);
+  --button-size-sm-padding-x: var(--space-3);
+  --button-size-sm-gap: var(--space-1-5);
+  --button-size-sm-font-size: var(--font-size-sm);
+  --button-size-sm-line-height: var(--font-line-height-sm);
+  --button-size-sm-icon-size: var(--space-4);
+  --button-size-md-height: var(--size-control-md); /** 40px: 20 interlineado + 10×2 */
+  --button-size-md-padding-y: var(--space-2-5);
+  --button-size-md-padding-x: var(--space-4);
+  --button-size-md-gap: var(--space-2);
+  --button-size-md-font-size: var(--font-size-sm);
+  --button-size-md-line-height: var(--font-line-height-sm);
+  --button-size-md-icon-size: var(--space-4);
+  --button-size-lg-height: var(--size-control-lg); /** 44px: 20 interlineado + 12×2. Mínimo táctil */
+  --button-size-lg-padding-y: var(--space-3);
+  --button-size-lg-padding-x: var(--space-5);
+  --button-size-lg-gap: var(--space-2);
+  --button-size-lg-font-size: var(--font-size-sm);
+  --button-size-lg-line-height: var(--font-line-height-sm);
+  --button-size-lg-icon-size: var(--space-5);
+  --button-size-xl-height: var(--size-control-xl); /** 48px: 24 interlineado + 12×2 */
+  --button-size-xl-padding-y: var(--space-3);
+  --button-size-xl-padding-x: var(--space-6);
+  --button-size-xl-gap: var(--space-2);
+  --button-size-xl-font-size: var(--font-size-md);
+  --button-size-xl-line-height: var(--font-line-height-md);
+  --button-size-xl-icon-size: var(--space-5);
   --button-primary-font-weight: var(--font-weight-semibold);
-  --button-add-to-cart-height: var(--size-control-md);
   --button-add-to-cart-font-weight: var(--font-weight-medium);
-  --button-secondary-height: var(--size-control-md);
-  --button-secondary-padding-x: var(--space-4);
   --button-secondary-font-weight: var(--font-weight-medium);
-  --button-outline-height: var(--size-control-lg);
-  --button-outline-padding-x: var(--space-4);
-  --button-outline-padding-y: var(--space-3);
   --button-outline-font-weight: var(--font-weight-medium);
-  --button-neutral-padding-x: var(--space-6);
   --button-neutral-font-weight: var(--font-weight-medium);
-  --button-inverse-height: var(--size-control-md);
-  --button-inverse-padding-x: var(--space-8);
   --button-inverse-font-weight: var(--font-weight-medium);
+  --button-link-padding-x: var(--space-0); /** Se alinea con el texto que lo rodea */
+  --button-link-font-weight: var(--font-weight-medium);
   --stepper-border-width: var(--border-width-sm);
   --stepper-height-sm: var(--size-control-xs); /** Carrito y drawer */
   --stepper-height-lg: var(--size-control-lg); /** PDP */
@@ -336,6 +359,14 @@
   --card-product-radius: var(--radius-md);
   --card-product-gap: var(--space-3);
   --card-content-radius: var(--radius-xl);
+  --color-action-neutral-bg: var(--color-surface-default);
+  --color-action-neutral-bg-hover: var(--color-surface-subtle);
+  --color-action-neutral-bg-active: var(--color-surface-muted);
+  --color-action-neutral-fg: var(--color-text-primary);
+  --color-action-neutral-border: var(--color-border-default);
+  --color-action-link-fg: var(--color-text-link);
+  --color-action-link-fg-hover: var(--color-text-link-hover);
+  --color-action-link-fg-active: var(--color-brand-active);
   --button-focus-ring: var(--color-focus-ring);
   --button-primary-bg: var(--color-action-primary-bg);
   --button-primary-bg-hover: var(--color-action-primary-bg-hover);
@@ -349,27 +380,30 @@
   --button-add-to-cart-radius: var(--button-shape-default); /** Comparte forma con stepper */
   --button-secondary-bg: var(--color-action-secondary-bg);
   --button-secondary-bg-hover: var(--color-action-secondary-bg-hover);
+  --button-secondary-bg-active: var(--color-action-secondary-bg-active);
   --button-secondary-fg: var(--color-action-secondary-fg);
   --button-secondary-radius: var(--button-shape-default);
   --button-outline-bg-hover: var(--color-action-outline-bg-hover);
+  --button-outline-bg-active: var(--color-action-outline-bg-active);
   --button-outline-fg: var(--color-text-brand);
   --button-outline-border: var(--color-border-brand);
   --button-outline-radius: var(--button-shape-default);
-  --button-neutral-bg: var(--color-surface-default);
-  --button-neutral-bg-hover: var(--color-surface-subtle);
-  --button-neutral-fg: var(--color-text-primary);
-  --button-neutral-border: var(--color-border-default);
   --button-neutral-radius: var(--button-shape-default);
   --button-inverse-bg: var(--color-surface-default);
   --button-inverse-bg-hover: var(--color-surface-subtle);
+  --button-inverse-bg-active: var(--color-surface-muted);
   --button-inverse-fg: var(--color-text-primary);
   --button-inverse-radius: var(--button-shape-pill); /** Va sobre fotos de banners: siempre pill */
+  --button-disabled-bg: var(--color-action-disabled-bg); /** Compartido por todas las jerarquías salvo link */
+  --button-disabled-fg: var(--color-action-disabled-fg);
+  --button-disabled-border: var(--color-action-disabled-border); /** Solo en jerarquías con borde (outline, neutral) */
+  --button-disabled-link-fg: var(--color-action-disabled-fg); /** Link deshabilitado: solo cambia el texto */
   --stepper-bg: var(--color-surface-default);
   --stepper-bg-hover: var(--color-action-outline-bg-hover);
   --stepper-fg: var(--color-text-primary);
   --stepper-icon: var(--color-icon-brand);
   --stepper-border: var(--color-border-brand);
-  --stepper-height: var(--button-add-to-cart-height);
+  --stepper-height: var(--button-size-md-height);
   --stepper-transition: var(--motion-transition-fast);
   --input-form-bg: var(--color-form-bg);
   --input-form-fg: var(--color-text-primary);
@@ -392,6 +426,14 @@
   --card-product-shadow-hover: var(--elevation-card-hover);
   --card-content-border: var(--color-border-default);
   --card-content-shadow: var(--elevation-subtle);
+  --button-neutral-bg: var(--color-action-neutral-bg);
+  --button-neutral-bg-hover: var(--color-action-neutral-bg-hover);
+  --button-neutral-bg-active: var(--color-action-neutral-bg-active);
+  --button-neutral-fg: var(--color-action-neutral-fg);
+  --button-neutral-border: var(--color-action-neutral-border);
+  --button-link-fg: var(--color-action-link-fg);
+  --button-link-fg-hover: var(--color-action-link-fg-hover);
+  --button-link-fg-active: var(--color-action-link-fg-active);
   --stepper-radius: var(--button-add-to-cart-radius); /** Siempre igual al botón Agregar */
 
   /* Canales RGB para modificadores de opacidad de Tailwind */
@@ -515,11 +557,23 @@
   --color-action-secondary-bg-rgb: 26 26 26;
   --color-action-secondary-bg-hover-rgb: 107 107 107;
   --color-action-secondary-fg-rgb: 255 255 255;
+  --color-action-secondary-bg-active-rgb: 64 64 64;
   --color-action-outline-bg-hover-rgb: 255 241 242;
   --color-action-outline-bg-active-rgb: 255 225 227;
   --color-action-accent-bg-rgb: 21 128 61;
   --color-action-accent-bg-hover-rgb: 18 101 40;
   --color-action-accent-fg-rgb: 255 255 255;
+  --color-action-neutral-bg-rgb: 255 255 255;
+  --color-action-neutral-bg-hover-rgb: 245 245 245;
+  --color-action-neutral-bg-active-rgb: 228 228 228;
+  --color-action-neutral-fg-rgb: 26 26 26;
+  --color-action-neutral-border-rgb: 228 228 228;
+  --color-action-link-fg-rgb: 227 6 19;
+  --color-action-link-fg-hover-rgb: 194 5 16;
+  --color-action-link-fg-active-rgb: 154 4 13;
+  --color-action-disabled-bg-rgb: 245 245 245;
+  --color-action-disabled-fg-rgb: 163 163 163;
+  --color-action-disabled-border-rgb: 228 228 228;
   --color-feedback-success-text-rgb: 21 128 61;
   --color-feedback-success-bg-rgb: 240 253 244;
   --color-feedback-success-border-rgb: 134 239 172;
@@ -564,17 +618,28 @@
   --button-add-to-cart-fg-rgb: 255 255 255;
   --button-secondary-bg-rgb: 26 26 26;
   --button-secondary-bg-hover-rgb: 107 107 107;
+  --button-secondary-bg-active-rgb: 64 64 64;
   --button-secondary-fg-rgb: 255 255 255;
   --button-outline-bg-hover-rgb: 255 241 242;
+  --button-outline-bg-active-rgb: 255 225 227;
   --button-outline-fg-rgb: 227 6 19;
   --button-outline-border-rgb: 227 6 19;
   --button-neutral-bg-rgb: 255 255 255;
   --button-neutral-bg-hover-rgb: 245 245 245;
+  --button-neutral-bg-active-rgb: 228 228 228;
   --button-neutral-fg-rgb: 26 26 26;
   --button-neutral-border-rgb: 228 228 228;
   --button-inverse-bg-rgb: 255 255 255;
   --button-inverse-bg-hover-rgb: 245 245 245;
+  --button-inverse-bg-active-rgb: 228 228 228;
   --button-inverse-fg-rgb: 26 26 26;
+  --button-link-fg-rgb: 227 6 19;
+  --button-link-fg-hover-rgb: 194 5 16;
+  --button-link-fg-active-rgb: 154 4 13;
+  --button-disabled-bg-rgb: 245 245 245;
+  --button-disabled-fg-rgb: 163 163 163;
+  --button-disabled-border-rgb: 228 228 228;
+  --button-disabled-link-fg-rgb: 163 163 163;
   --stepper-bg-rgb: 255 255 255;
   --stepper-bg-hover-rgb: 255 241 242;
   --stepper-fg-rgb: 26 26 26;

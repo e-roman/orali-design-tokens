@@ -504,6 +504,11 @@
       "$type": "dimension",
       "$value": "8px"
     },
+    "2-5": {
+      "$type": "dimension",
+      "$value": "10px",
+      "$description": "Padding vertical de botón md y lg"
+    },
     "3": {
       "$type": "dimension",
       "$value": "12px"
@@ -581,7 +586,8 @@
       },
       "sm": {
         "$type": "dimension",
-        "$value": "38px"
+        "$value": "36px",
+        "$description": "Botón sm. Antes 38px (fuera de la grilla de 4)"
       },
       "md": {
         "$type": "dimension",
@@ -593,7 +599,8 @@
       },
       "xl": {
         "$type": "dimension",
-        "$value": "46px"
+        "$value": "48px",
+        "$description": "Botón xl. Antes 46px (fuera de la grilla de 4)"
       }
     },
     "container": {

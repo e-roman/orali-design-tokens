@@ -1,5 +1,27 @@
 # Changelog
 
+## 3.0.0
+
+Botón reorganizado en tres ejes: jerarquía, tamaño y estado.
+
+- Nuevas jerarquías: `button.link` y `button.neutral` con hover y active completos. `bg-active` en todas las jerarquías con fondo
+- Disabled como set compartido: `button.disabled.{bg,fg,border,link-fg}` → `color.action.disabled.*`. Reemplaza a la opacidad
+- Tamaños: `button.size.{sm,md,lg,xl}.{height,padding-y,padding-x,gap,font-size,line-height,icon-size}`
+- Semántico: `color.action.neutral.*`, `color.action.link.*`, `color.action.disabled.*`, `color.action.secondary.bg-active`
+- Primitivo: `space.2-5` (10px). `size.control.sm` 38 → 36px y `size.control.xl` 46 → 48px (grilla de 4)
+- `stepper.height` → `{button.size.md.height}` (mismo valor, 40px)
+
+Rompe en código:
+
+| v2 | v3 |
+|---|---|
+| `--button-size-md` / `--button-size-lg` | `--button-size-md-height` / `--button-size-lg-height` |
+| `--button-{hierarchy}-height` | `--button-size-{size}-height` |
+| `--button-{hierarchy}-padding-x` / `-padding-y` | `--button-size-{size}-padding-x` / `-padding-y` |
+| `--button-disabled-opacity` | `--button-disabled-bg` / `-fg` / `-border` |
+
+Cambios visibles: padding horizontal de Primary e Inverse pasa de 32 a 20px en lg (unificado por tamaño). Neutral pasa de 24 a 16px en md.
+
 ## 2.0.0
 
 Design system rebuilt from the Figma file. Breaking for consumers: class and variable names change, rendered values don't (site migration verified pixel-identical).

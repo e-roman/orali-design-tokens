@@ -31,7 +31,7 @@ El cambio botón ↔ stepper es un **cambio de estado del mismo control**, no do
 | Borde | `stepper.border` → `border.brand` / `stepper.border-width` | tomato.500 / 1px |
 | Radius | `stepper.radius` → `button.add-to-cart.radius` | 8px |
 | Altura sm | `stepper.height-sm` → `size.control.xs` | 32px (carrito, drawer) |
-| Altura md | `stepper.height` → `button.add-to-cart.height` | 40px (card) |
+| Altura md | `stepper.height` → `button.size.md.height` | 40px (card) |
 | Altura lg | `stepper.height-lg` → `size.control.lg` | 44px (PDP) |
 | Padding horizontal | `stepper.padding-x` | 12px |
 | Área táctil −/+ | `stepper.hit-area` / `stepper.hit-area-sm` | 40×40px / 32×32px en sm |
@@ -49,7 +49,7 @@ En el carrito esa regla no aplica. El Stepper es una línea más de la fila y a 
 | Tamaño | Token | Altura | Dónde |
 |---|---|---|---|
 | sm | `stepper.height-sm` → `size.control.xs` | 32px | Carrito, drawer |
-| md | `stepper.height` → `button.add-to-cart.height` | 40px | Card de producto |
+| md | `stepper.height` → `button.size.md.height` | 40px | Card de producto |
 | lg | `stepper.height-lg` → `size.control.lg` | 44px | Página de producto |
 
 ## Estados

@@ -12,16 +12,6 @@
         "$description": "Solo marketing: hero, banners, newsletter"
       }
     },
-    "size": {
-      "md": {
-        "$type": "dimension",
-        "$value": "{size.control.md}"
-      },
-      "lg": {
-        "$type": "dimension",
-        "$value": "{size.control.lg}"
-      }
-    },
     "focus-ring": {
       "$type": "color",
       "$value": "{color.focus.ring}"
@@ -31,9 +21,136 @@
       "$value": "{border-width.lg}",
       "$description": "Botones: 2px por fuera (no tienen borde que recolorear)"
     },
-    "disabled-opacity": {
-      "$type": "number",
-      "$value": "{opacity.disabled}"
+    "focus-offset": {
+      "$type": "dimension",
+      "$value": "{border-width.lg}",
+      "$description": "Separación entre botón y anillo: 2px"
+    },
+    "size": {
+      "sm": {
+        "height": {
+          "$type": "dimension",
+          "$value": "{size.control.sm}",
+          "$description": "36px: 20 interlineado + 8×2"
+        },
+        "padding-y": {
+          "$type": "dimension",
+          "$value": "{space.2}"
+        },
+        "padding-x": {
+          "$type": "dimension",
+          "$value": "{space.3}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{space.1-5}"
+        },
+        "font-size": {
+          "$type": "dimension",
+          "$value": "{font.size.sm}"
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$value": "{font.line-height.sm}"
+        },
+        "icon-size": {
+          "$type": "dimension",
+          "$value": "{space.4}"
+        }
+      },
+      "md": {
+        "height": {
+          "$type": "dimension",
+          "$value": "{size.control.md}",
+          "$description": "40px: 20 interlineado + 10×2"
+        },
+        "padding-y": {
+          "$type": "dimension",
+          "$value": "{space.2-5}"
+        },
+        "padding-x": {
+          "$type": "dimension",
+          "$value": "{space.4}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{space.2}"
+        },
+        "font-size": {
+          "$type": "dimension",
+          "$value": "{font.size.sm}"
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$value": "{font.line-height.sm}"
+        },
+        "icon-size": {
+          "$type": "dimension",
+          "$value": "{space.4}"
+        }
+      },
+      "lg": {
+        "height": {
+          "$type": "dimension",
+          "$value": "{size.control.lg}",
+          "$description": "44px: 20 interlineado + 12×2. Mínimo táctil"
+        },
+        "padding-y": {
+          "$type": "dimension",
+          "$value": "{space.3}"
+        },
+        "padding-x": {
+          "$type": "dimension",
+          "$value": "{space.5}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{space.2}"
+        },
+        "font-size": {
+          "$type": "dimension",
+          "$value": "{font.size.sm}"
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$value": "{font.line-height.sm}"
+        },
+        "icon-size": {
+          "$type": "dimension",
+          "$value": "{space.5}"
+        }
+      },
+      "xl": {
+        "height": {
+          "$type": "dimension",
+          "$value": "{size.control.xl}",
+          "$description": "48px: 24 interlineado + 12×2"
+        },
+        "padding-y": {
+          "$type": "dimension",
+          "$value": "{space.3}"
+        },
+        "padding-x": {
+          "$type": "dimension",
+          "$value": "{space.6}"
+        },
+        "gap": {
+          "$type": "dimension",
+          "$value": "{space.2}"
+        },
+        "font-size": {
+          "$type": "dimension",
+          "$value": "{font.size.md}"
+        },
+        "line-height": {
+          "$type": "dimension",
+          "$value": "{font.line-height.md}"
+        },
+        "icon-size": {
+          "$type": "dimension",
+          "$value": "{space.5}"
+        }
+      }
     },
     "primary": {
       "bg": {
@@ -55,18 +172,6 @@
       "radius": {
         "$type": "dimension",
         "$value": "{button.shape.default}"
-      },
-      "height": {
-        "$type": "dimension",
-        "$value": "{size.control.lg}"
-      },
-      "padding-x": {
-        "$type": "dimension",
-        "$value": "{space.8}"
-      },
-      "padding-y": {
-        "$type": "dimension",
-        "$value": "{space.3}"
       },
       "font-weight": {
         "$type": "fontWeight",
@@ -95,10 +200,6 @@
         "$value": "{button.shape.default}",
         "$description": "Comparte forma con stepper"
       },
-      "height": {
-        "$type": "dimension",
-        "$value": "{size.control.md}"
-      },
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
@@ -113,6 +214,10 @@
         "$type": "color",
         "$value": "{color.action.secondary.bg-hover}"
       },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.action.secondary.bg-active}"
+      },
       "fg": {
         "$type": "color",
         "$value": "{color.action.secondary.fg}"
@@ -120,14 +225,6 @@
       "radius": {
         "$type": "dimension",
         "$value": "{button.shape.default}"
-      },
-      "height": {
-        "$type": "dimension",
-        "$value": "{size.control.md}"
-      },
-      "padding-x": {
-        "$type": "dimension",
-        "$value": "{space.4}"
       },
       "font-weight": {
         "$type": "fontWeight",
@@ -143,6 +240,10 @@
         "$type": "color",
         "$value": "{color.action.outline.bg-hover}"
       },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.action.outline.bg-active}"
+      },
       "fg": {
         "$type": "color",
         "$value": "{color.text.brand}"
@@ -155,18 +256,6 @@
         "$type": "dimension",
         "$value": "{button.shape.default}"
       },
-      "height": {
-        "$type": "dimension",
-        "$value": "{size.control.lg}"
-      },
-      "padding-x": {
-        "$type": "dimension",
-        "$value": "{space.4}"
-      },
-      "padding-y": {
-        "$type": "dimension",
-        "$value": "{space.3}"
-      },
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
@@ -175,27 +264,27 @@
     "neutral": {
       "bg": {
         "$type": "color",
-        "$value": "{color.surface.default}"
+        "$value": "{color.action.neutral.bg}"
       },
       "bg-hover": {
         "$type": "color",
-        "$value": "{color.surface.subtle}"
+        "$value": "{color.action.neutral.bg-hover}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.action.neutral.bg-active}"
       },
       "fg": {
         "$type": "color",
-        "$value": "{color.text.primary}"
+        "$value": "{color.action.neutral.fg}"
       },
       "border": {
         "$type": "color",
-        "$value": "{color.border.default}"
+        "$value": "{color.action.neutral.border}"
       },
       "radius": {
         "$type": "dimension",
         "$value": "{button.shape.default}"
-      },
-      "padding-x": {
-        "$type": "dimension",
-        "$value": "{space.6}"
       },
       "font-weight": {
         "$type": "fontWeight",
@@ -211,6 +300,10 @@
         "$type": "color",
         "$value": "{color.surface.subtle}"
       },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.surface.muted}"
+      },
       "fg": {
         "$type": "color",
         "$value": "{color.text.primary}"
@@ -220,17 +313,61 @@
         "$value": "{button.shape.pill}",
         "$description": "Va sobre fotos de banners: siempre pill"
       },
-      "height": {
-        "$type": "dimension",
-        "$value": "{size.control.md}"
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      }
+    },
+    "link": {
+      "fg": {
+        "$type": "color",
+        "$value": "{color.action.link.fg}"
+      },
+      "fg-hover": {
+        "$type": "color",
+        "$value": "{color.action.link.fg-hover}"
+      },
+      "fg-active": {
+        "$type": "color",
+        "$value": "{color.action.link.fg-active}"
       },
       "padding-x": {
         "$type": "dimension",
-        "$value": "{space.8}"
+        "$value": "{space.0}",
+        "$description": "Se alinea con el texto que lo rodea"
       },
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
+      },
+      "text-decoration": {
+        "$type": "textDecoration",
+        "$value": "none"
+      },
+      "text-decoration-hover": {
+        "$type": "textDecoration",
+        "$value": "underline"
+      }
+    },
+    "disabled": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.action.disabled.bg}",
+        "$description": "Compartido por todas las jerarquías salvo link"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.action.disabled.fg}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.action.disabled.border}",
+        "$description": "Solo en jerarquías con borde (outline, neutral)"
+      },
+      "link-fg": {
+        "$type": "color",
+        "$value": "{color.action.disabled.fg}",
+        "$description": "Link deshabilitado: solo cambia el texto"
       }
     }
   },
@@ -266,7 +403,7 @@
     },
     "height": {
       "$type": "dimension",
-      "$value": "{button.add-to-cart.height}"
+      "$value": "{button.size.md.height}"
     },
     "height-sm": {
       "$type": "dimension",
