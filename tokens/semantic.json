@@ -330,7 +330,8 @@
       "error": {
         "text": {
           "$type": "color",
-          "$value": "{color.tomato.600}"
+          "$value": "{color.tomato.500}",
+          "$description": "4.88:1 sobre blanco (AA). Más claro que tomato.600 para no verse marrón"
         },
         "bg": {
           "$type": "color",

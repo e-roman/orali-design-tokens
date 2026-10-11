@@ -245,7 +245,7 @@
   --color-feedback-warning-text: var(--color-yellow-700);
   --color-feedback-warning-bg: var(--color-yellow-50);
   --color-feedback-warning-border: var(--color-yellow-300);
-  --color-feedback-error-text: var(--color-tomato-600);
+  --color-feedback-error-text: var(--color-tomato-500); /** 4.88:1 sobre blanco (AA). Más claro que tomato.600 para no verse marrón */
   --color-feedback-error-bg: var(--color-tomato-50);
   --color-feedback-error-border: var(--color-tomato-200);
   --color-feedback-info-text: var(--color-blue-700);
@@ -581,7 +581,7 @@
   --color-feedback-warning-text-rgb: 161 98 7;
   --color-feedback-warning-bg-rgb: 254 252 232;
   --color-feedback-warning-border-rgb: 253 224 71;
-  --color-feedback-error-text-rgb: 194 5 16;
+  --color-feedback-error-text-rgb: 227 6 19;
   --color-feedback-error-bg-rgb: 255 241 242;
   --color-feedback-error-border-rgb: 255 199 202;
   --color-feedback-info-text-rgb: 29 78 216;
