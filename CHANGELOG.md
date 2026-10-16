@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.1.0
+
+Export para Figma Variables generado desde el repo. Sin cambios en tokens ni en `tokens.css`, `tokens.json` o `tailwind.preset.js`.
+
+- `build-figma.mjs` → `dist/figma/`: un JSON DTCG por colección (`primitive`, `semantic`, `component`), modo `Light`, para el import nativo de variables de Figma
+- Cada variable lleva `com.figma.scopes` por grupo, `com.figma.codeSyntax.WEB` igual a la custom property de `tokens.css` y su `$description`
+- Alias conservados (`{color.tomato.500}` + `com.figma.aliasData` con la colección destino)
+- `z-index`, `breakpoint` y `layer` sin scope y ocultos al publicar; colores primitivos sin scope (se usan vía semánticos)
+- Opacidad exportada en 0–100 (escala de Figma); el token sigue en 0–1
+- `styles.json`: 5 effect styles (elevation) y 9 text styles (typography) con las variables a bindear
+- `manifest.json`: orden de import, conteos y los 36 tokens que Figma Variables no representa
+- `npm run build` corre ambos scripts; `npm run build:figma` solo el export
+
 ## 3.0.1
 
 - `color.form.text-error` (red.600): mensaje de error debajo del campo, mismo tono que `form.border-error`. Tailwind: `text-form-text-error`

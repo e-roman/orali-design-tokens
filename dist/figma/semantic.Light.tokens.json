@@ -1,0 +1,1927 @@
+{
+  "color": {
+    "brand": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$description": "Logo, acentos de marca",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-brand-default)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "hover": {
+        "$type": "color",
+        "$value": "{color.tomato.600}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-brand-hover)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "active": {
+        "$type": "color",
+        "$value": "{color.tomato.700}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL",
+            "TEXT_FILL",
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-brand-active)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/700",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.tomato.50}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-brand-subtle)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/50",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      }
+    },
+    "surface": {
+      "page": {
+        "$type": "color",
+        "$value": "{color.neutral.50}",
+        "$description": "Fondo de página",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-page)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/50",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "default": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$description": "Cards, modales, header",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-default)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/base/white",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$description": "Secciones alternadas, hover neutro",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-subtle)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/100",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$description": "Skeletons, divisores gruesos",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-muted)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/200",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "Footer, secciones oscuras",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-inverse)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/900",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "{color.alpha.black-50}",
+        "$description": "Detrás de drawers y modales",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-overlay)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/alpha/black-50",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "overlay-strong": {
+        "$type": "color",
+        "$value": "{color.alpha.black-60}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-overlay-strong)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/alpha/black-60",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$description": "Contador del carrito, bloques de marca",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-brand)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "brand-subtle": {
+        "$type": "color",
+        "$value": "{color.tomato.50}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-brand-subtle)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/50",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.sage.600}",
+        "$description": "Barra superior, superficies verdes con texto (5.02:1)",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-accent)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/sage/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "mercadopago": {
+        "$type": "color",
+        "$value": "{color.external.mercadopago}",
+        "$description": "Botón de Mercado Pago",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-surface-mercadopago)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/external/mercadopago",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      }
+    },
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "Texto principal (17.4:1)",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-primary)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/900",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$description": "Gramaje, metadatos (5.33:1)",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-secondary)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$description": "Solo decorativo: numerales y flechas. Nunca información",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-tertiary)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/200",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.300}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-disabled)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/300",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-inverse)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/base/white",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "inverse-muted": {
+        "$type": "color",
+        "$value": "{color.alpha.white-80}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-inverse-muted)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/alpha/white-80",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "on-brand": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-on-brand)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/base/white",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "link": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-link)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "link-hover": {
+        "$type": "color",
+        "$value": "{color.tomato.600}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-link-hover)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-brand)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.sage.600}",
+        "$description": "Texto verde (5.02:1)",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-text-accent)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/sage/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      }
+    },
+    "border": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.200}",
+        "$description": "Solo divisores y bordes decorativos. Controles usan form.border",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-border-default)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/200",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "{color.neutral.900}",
+        "$description": "Hover y selección de chips y filtros",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-border-strong)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/900",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$description": "Campos en foco: reemplaza el color del borde",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-border-focus)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-border-brand)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "brand-subtle": {
+        "$type": "color",
+        "$value": "{color.tomato.200}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-border-brand-subtle)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/200",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "{color.sage.600}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-border-accent)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/sage/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.alpha.white-30}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-border-inverse)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/alpha/white-30",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      }
+    },
+    "icon": {
+      "default": {
+        "$type": "color",
+        "$value": "{color.neutral.600}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-icon-default)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "subtle": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-icon-subtle)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "brand": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-icon-brand)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "inverse": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "SHAPE_FILL",
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-icon-inverse)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/base/white",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      }
+    },
+    "action": {
+      "primary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.tomato.500}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-primary-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/tomato/500",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.tomato.600}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-primary-bg-hover)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/tomato/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.tomato.700}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-primary-bg-active)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/tomato/700",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.base.white}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-primary-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/base/white",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "secondary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.neutral.900}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-secondary-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/900",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.neutral.500}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-secondary-bg-hover)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/500",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.base.white}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-secondary-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/base/white",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.neutral.700}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-secondary-bg-active)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/700",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "outline": {
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.tomato.50}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-outline-bg-hover)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/tomato/50",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.tomato.100}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-outline-bg-active)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/tomato/100",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "fg-hover": {
+          "$type": "color",
+          "$value": "{color.brand.hover}",
+          "$description": "5.75:1 sobre outline.bg-hover",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-outline-fg-hover)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/brand/hover",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        },
+        "fg-active": {
+          "$type": "color",
+          "$value": "{color.brand.active}",
+          "$description": "7.15:1 sobre outline.bg-active",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-outline-fg-active)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/brand/active",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        }
+      },
+      "accent": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.sage.600}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-accent-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/sage/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.sage.700}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-accent-bg-hover)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/sage/700",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.base.white}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-accent-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/base/white",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "neutral": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.surface.default}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-neutral-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/surface/default",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.surface.subtle}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-neutral-bg-hover)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/surface/subtle",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.surface.muted}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-neutral-bg-active)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/surface/muted",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.text.primary}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-neutral-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/text/primary",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.border.default}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "STROKE_COLOR"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-neutral-border)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/border/default",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        }
+      },
+      "link": {
+        "fg": {
+          "$type": "color",
+          "$value": "{color.text.link}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-link-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/text/link",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        },
+        "fg-hover": {
+          "$type": "color",
+          "$value": "{color.text.link-hover}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-link-fg-hover)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/text/link-hover",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        },
+        "fg-active": {
+          "$type": "color",
+          "$value": "{color.brand.active}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-link-fg-active)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/brand/active",
+              "targetVariableSetName": "semantic"
+            }
+          }
+        }
+      },
+      "disabled": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.neutral.100}",
+          "$description": "Fondo de cualquier botón deshabilitado",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-disabled-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/100",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.neutral.400}",
+          "$description": "Texto e ícono deshabilitado. WCAG no exige contraste en deshabilitados",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-disabled-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/400",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.neutral.200}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "STROKE_COLOR"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-action-disabled-border)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/200",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      }
+    },
+    "feedback": {
+      "success": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.green.700}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-success-text)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/green/700",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.green.50}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-success-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/green/50",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.green.600}",
+          "$description": "Borde de alertas y estados de éxito. 3.30:1 sobre blanco (1.4.11)",
+          "$extensions": {
+            "com.figma.scopes": [
+              "STROKE_COLOR"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-success-border)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/green/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.green.600}",
+          "$description": "Relleno: barras, íconos sobre fondo. No usar con texto blanco (3.30:1)",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-success-solid)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/green/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "warning": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.yellow.700}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-warning-text)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/yellow/700",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.yellow.50}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-warning-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/yellow/50",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.yellow.300}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "STROKE_COLOR"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-warning-border)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/yellow/300",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "error": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.red.700}",
+          "$description": "6.47:1 sobre blanco, 5.91:1 sobre error.bg",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-error-text)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/red/700",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.red.50}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-error-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/red/50",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.red.600}",
+          "$description": "Borde de alertas y estados de error. 4.83:1 sobre blanco",
+          "$extensions": {
+            "com.figma.scopes": [
+              "STROKE_COLOR"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-error-border)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/red/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.red.600}",
+          "$description": "Relleno: barras, íconos sobre fondo. Texto blanco OK (4.83:1)",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-error-solid)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/red/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "info": {
+        "text": {
+          "$type": "color",
+          "$value": "{color.blue.700}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-info-text)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/blue/700",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.blue.50}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-info-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/blue/50",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.blue.300}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "STROKE_COLOR"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-feedback-info-border)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/blue/300",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      }
+    },
+    "form": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-bg)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/base/white",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.neutral.400}",
+        "$description": "Borde de controles: 3.28:1 (WCAG 1.4.11)",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-border)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/400",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "border-hover": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-border-hover)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "control-off": {
+        "$type": "color",
+        "$value": "{color.neutral.400}",
+        "$description": "Track de toggle apagado: 3.28:1",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-control-off)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/400",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "control-off-hover": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-control-off-hover)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-border-focus)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "border-error": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-border-error)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/red/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "text-error": {
+        "$type": "color",
+        "$value": "{color.red.600}",
+        "$description": "Mensaje de error debajo del campo, mismo tono que form.border-error. 4.83:1 sobre blanco. Dentro de alertas con fondo error.bg usar feedback.error.text",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-text-error)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/red/600",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "bg-error": {
+        "$type": "color",
+        "$value": "{color.red.50}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-bg-error)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/red/50",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "bg-disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.100}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "FRAME_FILL",
+            "SHAPE_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-bg-disabled)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/100",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "label": {
+        "$type": "color",
+        "$value": "{color.text.primary}",
+        "$description": "Etiqueta del campo",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-label)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/text/primary",
+            "targetVariableSetName": "semantic"
+          }
+        }
+      },
+      "label-disabled": {
+        "$type": "color",
+        "$value": "{color.form.text-disabled}",
+        "$description": "Etiqueta de campo deshabilitado",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-label-disabled)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/form/text-disabled",
+            "targetVariableSetName": "semantic"
+          }
+        }
+      },
+      "text": {
+        "$type": "color",
+        "$value": "{color.text.primary}",
+        "$description": "Valor ingresado. Se distingue del placeholder por contraste",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-text)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/text/primary",
+            "targetVariableSetName": "semantic"
+          }
+        }
+      },
+      "placeholder": {
+        "$type": "color",
+        "$value": "{color.neutral.500}",
+        "$description": "5.33:1. Es el gris más claro que pasa AA para texto",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-placeholder)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "helper": {
+        "$type": "color",
+        "$value": "{color.text.secondary}",
+        "$description": "Texto de ayuda debajo del campo",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-helper)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/text/secondary",
+            "targetVariableSetName": "semantic"
+          }
+        }
+      },
+      "text-disabled": {
+        "$type": "color",
+        "$value": "{color.neutral.400}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "TEXT_FILL"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-form-text-disabled)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/neutral/400",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$value": "{color.tomato.500}",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-focus-ring)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/tomato/500",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      },
+      "ring-inverse": {
+        "$type": "color",
+        "$value": "{color.base.white}",
+        "$description": "Sobre fotos, superficies oscuras o de marca",
+        "$extensions": {
+          "com.figma.scopes": [
+            "STROKE_COLOR"
+          ],
+          "com.figma.codeSyntax": {
+            "WEB": "var(--color-focus-ring-inverse)"
+          },
+          "com.figma.aliasData": {
+            "targetVariableName": "color/base/white",
+            "targetVariableSetName": "primitive"
+          }
+        }
+      }
+    },
+    "commerce": {
+      "price": {
+        "current": {
+          "$type": "color",
+          "$value": "{color.neutral.900}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-price-current)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/900",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "previous": {
+          "$type": "color",
+          "$value": "{color.neutral.500}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-price-previous)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/500",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "unit": {
+          "$type": "color",
+          "$value": "{color.neutral.500}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-price-unit)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/neutral/500",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "discount": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.base.white}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-discount-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/base/white",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.tomato.500}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-discount-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/tomato/500",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{color.tomato.500}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "STROKE_COLOR"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-discount-border)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/tomato/500",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "badge-dietary": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.sage.600}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "FRAME_FILL",
+              "SHAPE_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-badge-dietary-bg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/sage/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.base.white}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-badge-dietary-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/base/white",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      },
+      "shipping-free": {
+        "fg": {
+          "$type": "color",
+          "$value": "{color.sage.600}",
+          "$extensions": {
+            "com.figma.scopes": [
+              "TEXT_FILL"
+            ],
+            "com.figma.codeSyntax": {
+              "WEB": "var(--color-commerce-shipping-free-fg)"
+            },
+            "com.figma.aliasData": {
+              "targetVariableName": "color/sage/600",
+              "targetVariableSetName": "primitive"
+            }
+          }
+        }
+      }
+    }
+  },
+  "layer": {
+    "sticky": {
+      "$type": "number",
+      "$value": "{z-index.sticky}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-sticky)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/sticky",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    },
+    "header": {
+      "$type": "number",
+      "$value": "{z-index.header}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-header)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/header",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    },
+    "overlay": {
+      "$type": "number",
+      "$value": "{z-index.overlay}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-overlay)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/overlay",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    },
+    "mobile-menu": {
+      "$type": "number",
+      "$value": "{z-index.mobile-menu}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-mobile-menu)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/mobile-menu",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    },
+    "drawer": {
+      "$type": "number",
+      "$value": "{z-index.drawer}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-drawer)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/drawer",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    },
+    "modal": {
+      "$type": "number",
+      "$value": "{z-index.modal}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-modal)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/modal",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    },
+    "modal-top": {
+      "$type": "number",
+      "$value": "{z-index.modal-top}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-modal-top)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/modal-top",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    },
+    "progress": {
+      "$type": "number",
+      "$value": "{z-index.progress}",
+      "$extensions": {
+        "com.figma.scopes": [],
+        "com.figma.codeSyntax": {
+          "WEB": "var(--layer-progress)"
+        },
+        "com.figma.hiddenFromPublishing": true,
+        "com.figma.aliasData": {
+          "targetVariableName": "z-index/progress",
+          "targetVariableSetName": "primitive"
+        }
+      }
+    }
+  }
+}

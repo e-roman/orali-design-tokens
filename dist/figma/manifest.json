@@ -1,0 +1,241 @@
+{
+  "mode": "Light",
+  "importOrder": [
+    "primitive",
+    "semantic",
+    "component"
+  ],
+  "counts": {
+    "primitive": {
+      "exported": 167,
+      "excluded": 11
+    },
+    "semantic": {
+      "exported": 112,
+      "excluded": 16
+    },
+    "component": {
+      "exported": 213,
+      "excluded": 9
+    }
+  },
+  "excluded": [
+    {
+      "set": "primitive",
+      "token": "shadow.sm",
+      "type": "shadow",
+      "css": "var(--shadow-sm)"
+    },
+    {
+      "set": "primitive",
+      "token": "shadow.md",
+      "type": "shadow",
+      "css": "var(--shadow-md)"
+    },
+    {
+      "set": "primitive",
+      "token": "shadow.lg",
+      "type": "shadow",
+      "css": "var(--shadow-lg)"
+    },
+    {
+      "set": "primitive",
+      "token": "shadow.xl",
+      "type": "shadow",
+      "css": "var(--shadow-xl)"
+    },
+    {
+      "set": "primitive",
+      "token": "shadow.2xl",
+      "type": "shadow",
+      "css": "var(--shadow-2xl)"
+    },
+    {
+      "set": "primitive",
+      "token": "duration.fast",
+      "type": "duration",
+      "css": "var(--duration-fast)"
+    },
+    {
+      "set": "primitive",
+      "token": "duration.base",
+      "type": "duration",
+      "css": "var(--duration-base)"
+    },
+    {
+      "set": "primitive",
+      "token": "duration.slow",
+      "type": "duration",
+      "css": "var(--duration-slow)"
+    },
+    {
+      "set": "primitive",
+      "token": "duration.slower",
+      "type": "duration",
+      "css": "var(--duration-slower)"
+    },
+    {
+      "set": "primitive",
+      "token": "easing.standard",
+      "type": "cubicBezier",
+      "css": "var(--easing-standard)"
+    },
+    {
+      "set": "primitive",
+      "token": "easing.out",
+      "type": "cubicBezier",
+      "css": "var(--easing-out)"
+    },
+    {
+      "set": "semantic",
+      "token": "elevation.subtle",
+      "type": "shadow",
+      "css": "var(--elevation-subtle)"
+    },
+    {
+      "set": "semantic",
+      "token": "elevation.card",
+      "type": "shadow",
+      "css": "var(--elevation-card)"
+    },
+    {
+      "set": "semantic",
+      "token": "elevation.card-hover",
+      "type": "shadow",
+      "css": "var(--elevation-card-hover)"
+    },
+    {
+      "set": "semantic",
+      "token": "elevation.dropdown",
+      "type": "shadow",
+      "css": "var(--elevation-dropdown)"
+    },
+    {
+      "set": "semantic",
+      "token": "elevation.overlay",
+      "type": "shadow",
+      "css": "var(--elevation-overlay)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.display",
+      "type": "typography",
+      "css": "var(--typography-display)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.heading-xl",
+      "type": "typography",
+      "css": "var(--typography-heading-xl)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.heading-lg",
+      "type": "typography",
+      "css": "var(--typography-heading-lg)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.heading-md",
+      "type": "typography",
+      "css": "var(--typography-heading-md)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.heading-sm",
+      "type": "typography",
+      "css": "var(--typography-heading-sm)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.body-md",
+      "type": "typography",
+      "css": "var(--typography-body-md)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.body-sm",
+      "type": "typography",
+      "css": "var(--typography-body-sm)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.label",
+      "type": "typography",
+      "css": "var(--typography-label)"
+    },
+    {
+      "set": "semantic",
+      "token": "typography.caption",
+      "type": "typography",
+      "css": "var(--typography-caption)"
+    },
+    {
+      "set": "semantic",
+      "token": "motion.transition.fast",
+      "type": "transition",
+      "css": "var(--motion-transition-fast)"
+    },
+    {
+      "set": "semantic",
+      "token": "motion.transition.base",
+      "type": "transition",
+      "css": "var(--motion-transition-base)"
+    },
+    {
+      "set": "component",
+      "token": "button.link.text-decoration",
+      "type": "textDecoration",
+      "css": "var(--button-link-text-decoration)"
+    },
+    {
+      "set": "component",
+      "token": "button.link.text-decoration-hover",
+      "type": "textDecoration",
+      "css": "var(--button-link-text-decoration-hover)"
+    },
+    {
+      "set": "component",
+      "token": "stepper.transition",
+      "type": "transition",
+      "css": "var(--stepper-transition)"
+    },
+    {
+      "set": "component",
+      "token": "card.product.shadow",
+      "type": "shadow",
+      "css": "var(--card-product-shadow)"
+    },
+    {
+      "set": "component",
+      "token": "card.product.shadow-hover",
+      "type": "shadow",
+      "css": "var(--card-product-shadow-hover)"
+    },
+    {
+      "set": "component",
+      "token": "card.content.shadow",
+      "type": "shadow",
+      "css": "var(--card-content-shadow)"
+    },
+    {
+      "set": "component",
+      "token": "select.menu.elevation",
+      "type": "shadow",
+      "css": "var(--select-menu-elevation)"
+    },
+    {
+      "set": "component",
+      "token": "toggle.thumb-elevation",
+      "type": "shadow",
+      "css": "var(--toggle-thumb-elevation)"
+    },
+    {
+      "set": "component",
+      "token": "toggle.transition",
+      "type": "transition",
+      "css": "var(--toggle-transition)"
+    }
+  ],
+  "noScope": []
+}

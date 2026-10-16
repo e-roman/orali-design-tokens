@@ -7,10 +7,12 @@ on:
     paths:
       - 'tokens/**'
       - 'build.mjs'
+      - 'build-figma.mjs'
   pull_request:
     paths:
       - 'tokens/**'
       - 'build.mjs'
+      - 'build-figma.mjs'
   workflow_dispatch:
 
 jobs:

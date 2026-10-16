@@ -187,6 +187,20 @@ npm run build
 
 ---
 
+### Figma Variables (import nativo)
+
+`npm run build` genera `dist/figma/`. No se edita a mano.
+
+| Archivo | Colección | Variables |
+|---|---|---|
+| `primitive.Light.tokens.json` | primitive | 167 |
+| `semantic.Light.tokens.json` | semantic | 112 |
+| `component.Light.tokens.json` | component | 213 |
+
+Importar en este orden (los alias apuntan a la colección anterior): primitive → semantic → component. Modo de cada colección: `Light`. Shadows y typography no son variables: van como Effect y Text Styles según `styles.json`. Detalle de lo excluido en `manifest.json`.
+
+---
+
 ## Site migration (tienda-orali)
 
 | Before | After |
