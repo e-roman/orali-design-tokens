@@ -130,9 +130,6 @@ module.exports = {
           "white": "rgb(var(--color-base-white-rgb) / <alpha-value>)",
           "black": "rgb(var(--color-base-black-rgb) / <alpha-value>)",
           "transparent": "var(--color-base-transparent)"
-        },
-        "external": {
-          "mercadopago": "rgb(var(--color-external-mercadopago-rgb) / <alpha-value>)"
         }
       },
       "backgroundColor": {
@@ -146,7 +143,6 @@ module.exports = {
         "brand": "rgb(var(--color-surface-brand-rgb) / <alpha-value>)",
         "brand-subtle": "rgb(var(--color-surface-brand-subtle-rgb) / <alpha-value>)",
         "accent": "rgb(var(--color-surface-accent-rgb) / <alpha-value>)",
-        "mercadopago": "rgb(var(--color-surface-mercadopago-rgb) / <alpha-value>)",
         "form": "rgb(var(--color-form-bg-rgb) / <alpha-value>)",
         "form-error": "rgb(var(--color-form-bg-error-rgb) / <alpha-value>)",
         "form-disabled": "rgb(var(--color-form-bg-disabled-rgb) / <alpha-value>)",

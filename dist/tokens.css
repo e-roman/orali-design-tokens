@@ -89,7 +89,6 @@
   --color-alpha-white-30: rgba(255, 255, 255, 0.3);
   --color-alpha-white-80: rgba(255, 255, 255, 0.8);
   --color-alpha-white-90: rgba(255, 255, 255, 0.9);
-  --color-external-mercadopago: #009ee3; /** Botón de Mercado Pago */
   --font-family-sans: Montserrat, system-ui, sans-serif;
   --font-family-display: Montserrat, system-ui, sans-serif;
   --font-weight-regular: 400;
@@ -199,7 +198,6 @@
   --color-surface-brand: var(--color-tomato-500); /** Contador del carrito, bloques de marca */
   --color-surface-brand-subtle: var(--color-tomato-50);
   --color-surface-accent: var(--color-sage-600); /** Barra superior, superficies verdes con texto (5.02:1) */
-  --color-surface-mercadopago: var(--color-external-mercadopago); /** Botón de Mercado Pago */
   --color-text-primary: var(--color-neutral-900); /** Texto principal (17.4:1) */
   --color-text-secondary: var(--color-neutral-500); /** Gramaje, metadatos (5.33:1) */
   --color-text-tertiary: var(--color-neutral-200); /** Solo decorativo: numerales y flechas. Nunca información */
@@ -654,7 +652,6 @@
   --color-blue-950-rgb: 23 37 84;
   --color-base-white-rgb: 255 255 255;
   --color-base-black-rgb: 20 20 20;
-  --color-external-mercadopago-rgb: 0 158 227;
   --color-brand-default-rgb: 227 6 19;
   --color-brand-hover-rgb: 194 5 16;
   --color-brand-active-rgb: 154 4 13;
@@ -667,7 +664,6 @@
   --color-surface-brand-rgb: 227 6 19;
   --color-surface-brand-subtle-rgb: 255 241 242;
   --color-surface-accent-rgb: 21 128 61;
-  --color-surface-mercadopago-rgb: 0 158 227;
   --color-text-primary-rgb: 26 26 26;
   --color-text-secondary-rgb: 107 107 107;
   --color-text-tertiary-rgb: 228 228 228;
