@@ -1,5 +1,22 @@
 # Changelog
 
+## Unreleased: sincronización con Figma (limpieza del DS)
+
+- Nuevo: `button.ghost.*` (botón solo texto oscuro, sin fondo en ningún estado)
+- Nuevo: `dropdown.*` (menú de navegación y de cuenta: fondo, ítems, header, link "Ver todos")
+- Nuevo: `divider.color`, `border.neutral`
+- Alto y padding por jerarquía: `button.{primary,secondary,outline,neutral,inverse,add-to-cart}.{height,padding-x,padding-y}`
+- `button.disabled-opacity`
+- Semántico: `color.action.outline.bg`, `color.feedback.{info,warning}.solid`, `color.form.border-disabled`, `color.form.control-on`, `-hover` y `-subtle`
+- Tipografía: `typography.body-lg` (18/28, regular)
+- Primitivo: `color.base.transparent`
+- `color.action.disabled.fg` y `.border` → neutral.300
+- `color.action.neutral.bg` / `-hover` / `-active` → neutral.50 / 100 / 200
+- `color.form.border-hover` → neutral.600; `color.form.text-disabled` → `{color.action.disabled.fg}`
+- `color.commerce.shipping-free.fg` → green.700
+- `badge.discount.padding-y` 2 → 6px (`space.1-5`)
+- `button.outline.bg` → `{color.action.outline.bg}` (blanco)
+
 ## 3.0.0
 
 Botón reorganizado en tres ejes: jerarquía, tamaño y estado.
