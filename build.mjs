@@ -159,7 +159,26 @@ StyleDictionary.registerTransform({
 });
 const cssTransforms = [...StyleDictionary.hooks.transformGroups.css, 'font/stack'];
 
+/**
+ * Las sombras guardan además x, y y type (formato de Tokens Studio / Supernova).
+ * Style Dictionary usa offsetX/offsetY: se quitan los campos extra antes de transformar.
+ */
+StyleDictionary.registerPreprocessor({
+  name: 'strip-tokens-studio-shadow',
+  preprocessor: (dict) => {
+    const clean = (l) => { if (l && typeof l === 'object') { delete l.x; delete l.y; delete l.type; } };
+    const walk = (o) => {
+      if (!o || typeof o !== 'object') return;
+      if (o.$type === 'shadow' && o.$value) { [].concat(o.$value).forEach(clean); return; }
+      Object.values(o).forEach(walk);
+    };
+    walk(dict);
+    return dict;
+  },
+});
+
 const sd = new StyleDictionary({
+  preprocessors: ['strip-tokens-studio-shadow'],
   source: ['tokens/primitive.json', 'tokens/semantic.json', 'tokens/component.json'],
   usesDtcg: true,
   log: { verbosity: 'default' },
