@@ -369,13 +369,6 @@
         "$type": "color",
         "$value": "rgba(255, 255, 255, 0.9)"
       }
-    },
-    "external": {
-      "mercadopago": {
-        "$type": "color",
-        "$value": "#009EE3",
-        "$description": "Botón de Mercado Pago"
-      }
     }
   },
   "font": {
