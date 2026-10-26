@@ -82,6 +82,7 @@
   --color-blue-950: #172554;
   --color-base-white: #ffffff;
   --color-base-black: #141414;
+  --color-base-transparent: rgba(255, 255, 255, 0);
   --color-alpha-black-50: rgba(0, 0, 0, 0.5);
   --color-alpha-black-60: rgba(0, 0, 0, 0.6);
   --color-alpha-white-15: rgba(255, 255, 255, 0.15);
@@ -181,10 +182,8 @@
   --z-index-modal: 100;
   --z-index-modal-top: 110;
   --z-index-progress: 200;
-  --button-outline-bg: rgba(0, 0, 0, 0);
   --button-link-text-decoration: none;
   --button-link-text-decoration-hover: underline;
-  --badge-discount-padding-y: 2px;
   --badge-counter-min-size: 16px;
   --color-brand-default: var(--color-tomato-500); /** Logo, acentos de marca */
   --color-brand-hover: var(--color-tomato-600);
@@ -233,12 +232,16 @@
   --color-action-secondary-bg-active: var(--color-neutral-700);
   --color-action-outline-bg-hover: var(--color-tomato-50);
   --color-action-outline-bg-active: var(--color-tomato-100);
+  --color-action-outline-bg: var(--color-base-white);
   --color-action-accent-bg: var(--color-sage-600);
   --color-action-accent-bg-hover: var(--color-sage-700);
   --color-action-accent-fg: var(--color-base-white);
+  --color-action-neutral-bg: var(--color-neutral-50);
+  --color-action-neutral-bg-hover: var(--color-neutral-100);
+  --color-action-neutral-bg-active: var(--color-neutral-200);
   --color-action-disabled-bg: var(--color-neutral-100); /** Fondo de cualquier botón deshabilitado */
-  --color-action-disabled-fg: var(--color-neutral-400); /** Texto e ícono deshabilitado. WCAG no exige contraste en deshabilitados */
-  --color-action-disabled-border: var(--color-neutral-200);
+  --color-action-disabled-fg: var(--color-neutral-300); /** Texto e ícono deshabilitado. WCAG no exige contraste en deshabilitados */
+  --color-action-disabled-border: var(--color-neutral-300);
   --color-feedback-success-text: var(--color-green-700);
   --color-feedback-success-bg: var(--color-green-50);
   --color-feedback-success-border: var(--color-green-600); /** Borde de alertas y estados de éxito. 3.30:1 sobre blanco (1.4.11) */
@@ -246,6 +249,7 @@
   --color-feedback-warning-text: var(--color-yellow-700);
   --color-feedback-warning-bg: var(--color-yellow-50);
   --color-feedback-warning-border: var(--color-yellow-300);
+  --color-feedback-warning-solid: var(--color-yellow-600); /** Relleno: barras, íconos sobre fondo. No usar con texto blanco (3.30:1) */
   --color-feedback-error-text: var(--color-red-700); /** 6.47:1 sobre blanco, 5.91:1 sobre error.bg */
   --color-feedback-error-bg: var(--color-red-50);
   --color-feedback-error-border: var(--color-red-600); /** Borde de alertas y estados de error. 4.83:1 sobre blanco */
@@ -253,9 +257,10 @@
   --color-feedback-info-text: var(--color-blue-700);
   --color-feedback-info-bg: var(--color-blue-50);
   --color-feedback-info-border: var(--color-blue-300);
+  --color-feedback-info-solid: var(--color-blue-600); /** Relleno: barras, íconos sobre fondo. No usar con texto blanco (3.30:1) */
   --color-form-bg: var(--color-base-white);
   --color-form-border: var(--color-neutral-400); /** Borde de controles: 3.28:1 (WCAG 1.4.11) */
-  --color-form-border-hover: var(--color-neutral-500);
+  --color-form-border-hover: var(--color-neutral-600);
   --color-form-control-off: var(--color-neutral-400); /** Track de toggle apagado: 3.28:1 */
   --color-form-control-off-hover: var(--color-neutral-500);
   --color-form-border-focus: var(--color-tomato-500);
@@ -263,7 +268,7 @@
   --color-form-bg-error: var(--color-red-50);
   --color-form-bg-disabled: var(--color-neutral-100);
   --color-form-placeholder: var(--color-neutral-500); /** 5.33:1. Es el gris más claro que pasa AA para texto */
-  --color-form-text-disabled: var(--color-neutral-400);
+  --color-form-control-on-subtle: var(--color-tomato-50);
   --color-focus-ring: var(--color-tomato-500);
   --color-focus-ring-inverse: var(--color-base-white); /** Sobre fotos, superficies oscuras o de marca */
   --color-commerce-price-current: var(--color-neutral-900);
@@ -274,7 +279,7 @@
   --color-commerce-discount-border: var(--color-tomato-500);
   --color-commerce-badge-dietary-bg: var(--color-sage-600);
   --color-commerce-badge-dietary-fg: var(--color-base-white);
-  --color-commerce-shipping-free-fg: var(--color-sage-600);
+  --color-commerce-shipping-free-fg: var(--color-green-700);
   --elevation-subtle: var(--shadow-sm); /** Cards de contenido en reposo */
   --elevation-card: var(--shadow-md); /** Card de producto en reposo */
   --elevation-card-hover: var(--shadow-lg); /** Card de producto en hover, barra flotante */
@@ -293,6 +298,7 @@
   --typography-heading-lg: var(--font-weight-semibold) var(--font-size-3xl)/var(--font-line-height-2xl) var(--font-family-sans); /** Títulos de página (h1) mobile y de sección (h2) */
   --typography-heading-md: var(--font-weight-semibold) var(--font-size-xl)/var(--font-line-height-lg) var(--font-family-sans); /** Subtítulos de bloque */
   --typography-heading-sm: var(--font-weight-semibold) var(--font-size-sm)/var(--font-line-height-sm) var(--font-family-sans); /** Nombre de producto en card (h3) */
+  --typography-body-lg: var(--font-weight-regular) var(--font-size-lg)/var(--font-line-height-lg) var(--font-family-sans); /** Texto destacado: bajada del hero (desde md) */
   --typography-body-md: var(--font-weight-regular) var(--font-size-md)/var(--font-line-height-md) var(--font-family-sans); /** Texto base */
   --typography-body-sm: var(--font-weight-regular) var(--font-size-sm)/var(--font-line-height-sm) var(--font-family-sans); /** Descripciones, footer */
   --typography-label: var(--font-weight-medium) var(--font-size-sm)/var(--font-line-height-sm) var(--font-family-sans); /** Botones y controles */
@@ -332,13 +338,29 @@
   --button-size-xl-line-height: var(--font-line-height-md);
   --button-size-xl-icon-size: var(--space-5);
   --button-primary-font-weight: var(--font-weight-semibold);
+  --button-primary-height: var(--size-control-lg);
+  --button-primary-padding-x: var(--space-8);
+  --button-primary-padding-y: var(--space-3);
   --button-add-to-cart-font-weight: var(--font-weight-medium);
+  --button-add-to-cart-height: var(--size-control-md);
   --button-secondary-font-weight: var(--font-weight-medium);
+  --button-secondary-height: var(--size-control-md);
+  --button-secondary-padding-x: var(--space-4);
   --button-outline-font-weight: var(--font-weight-medium);
+  --button-outline-height: var(--size-control-lg);
+  --button-outline-padding-x: var(--space-4);
+  --button-outline-padding-y: var(--space-3);
   --button-neutral-font-weight: var(--font-weight-medium);
+  --button-neutral-padding-x: var(--space-6);
   --button-inverse-font-weight: var(--font-weight-medium);
+  --button-inverse-height: var(--size-control-md);
+  --button-inverse-padding-x: var(--space-8);
   --button-link-padding-x: var(--space-0); /** Se alinea con el texto que lo rodea */
   --button-link-font-weight: var(--font-weight-medium);
+  --button-disabled-opacity: var(--opacity-disabled);
+  --button-ghost-bg: var(--color-base-transparent);
+  --button-ghost-font-weight: var(--font-weight-medium);
+  --button-ghost-padding-x: var(--space-0); /** Se alinea con el texto que lo rodea */
   --stepper-border-width: var(--border-width-sm);
   --stepper-height-sm: var(--size-control-xs); /** Carrito y drawer */
   --stepper-height-lg: var(--size-control-lg); /** PDP */
@@ -354,6 +376,7 @@
   --input-pill-padding-x: var(--space-4);
   --badge-discount-radius: var(--radius-sm);
   --badge-discount-padding-x: var(--space-1-5);
+  --badge-discount-padding-y: var(--space-1-5);
   --badge-discount-font-size: var(--font-size-xs);
   --badge-discount-font-weight: var(--font-weight-bold);
   --badge-dietary-radius: var(--radius-sm);
@@ -394,20 +417,24 @@
   --chip-font-weight: var(--font-weight-medium);
   --chip-border-width: var(--border-width-sm);
   --chip-focus-width: var(--border-width-lg);
+  --dropdown-bg: var(--color-base-white);
+  --dropdown-item-gap: var(--space-1);
+  --dropdown-item-padding: var(--space-1);
+  --dropdown-item-radius: var(--radius-md);
   --color-action-outline-fg-hover: var(--color-brand-hover); /** 5.75:1 sobre outline.bg-hover */
   --color-action-outline-fg-active: var(--color-brand-active); /** 7.15:1 sobre outline.bg-active */
-  --color-action-neutral-bg: var(--color-surface-default);
-  --color-action-neutral-bg-hover: var(--color-surface-subtle);
-  --color-action-neutral-bg-active: var(--color-surface-muted);
   --color-action-neutral-fg: var(--color-text-primary);
   --color-action-neutral-border: var(--color-border-default);
   --color-action-link-fg: var(--color-text-link);
   --color-action-link-fg-hover: var(--color-text-link-hover);
   --color-action-link-fg-active: var(--color-brand-active);
   --color-form-label: var(--color-text-primary); /** Etiqueta del campo */
-  --color-form-label-disabled: var(--color-form-text-disabled); /** Etiqueta de campo deshabilitado */
   --color-form-text: var(--color-text-primary); /** Valor ingresado. Se distingue del placeholder por contraste */
   --color-form-helper: var(--color-text-secondary); /** Texto de ayuda debajo del campo */
+  --color-form-text-disabled: var(--color-action-disabled-fg);
+  --color-form-border-disabled: var(--color-action-disabled-border);
+  --color-form-control-on: var(--color-brand-default);
+  --color-form-control-on-hover: var(--color-brand-hover);
   --button-focus-ring: var(--color-focus-ring);
   --button-primary-bg: var(--color-action-primary-bg);
   --button-primary-bg-hover: var(--color-action-primary-bg-hover);
@@ -424,11 +451,15 @@
   --button-secondary-bg-active: var(--color-action-secondary-bg-active);
   --button-secondary-fg: var(--color-action-secondary-fg);
   --button-secondary-radius: var(--button-shape-default);
+  --button-outline-bg: var(--color-action-outline-bg);
   --button-outline-bg-hover: var(--color-action-outline-bg-hover);
   --button-outline-bg-active: var(--color-action-outline-bg-active);
   --button-outline-fg: var(--color-text-brand);
   --button-outline-border: var(--color-border-brand);
   --button-outline-radius: var(--button-shape-default);
+  --button-neutral-bg: var(--color-action-neutral-bg);
+  --button-neutral-bg-hover: var(--color-action-neutral-bg-hover);
+  --button-neutral-bg-active: var(--color-action-neutral-bg-active);
   --button-neutral-radius: var(--button-shape-default);
   --button-inverse-bg: var(--color-surface-default);
   --button-inverse-bg-hover: var(--color-surface-subtle);
@@ -439,6 +470,10 @@
   --button-disabled-fg: var(--color-action-disabled-fg);
   --button-disabled-border: var(--color-action-disabled-border); /** Solo en jerarquías con borde (outline, neutral) */
   --button-disabled-link-fg: var(--color-action-disabled-fg); /** Link deshabilitado: solo cambia el texto */
+  --button-ghost-fg: var(--color-text-primary);
+  --button-ghost-fg-active: var(--color-text-primary);
+  --button-ghost-fg-hover: var(--color-text-secondary);
+  --button-ghost-icon: var(--color-icon-default);
   --stepper-bg: var(--color-surface-default);
   --stepper-bg-hover: var(--color-action-outline-bg-hover);
   --stepper-fg: var(--color-text-primary);
@@ -475,9 +510,7 @@
   --select-border-error: var(--color-form-border-error);
   --select-border-disabled: var(--color-action-disabled-border);
   --select-placeholder: var(--color-form-placeholder);
-  --select-text-disabled: var(--color-form-text-disabled);
   --select-icon: var(--color-icon-default); /** Chevron */
-  --select-icon-disabled: var(--color-form-text-disabled);
   --select-height: var(--select-size-lg-height); /** Por defecto: lg (formularios) */
   --select-menu-bg: var(--color-surface-default);
   --select-menu-border: var(--color-border-default);
@@ -488,7 +521,6 @@
   --select-option-bg-selected: var(--color-brand-subtle);
   --select-option-fg-selected: var(--color-brand-hover); /** 5.75:1 sobre brand.subtle */
   --select-option-check: var(--color-icon-brand); /** Tilde de la opción elegida */
-  --select-option-fg-disabled: var(--color-form-text-disabled);
   --toggle-track-off: var(--color-form-control-off); /** Default */
   --toggle-track-off-hover: var(--color-form-control-off-hover);
   --toggle-track-on: var(--color-action-primary-bg); /** Active */
@@ -510,22 +542,36 @@
   --chip-border-selected: var(--color-action-primary-bg);
   --chip-bg-selected-hover: var(--color-action-primary-bg-hover);
   --chip-focus-ring: var(--color-focus-ring);
+  --border-neutral: var(--color-border-default);
+  --divider-color: var(--color-border-default);
+  --dropdown-header-fg: var(--color-text-primary);
+  --dropdown-header-icon: var(--color-icon-brand);
+  --dropdown-item-bg-active: var(--color-surface-muted);
+  --dropdown-item-bg-hover: var(--color-surface-subtle);
+  --dropdown-item-fg: var(--color-text-primary);
+  --dropdown-item-fg-disabled: var(--color-action-disabled-fg);
+  --dropdown-item-icon: var(--color-icon-default);
+  --dropdown-item-layer: var(--layer-overlay);
+  --dropdown-link-fg: var(--color-text-link);
+  --dropdown-link-fg-hover: var(--color-text-link-hover);
+  --color-form-label-disabled: var(--color-form-text-disabled); /** Etiqueta de campo deshabilitado */
   --button-outline-fg-hover: var(--color-action-outline-fg-hover);
   --button-outline-fg-active: var(--color-action-outline-fg-active);
-  --button-neutral-bg: var(--color-action-neutral-bg);
-  --button-neutral-bg-hover: var(--color-action-neutral-bg-hover);
-  --button-neutral-bg-active: var(--color-action-neutral-bg-active);
   --button-neutral-fg: var(--color-action-neutral-fg);
   --button-neutral-border: var(--color-action-neutral-border);
   --button-link-fg: var(--color-action-link-fg);
   --button-link-fg-hover: var(--color-action-link-fg-hover);
   --button-link-fg-active: var(--color-action-link-fg-active);
+  --button-ghost-fg-disable: var(--button-disabled-fg);
   --stepper-radius: var(--button-add-to-cart-radius); /** Siempre igual al botón Agregar */
   --select-label: var(--color-form-label);
-  --select-label-disabled: var(--color-form-label-disabled);
   --select-text: var(--color-form-text); /** Opción elegida */
+  --select-text-disabled: var(--color-form-text-disabled);
   --select-helper: var(--color-form-helper);
+  --select-icon-disabled: var(--color-form-text-disabled);
+  --select-option-fg-disabled: var(--color-form-text-disabled);
   --toggle-label: var(--color-form-label);
+  --select-label-disabled: var(--color-form-label-disabled);
   --toggle-label-disabled: var(--color-form-label-disabled);
 
   /* Canales RGB para modificadores de opacidad de Tailwind */
@@ -654,10 +700,11 @@
   --color-action-outline-bg-active-rgb: 255 225 227;
   --color-action-outline-fg-hover-rgb: 194 5 16;
   --color-action-outline-fg-active-rgb: 154 4 13;
+  --color-action-outline-bg-rgb: 255 255 255;
   --color-action-accent-bg-rgb: 21 128 61;
   --color-action-accent-bg-hover-rgb: 18 101 40;
   --color-action-accent-fg-rgb: 255 255 255;
-  --color-action-neutral-bg-rgb: 255 255 255;
+  --color-action-neutral-bg-rgb: 250 250 250;
   --color-action-neutral-bg-hover-rgb: 245 245 245;
   --color-action-neutral-bg-active-rgb: 228 228 228;
   --color-action-neutral-fg-rgb: 26 26 26;
@@ -666,8 +713,8 @@
   --color-action-link-fg-hover-rgb: 194 5 16;
   --color-action-link-fg-active-rgb: 154 4 13;
   --color-action-disabled-bg-rgb: 245 245 245;
-  --color-action-disabled-fg-rgb: 142 142 142;
-  --color-action-disabled-border-rgb: 228 228 228;
+  --color-action-disabled-fg-rgb: 212 212 212;
+  --color-action-disabled-border-rgb: 212 212 212;
   --color-feedback-success-text-rgb: 21 128 61;
   --color-feedback-success-bg-rgb: 240 253 244;
   --color-feedback-success-border-rgb: 22 163 74;
@@ -675,6 +722,7 @@
   --color-feedback-warning-text-rgb: 161 98 7;
   --color-feedback-warning-bg-rgb: 254 252 232;
   --color-feedback-warning-border-rgb: 253 224 71;
+  --color-feedback-warning-solid-rgb: 202 138 4;
   --color-feedback-error-text-rgb: 185 28 28;
   --color-feedback-error-bg-rgb: 254 242 242;
   --color-feedback-error-border-rgb: 220 38 38;
@@ -682,9 +730,10 @@
   --color-feedback-info-text-rgb: 29 78 216;
   --color-feedback-info-bg-rgb: 239 246 255;
   --color-feedback-info-border-rgb: 147 197 253;
+  --color-feedback-info-solid-rgb: 37 99 235;
   --color-form-bg-rgb: 255 255 255;
   --color-form-border-rgb: 142 142 142;
-  --color-form-border-hover-rgb: 107 107 107;
+  --color-form-border-hover-rgb: 82 82 82;
   --color-form-control-off-rgb: 142 142 142;
   --color-form-control-off-hover-rgb: 107 107 107;
   --color-form-border-focus-rgb: 227 6 19;
@@ -692,11 +741,15 @@
   --color-form-bg-error-rgb: 254 242 242;
   --color-form-bg-disabled-rgb: 245 245 245;
   --color-form-label-rgb: 26 26 26;
-  --color-form-label-disabled-rgb: 142 142 142;
+  --color-form-label-disabled-rgb: 212 212 212;
   --color-form-text-rgb: 26 26 26;
   --color-form-placeholder-rgb: 107 107 107;
   --color-form-helper-rgb: 107 107 107;
-  --color-form-text-disabled-rgb: 142 142 142;
+  --color-form-text-disabled-rgb: 212 212 212;
+  --color-form-border-disabled-rgb: 212 212 212;
+  --color-form-control-on-rgb: 227 6 19;
+  --color-form-control-on-hover-rgb: 194 5 16;
+  --color-form-control-on-subtle-rgb: 255 241 242;
   --color-focus-ring-rgb: 227 6 19;
   --color-focus-ring-inverse-rgb: 255 255 255;
   --color-commerce-price-current-rgb: 26 26 26;
@@ -721,13 +774,14 @@
   --button-secondary-bg-hover-rgb: 107 107 107;
   --button-secondary-bg-active-rgb: 64 64 64;
   --button-secondary-fg-rgb: 255 255 255;
+  --button-outline-bg-rgb: 255 255 255;
   --button-outline-bg-hover-rgb: 255 241 242;
   --button-outline-bg-active-rgb: 255 225 227;
   --button-outline-fg-rgb: 227 6 19;
   --button-outline-fg-hover-rgb: 194 5 16;
   --button-outline-fg-active-rgb: 154 4 13;
   --button-outline-border-rgb: 227 6 19;
-  --button-neutral-bg-rgb: 255 255 255;
+  --button-neutral-bg-rgb: 250 250 250;
   --button-neutral-bg-hover-rgb: 245 245 245;
   --button-neutral-bg-active-rgb: 228 228 228;
   --button-neutral-fg-rgb: 26 26 26;
@@ -740,9 +794,14 @@
   --button-link-fg-hover-rgb: 194 5 16;
   --button-link-fg-active-rgb: 154 4 13;
   --button-disabled-bg-rgb: 245 245 245;
-  --button-disabled-fg-rgb: 142 142 142;
-  --button-disabled-border-rgb: 228 228 228;
-  --button-disabled-link-fg-rgb: 142 142 142;
+  --button-disabled-fg-rgb: 212 212 212;
+  --button-disabled-border-rgb: 212 212 212;
+  --button-disabled-link-fg-rgb: 212 212 212;
+  --button-ghost-fg-rgb: 26 26 26;
+  --button-ghost-fg-active-rgb: 26 26 26;
+  --button-ghost-fg-disable-rgb: 212 212 212;
+  --button-ghost-fg-hover-rgb: 107 107 107;
+  --button-ghost-icon-rgb: 82 82 82;
   --stepper-bg-rgb: 255 255 255;
   --stepper-bg-hover-rgb: 255 241 242;
   --stepper-fg-rgb: 26 26 26;
@@ -769,18 +828,18 @@
   --select-bg-rgb: 255 255 255;
   --select-bg-disabled-rgb: 245 245 245;
   --select-border-rgb: 142 142 142;
-  --select-border-hover-rgb: 107 107 107;
+  --select-border-hover-rgb: 82 82 82;
   --select-border-focus-rgb: 227 6 19;
   --select-border-error-rgb: 220 38 38;
-  --select-border-disabled-rgb: 228 228 228;
+  --select-border-disabled-rgb: 212 212 212;
   --select-label-rgb: 26 26 26;
-  --select-label-disabled-rgb: 142 142 142;
+  --select-label-disabled-rgb: 212 212 212;
   --select-text-rgb: 26 26 26;
   --select-placeholder-rgb: 107 107 107;
-  --select-text-disabled-rgb: 142 142 142;
+  --select-text-disabled-rgb: 212 212 212;
   --select-helper-rgb: 107 107 107;
   --select-icon-rgb: 82 82 82;
-  --select-icon-disabled-rgb: 142 142 142;
+  --select-icon-disabled-rgb: 212 212 212;
   --select-menu-bg-rgb: 255 255 255;
   --select-menu-border-rgb: 228 228 228;
   --select-option-fg-rgb: 26 26 26;
@@ -788,7 +847,7 @@
   --select-option-bg-selected-rgb: 255 241 242;
   --select-option-fg-selected-rgb: 194 5 16;
   --select-option-check-rgb: 227 6 19;
-  --select-option-fg-disabled-rgb: 142 142 142;
+  --select-option-fg-disabled-rgb: 212 212 212;
   --toggle-track-off-rgb: 142 142 142;
   --toggle-track-off-hover-rgb: 107 107 107;
   --toggle-track-on-rgb: 227 6 19;
@@ -798,7 +857,7 @@
   --toggle-thumb-rgb: 255 255 255;
   --toggle-thumb-disabled-rgb: 255 255 255;
   --toggle-label-rgb: 26 26 26;
-  --toggle-label-disabled-rgb: 142 142 142;
+  --toggle-label-disabled-rgb: 212 212 212;
   --toggle-focus-ring-rgb: 227 6 19;
   --chip-bg-rgb: 255 255 255;
   --chip-fg-rgb: 26 26 26;
@@ -809,4 +868,16 @@
   --chip-border-selected-rgb: 227 6 19;
   --chip-bg-selected-hover-rgb: 194 5 16;
   --chip-focus-ring-rgb: 227 6 19;
+  --border-neutral-rgb: 228 228 228;
+  --divider-color-rgb: 228 228 228;
+  --dropdown-bg-rgb: 255 255 255;
+  --dropdown-header-fg-rgb: 26 26 26;
+  --dropdown-header-icon-rgb: 227 6 19;
+  --dropdown-item-bg-active-rgb: 228 228 228;
+  --dropdown-item-bg-hover-rgb: 245 245 245;
+  --dropdown-item-fg-rgb: 26 26 26;
+  --dropdown-item-fg-disabled-rgb: 212 212 212;
+  --dropdown-item-icon-rgb: 82 82 82;
+  --dropdown-link-fg-rgb: 227 6 19;
+  --dropdown-link-fg-hover-rgb: 194 5 16;
 }

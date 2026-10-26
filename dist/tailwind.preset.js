@@ -128,7 +128,8 @@ module.exports = {
         },
         "base": {
           "white": "rgb(var(--color-base-white-rgb) / <alpha-value>)",
-          "black": "rgb(var(--color-base-black-rgb) / <alpha-value>)"
+          "black": "rgb(var(--color-base-black-rgb) / <alpha-value>)",
+          "transparent": "var(--color-base-transparent)"
         },
         "external": {
           "mercadopago": "rgb(var(--color-external-mercadopago-rgb) / <alpha-value>)"
@@ -157,6 +158,7 @@ module.exports = {
         "action-secondary-active": "rgb(var(--color-action-secondary-bg-active-rgb) / <alpha-value>)",
         "action-outline-hover": "rgb(var(--color-action-outline-bg-hover-rgb) / <alpha-value>)",
         "action-outline-active": "rgb(var(--color-action-outline-bg-active-rgb) / <alpha-value>)",
+        "action-outline": "rgb(var(--color-action-outline-bg-rgb) / <alpha-value>)",
         "action-accent": "rgb(var(--color-action-accent-bg-rgb) / <alpha-value>)",
         "action-accent-hover": "rgb(var(--color-action-accent-bg-hover-rgb) / <alpha-value>)",
         "action-neutral": "rgb(var(--color-action-neutral-bg-rgb) / <alpha-value>)",
@@ -166,9 +168,11 @@ module.exports = {
         "success-subtle": "rgb(var(--color-feedback-success-bg-rgb) / <alpha-value>)",
         "success": "rgb(var(--color-feedback-success-solid-rgb) / <alpha-value>)",
         "warning-subtle": "rgb(var(--color-feedback-warning-bg-rgb) / <alpha-value>)",
+        "warning": "rgb(var(--color-feedback-warning-solid-rgb) / <alpha-value>)",
         "error-subtle": "rgb(var(--color-feedback-error-bg-rgb) / <alpha-value>)",
         "error": "rgb(var(--color-feedback-error-solid-rgb) / <alpha-value>)",
         "info-subtle": "rgb(var(--color-feedback-info-bg-rgb) / <alpha-value>)",
+        "info": "rgb(var(--color-feedback-info-solid-rgb) / <alpha-value>)",
         "discount": "rgb(var(--color-commerce-discount-bg-rgb) / <alpha-value>)",
         "badge-dietary": "rgb(var(--color-commerce-badge-dietary-bg-rgb) / <alpha-value>)"
       },
@@ -196,6 +200,9 @@ module.exports = {
         "form-placeholder": "rgb(var(--color-form-placeholder-rgb) / <alpha-value>)",
         "form-helper": "rgb(var(--color-form-helper-rgb) / <alpha-value>)",
         "form-text-disabled": "rgb(var(--color-form-text-disabled-rgb) / <alpha-value>)",
+        "form-control-on": "rgb(var(--color-form-control-on-rgb) / <alpha-value>)",
+        "form-control-on-hover": "rgb(var(--color-form-control-on-hover-rgb) / <alpha-value>)",
+        "form-control-on-subtle": "rgb(var(--color-form-control-on-subtle-rgb) / <alpha-value>)",
         "on-primary": "rgb(var(--color-action-primary-fg-rgb) / <alpha-value>)",
         "on-secondary": "rgb(var(--color-action-secondary-fg-rgb) / <alpha-value>)",
         "on-accent": "rgb(var(--color-action-accent-fg-rgb) / <alpha-value>)",
@@ -225,6 +232,7 @@ module.exports = {
         "form-hover": "rgb(var(--color-form-border-hover-rgb) / <alpha-value>)",
         "form-focus": "rgb(var(--color-form-border-focus-rgb) / <alpha-value>)",
         "form-error": "rgb(var(--color-form-border-error-rgb) / <alpha-value>)",
+        "form-disabled": "rgb(var(--color-form-border-disabled-rgb) / <alpha-value>)",
         "success": "rgb(var(--color-feedback-success-border-rgb) / <alpha-value>)",
         "warning": "rgb(var(--color-feedback-warning-border-rgb) / <alpha-value>)",
         "error": "rgb(var(--color-feedback-error-border-rgb) / <alpha-value>)",
@@ -243,6 +251,7 @@ module.exports = {
         "form-hover": "rgb(var(--color-form-border-hover-rgb) / <alpha-value>)",
         "form-focus": "rgb(var(--color-form-border-focus-rgb) / <alpha-value>)",
         "form-error": "rgb(var(--color-form-border-error-rgb) / <alpha-value>)",
+        "form-disabled": "rgb(var(--color-form-border-disabled-rgb) / <alpha-value>)",
         "success": "rgb(var(--color-feedback-success-border-rgb) / <alpha-value>)",
         "warning": "rgb(var(--color-feedback-warning-border-rgb) / <alpha-value>)",
         "error": "rgb(var(--color-feedback-error-border-rgb) / <alpha-value>)",
@@ -291,6 +300,13 @@ module.exports = {
           {
             "lineHeight": "var(--font-line-height-sm)",
             "fontWeight": "var(--font-weight-semibold)"
+          }
+        ],
+        "body-lg": [
+          "var(--font-size-lg)",
+          {
+            "lineHeight": "var(--font-line-height-lg)",
+            "fontWeight": "var(--font-weight-regular)"
           }
         ],
         "body-md": [
