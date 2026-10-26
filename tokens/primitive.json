@@ -338,6 +338,10 @@
       "black": {
         "$type": "color",
         "$value": "#141414"
+      },
+      "transparent": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0)"
       }
     },
     "alpha": {

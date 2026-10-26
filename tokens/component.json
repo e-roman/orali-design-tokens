@@ -176,6 +176,18 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.semibold}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.8}"
+      },
+      "padding-y": {
+        "$type": "dimension",
+        "$value": "{space.3}"
       }
     },
     "add-to-cart": {
@@ -203,6 +215,10 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
       }
     },
     "secondary": {
@@ -229,12 +245,20 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.4}"
       }
     },
     "outline": {
       "bg": {
         "$type": "color",
-        "$value": "rgba(0, 0, 0, 0)"
+        "$value": "{color.action.outline.bg}"
       },
       "bg-hover": {
         "$type": "color",
@@ -267,6 +291,18 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.4}"
+      },
+      "padding-y": {
+        "$type": "dimension",
+        "$value": "{space.3}"
       }
     },
     "neutral": {
@@ -297,6 +333,10 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.6}"
       }
     },
     "inverse": {
@@ -324,6 +364,14 @@
       "font-weight": {
         "$type": "fontWeight",
         "$value": "{font.weight.medium}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.md}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.8}"
       }
     },
     "link": {
@@ -376,6 +424,45 @@
         "$type": "color",
         "$value": "{color.action.disabled.fg}",
         "$description": "Link deshabilitado: solo cambia el texto"
+      }
+    },
+    "disabled-opacity": {
+      "$type": "number",
+      "$value": "{opacity.disabled}"
+    },
+    "ghost": {
+      "bg": {
+        "$type": "color",
+        "$value": "{color.base.transparent}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.primary}"
+      },
+      "fg-active": {
+        "$type": "color",
+        "$value": "{color.text.primary}"
+      },
+      "fg-disable": {
+        "$type": "color",
+        "$value": "{button.disabled.fg}"
+      },
+      "fg-hover": {
+        "$type": "color",
+        "$value": "{color.text.secondary}"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.icon.default}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.0}",
+        "$description": "Se alinea con el texto que lo rodea"
       }
     }
   },
@@ -530,7 +617,7 @@
       },
       "padding-y": {
         "$type": "dimension",
-        "$value": "2px"
+        "$value": "{space.1-5}"
       },
       "font-size": {
         "$type": "dimension",
@@ -986,6 +1073,82 @@
     "focus-width": {
       "$type": "dimension",
       "$value": "{border-width.lg}"
+    }
+  },
+  "border": {
+    "neutral": {
+      "$type": "color",
+      "$value": "{color.border.default}"
+    }
+  },
+  "divider": {
+    "color": {
+      "$type": "color",
+      "$value": "{color.border.default}"
+    }
+  },
+  "dropdown": {
+    "bg": {
+      "$type": "color",
+      "$value": "{color.base.white}"
+    },
+    "header": {
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.primary}"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.icon.brand}"
+      }
+    },
+    "item": {
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.surface.muted}"
+      },
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.surface.subtle}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.primary}"
+      },
+      "fg-disabled": {
+        "$type": "color",
+        "$value": "{color.action.disabled.fg}"
+      },
+      "gap": {
+        "$type": "dimension",
+        "$value": "{space.1}"
+      },
+      "icon": {
+        "$type": "color",
+        "$value": "{color.icon.default}"
+      },
+      "layer": {
+        "$type": "number",
+        "$value": "{layer.overlay}"
+      },
+      "padding": {
+        "$type": "dimension",
+        "$value": "{space.1}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{radius.md}"
+      }
+    },
+    "link": {
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.link}"
+      },
+      "fg-hover": {
+        "$type": "color",
+        "$value": "{color.text.link-hover}"
+      }
     }
   }
 }

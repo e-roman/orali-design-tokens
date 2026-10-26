@@ -235,6 +235,10 @@
           "$type": "color",
           "$value": "{color.brand.active}",
           "$description": "7.15:1 sobre outline.bg-active"
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{color.base.white}"
         }
       },
       "accent": {
@@ -254,15 +258,15 @@
       "neutral": {
         "bg": {
           "$type": "color",
-          "$value": "{color.surface.default}"
+          "$value": "{color.neutral.50}"
         },
         "bg-hover": {
           "$type": "color",
-          "$value": "{color.surface.subtle}"
+          "$value": "{color.neutral.100}"
         },
         "bg-active": {
           "$type": "color",
-          "$value": "{color.surface.muted}"
+          "$value": "{color.neutral.200}"
         },
         "fg": {
           "$type": "color",
@@ -295,12 +299,12 @@
         },
         "fg": {
           "$type": "color",
-          "$value": "{color.neutral.400}",
+          "$value": "{color.neutral.300}",
           "$description": "Texto e ícono deshabilitado. WCAG no exige contraste en deshabilitados"
         },
         "border": {
           "$type": "color",
-          "$value": "{color.neutral.200}"
+          "$value": "{color.neutral.300}"
         }
       }
     },
@@ -337,6 +341,11 @@
         "border": {
           "$type": "color",
           "$value": "{color.yellow.300}"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.yellow.600}",
+          "$description": "Relleno: barras, íconos sobre fondo. No usar con texto blanco (3.30:1)"
         }
       },
       "error": {
@@ -372,6 +381,11 @@
         "border": {
           "$type": "color",
           "$value": "{color.blue.300}"
+        },
+        "solid": {
+          "$type": "color",
+          "$value": "{color.blue.600}",
+          "$description": "Relleno: barras, íconos sobre fondo. No usar con texto blanco (3.30:1)"
         }
       }
     },
@@ -388,7 +402,7 @@
       },
       "border-hover": {
         "$type": "color",
-        "$value": "{color.neutral.500}"
+        "$value": "{color.neutral.600}"
       },
       "control-off": {
         "$type": "color",
@@ -442,7 +456,23 @@
       },
       "text-disabled": {
         "$type": "color",
-        "$value": "{color.neutral.400}"
+        "$value": "{color.action.disabled.fg}"
+      },
+      "border-disabled": {
+        "$type": "color",
+        "$value": "{color.action.disabled.border}"
+      },
+      "control-on": {
+        "$type": "color",
+        "$value": "{color.brand.default}"
+      },
+      "control-on-hover": {
+        "$type": "color",
+        "$value": "{color.brand.hover}"
+      },
+      "control-on-subtle": {
+        "$type": "color",
+        "$value": "{color.tomato.50}"
       }
     },
     "focus": {
@@ -499,7 +529,7 @@
       "shipping-free": {
         "fg": {
           "$type": "color",
-          "$value": "{color.sage.600}"
+          "$value": "{color.green.700}"
         }
       }
     }
@@ -615,6 +645,16 @@
         "lineHeight": "{font.line-height.sm}"
       },
       "$description": "Nombre de producto en card (h3)"
+    },
+    "body-lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.sans}",
+        "fontSize": "{font.size.lg}",
+        "fontWeight": "{font.weight.regular}",
+        "lineHeight": "{font.line-height.lg}"
+      },
+      "$description": "Texto destacado: bajada del hero (desde md)"
     },
     "body-md": {
       "$type": "typography",
