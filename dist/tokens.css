@@ -234,6 +234,10 @@
   --color-action-accent-bg: var(--color-sage-600);
   --color-action-accent-bg-hover: var(--color-sage-700);
   --color-action-accent-fg: var(--color-base-white);
+  --color-action-destructive-bg: var(--color-red-600); /** Fondo de acciones destructivas (eliminar, vaciar carrito) */
+  --color-action-destructive-bg-hover: var(--color-red-700);
+  --color-action-destructive-bg-active: var(--color-red-800);
+  --color-action-destructive-fg: var(--color-base-white); /** Texto sobre action.destructive.bg */
   --color-action-neutral-bg: var(--color-neutral-50);
   --color-action-neutral-bg-hover: var(--color-neutral-100);
   --color-action-neutral-bg-active: var(--color-neutral-200);
@@ -700,6 +704,10 @@
   --color-action-accent-bg-rgb: 21 128 61;
   --color-action-accent-bg-hover-rgb: 18 101 40;
   --color-action-accent-fg-rgb: 255 255 255;
+  --color-action-destructive-bg-rgb: 220 38 38;
+  --color-action-destructive-bg-hover-rgb: 185 28 28;
+  --color-action-destructive-bg-active-rgb: 153 27 27;
+  --color-action-destructive-fg-rgb: 255 255 255;
   --color-action-neutral-bg-rgb: 250 250 250;
   --color-action-neutral-bg-hover-rgb: 245 245 245;
   --color-action-neutral-bg-active-rgb: 228 228 228;

@@ -16,6 +16,7 @@
 - `color.commerce.shipping-free.fg` → green.700
 - `badge.discount.padding-y` 2 → 6px (`space.1-5`)
 - `button.outline.bg` → `{color.action.outline.bg}` (blanco)
+- Semántico: `color.action.destructive.{bg,bg-hover,bg-active,fg}` → red.600 / 700 / 800 y blanco. Ya existía en Figma; ahora el repo es la fuente. Texto blanco: 4.83 / 6.47 / 8.31:1 (AA)
 
 ## 3.0.0
 
