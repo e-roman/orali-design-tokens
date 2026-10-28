@@ -250,6 +250,26 @@
           "$value": "{color.base.white}"
         }
       },
+      "destructive": {
+        "bg": {
+          "$type": "color",
+          "$value": "{color.red.600}",
+          "$description": "Fondo de acciones destructivas (eliminar, vaciar carrito)"
+        },
+        "bg-hover": {
+          "$type": "color",
+          "$value": "{color.red.700}"
+        },
+        "bg-active": {
+          "$type": "color",
+          "$value": "{color.red.800}"
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{color.base.white}",
+          "$description": "Texto sobre action.destructive.bg"
+        }
+      },
       "neutral": {
         "bg": {
           "$type": "color",
