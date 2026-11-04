@@ -154,6 +154,7 @@ module.exports = {
         "action-secondary-active": "rgb(var(--color-action-secondary-bg-active-rgb) / <alpha-value>)",
         "action-outline-hover": "rgb(var(--color-action-outline-bg-hover-rgb) / <alpha-value>)",
         "action-outline-active": "rgb(var(--color-action-outline-bg-active-rgb) / <alpha-value>)",
+        "action-outline-focus": "rgb(var(--color-action-outline-bg-focus-rgb) / <alpha-value>)",
         "action-outline": "rgb(var(--color-action-outline-bg-rgb) / <alpha-value>)",
         "action-accent": "rgb(var(--color-action-accent-bg-rgb) / <alpha-value>)",
         "action-accent-hover": "rgb(var(--color-action-accent-bg-hover-rgb) / <alpha-value>)",
