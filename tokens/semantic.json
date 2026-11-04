@@ -221,6 +221,11 @@
           "$type": "color",
           "$value": "{color.tomato.100}"
         },
+        "bg-focus": {
+          "$type": "color",
+          "$value": "{color.tomato.100}",
+          "$description": "Botón con foco de teclado dentro de un control (stepper). Ícono tomato.500 encima: ~4:1"
+        },
         "fg-hover": {
           "$type": "color",
           "$value": "{color.brand.hover}",
