@@ -1,6 +1,14 @@
 # Changelog
 
-## Unreleased: sincronización con Figma (limpieza del DS)
+## 4.0.0
+
+Sincronización con Figma (limpieza del DS).
+
+**Breaking**
+
+- Eliminados `color.external.mercadopago` y `color.surface.mercadopago` (y la utilidad Tailwind `bg-mercadopago`). El botón de pago usa `Button`.
+
+**Resto de cambios**
 
 - Nuevo: `button.ghost.*` (botón solo texto oscuro, sin fondo en ningún estado)
 - Nuevo: `dropdown.*` (menú de navegación y de cuenta: fondo, ítems, header, link "Ver todos")
