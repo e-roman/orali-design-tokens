@@ -17,6 +17,8 @@
 - `badge.discount.padding-y` 2 → 6px (`space.1-5`)
 - `button.outline.bg` → `{color.action.outline.bg}` (blanco)
 - Semántico: `color.action.destructive.{bg,bg-hover,bg-active,fg}` → red.600 / 700 / 800 y blanco. Ya existía en Figma; ahora el repo es la fuente. Texto blanco: 4.83 / 6.47 / 8.31:1 (AA)
+- `color.form.border-focus` → neutral.900 (antes tomato.500). Foco y error ya no comparten rojo: el rojo queda solo para error. 17.4:1 sobre blanco
+- `border-width.focus` 1 → 2px. Afecta a `select.focus-width`. En el sitio se dibuja con `box-shadow: inset` para no mover el layout
 
 ## 3.0.0
 

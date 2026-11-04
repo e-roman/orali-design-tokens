@@ -665,8 +665,8 @@
     },
     "focus": {
       "$type": "dimension",
-      "$value": "1px",
-      "$description": "Campos: el borde cambia de color, sin línea extra"
+      "$value": "2px",
+      "$description": "Campos: borde de 2px en foco (box-shadow inset para no mover el layout)"
     }
   },
   "shadow": {

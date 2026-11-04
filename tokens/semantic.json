@@ -430,7 +430,8 @@
       },
       "border-focus": {
         "$type": "color",
-        "$value": "{color.tomato.500}"
+        "$value": "{color.neutral.900}",
+        "$description": "Foco de campos: 2px (border-width.focus) en neutral.900. El rojo queda solo para error"
       },
       "border-error": {
         "$type": "color",
