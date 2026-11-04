@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased: sincronización con Figma (limpieza del DS)
+## 3.1.0
+
+Sincronización con Figma (limpieza del DS). Sin cambios de nombre ni eliminaciones respecto de 3.0.0.
+
+- Restaurados `color.external.mercadopago` y `color.surface.mercadopago` (se habían borrado en una subida desde Figma; los usa el botón de pago del checkout)
 
 - Nuevo: `button.ghost.*` (botón solo texto oscuro, sin fondo en ningún estado)
 - Nuevo: `dropdown.*` (menú de navegación y de cuenta: fondo, ítems, header, link "Ver todos")
