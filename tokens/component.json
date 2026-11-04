@@ -374,6 +374,42 @@
         "$value": "{space.8}"
       }
     },
+    "outline-inverse": {
+      "bg-hover": {
+        "$type": "color",
+        "$value": "{color.alpha.white-10}"
+      },
+      "bg-active": {
+        "$type": "color",
+        "$value": "{color.alpha.white-15}"
+      },
+      "fg": {
+        "$type": "color",
+        "$value": "{color.text.inverse}"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{color.alpha.white-50}",
+        "$description": "Va sobre fotos de banners"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$value": "{button.shape.pill}",
+        "$description": "Va sobre fotos de banners: siempre pill"
+      },
+      "font-weight": {
+        "$type": "fontWeight",
+        "$value": "{font.weight.medium}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.lg}"
+      },
+      "padding-x": {
+        "$type": "dimension",
+        "$value": "{space.4}"
+      }
+    },
     "link": {
       "fg": {
         "$type": "color",
@@ -1154,6 +1190,13 @@
         "$type": "color",
         "$value": "{color.text.link-hover}"
       }
+    }
+  },
+  "carousel-dot": {
+    "inactive": {
+      "$type": "color",
+      "$value": "{color.alpha.white-50}",
+      "$description": "Punto inactivo del carrusel sobre foto"
     }
   }
 }

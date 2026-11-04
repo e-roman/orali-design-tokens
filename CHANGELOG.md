@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.1.0
+
+Solo altas, sin cambios en nombres ni valores existentes.
+
+- Primitivos: `color.alpha.white-10` y `color.alpha.white-50`
+- Nuevo: `button.outline-inverse.*` (botón con borde sobre foto: border, fg, bg-hover, bg-active, radius, font-weight, height, padding-x)
+- Nuevo: `carousel-dot.inactive` (punto inactivo del carrusel sobre foto)
+
 ## 4.0.0
 
 Sincronización con Figma (limpieza del DS).

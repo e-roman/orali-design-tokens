@@ -353,6 +353,10 @@
         "$type": "color",
         "$value": "rgba(0, 0, 0, 0.6)"
       },
+      "white-10": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.1)"
+      },
       "white-15": {
         "$type": "color",
         "$value": "rgba(255, 255, 255, 0.15)"
@@ -360,6 +364,10 @@
       "white-30": {
         "$type": "color",
         "$value": "rgba(255, 255, 255, 0.3)"
+      },
+      "white-50": {
+        "$type": "color",
+        "$value": "rgba(255, 255, 255, 0.5)"
       },
       "white-80": {
         "$type": "color",

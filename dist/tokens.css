@@ -85,8 +85,10 @@
   --color-base-transparent: rgba(255, 255, 255, 0);
   --color-alpha-black-50: rgba(0, 0, 0, 0.5);
   --color-alpha-black-60: rgba(0, 0, 0, 0.6);
+  --color-alpha-white-10: rgba(255, 255, 255, 0.1);
   --color-alpha-white-15: rgba(255, 255, 255, 0.15);
   --color-alpha-white-30: rgba(255, 255, 255, 0.3);
+  --color-alpha-white-50: rgba(255, 255, 255, 0.5);
   --color-alpha-white-80: rgba(255, 255, 255, 0.8);
   --color-alpha-white-90: rgba(255, 255, 255, 0.9);
   --font-family-sans: Montserrat, system-ui, sans-serif;
@@ -358,6 +360,12 @@
   --button-inverse-font-weight: var(--font-weight-medium);
   --button-inverse-height: var(--size-control-md);
   --button-inverse-padding-x: var(--space-8);
+  --button-outline-inverse-bg-hover: var(--color-alpha-white-10);
+  --button-outline-inverse-bg-active: var(--color-alpha-white-15);
+  --button-outline-inverse-border: var(--color-alpha-white-50); /** Va sobre fotos de banners */
+  --button-outline-inverse-font-weight: var(--font-weight-medium);
+  --button-outline-inverse-height: var(--size-control-lg);
+  --button-outline-inverse-padding-x: var(--space-4);
   --button-link-padding-x: var(--space-0); /** Se alinea con el texto que lo rodea */
   --button-link-font-weight: var(--font-weight-medium);
   --button-disabled-opacity: var(--opacity-disabled);
@@ -424,6 +432,7 @@
   --dropdown-item-gap: var(--space-1);
   --dropdown-item-padding: var(--space-1);
   --dropdown-item-radius: var(--radius-md);
+  --carousel-dot-inactive: var(--color-alpha-white-50); /** Punto inactivo del carrusel sobre foto */
   --color-action-outline-fg-hover: var(--color-brand-hover); /** 5.75:1 sobre outline.bg-hover */
   --color-action-outline-fg-active: var(--color-brand-active); /** 7.15:1 sobre outline.bg-active */
   --color-action-neutral-fg: var(--color-text-primary);
@@ -469,6 +478,8 @@
   --button-inverse-bg-active: var(--color-surface-muted);
   --button-inverse-fg: var(--color-text-primary);
   --button-inverse-radius: var(--button-shape-pill); /** Va sobre fotos de banners: siempre pill */
+  --button-outline-inverse-fg: var(--color-text-inverse);
+  --button-outline-inverse-radius: var(--button-shape-pill); /** Va sobre fotos de banners: siempre pill */
   --button-disabled-bg: var(--color-action-disabled-bg); /** Compartido por todas las jerarquías salvo link */
   --button-disabled-fg: var(--color-action-disabled-fg);
   --button-disabled-border: var(--color-action-disabled-border); /** Solo en jerarquías con borde (outline, neutral) */
@@ -797,6 +808,7 @@
   --button-inverse-bg-hover-rgb: 245 245 245;
   --button-inverse-bg-active-rgb: 228 228 228;
   --button-inverse-fg-rgb: 26 26 26;
+  --button-outline-inverse-fg-rgb: 255 255 255;
   --button-link-fg-rgb: 227 6 19;
   --button-link-fg-hover-rgb: 194 5 16;
   --button-link-fg-active-rgb: 154 4 13;
