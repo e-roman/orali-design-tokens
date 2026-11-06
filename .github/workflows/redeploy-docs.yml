@@ -1,0 +1,11 @@
+name: Redeploy docs
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Avisar a Vercel
+        run: curl -fsS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
