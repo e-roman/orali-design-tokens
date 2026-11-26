@@ -398,7 +398,7 @@
   --card-product-gap: var(--space-3);
   --card-content-radius: var(--radius-xl);
   --select-radius: var(--radius-md);
-  --select-size-md-height: var(--size-control-md); /** 40px: barras de herramientas (Ordenar por) */
+  --select-size-md-height: var(--size-control-sm); /** 36px: barras de herramientas (Ordenar por), igual que los chips de filtro */
   --select-size-lg-height: var(--size-control-lg); /** 44px: formularios, igual que input */
   --select-padding-x: var(--space-3);
   --select-gap: var(--space-2);

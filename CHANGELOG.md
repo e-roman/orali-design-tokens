@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.2.0
+
+- `select.size.md.height` → `{size.control.sm}` (40 → 36px). El select de barra de herramientas queda a la altura de los chips de filtro. Sin cambios de nombres
+
 ## 4.1.0
 
 Solo altas, sin cambios en nombres ni valores existentes.

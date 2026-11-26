@@ -831,8 +831,8 @@
       "md": {
         "height": {
           "$type": "dimension",
-          "$value": "{size.control.md}",
-          "$description": "40px: barras de herramientas (Ordenar por)"
+          "$value": "{size.control.sm}",
+          "$description": "36px: barras de herramientas (Ordenar por), igual que los chips de filtro"
         }
       },
       "lg": {
